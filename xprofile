@@ -1,7 +1,7 @@
 
 export MANPATH=/usr/local/texlive/2019/texmf-dist/doc/man:$MANPATH;
 export INFOPATH=/usr/local/texlive/2019/texmf-dist/doc/info:$INFOPATH;
-export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH;
+export PATH=/usr/local/texlive/2019/bin/x86_64-linux:/home/liukairui/.local/bin:$PATH;
 
 GTK_IM_MODULE DEFAULT=fcitx
 QT_IM_MODULE  DEFAULT=fcitx

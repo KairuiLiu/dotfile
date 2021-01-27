@@ -15,6 +15,7 @@ ln -s ~/.dotfile/fcitx5_config ~/.config/fcitx5/config
 ln -s ~/.dotfile/ranger ~/.config/ranger
 ln -s ~/.dotfile/polybar ~/.config/polybar
 ln -s ~/.dotfile/picom ~/.config/picom  
+ln -s pam_environment ~/.pam_environment 
 echo "RECOVERY END\n"
 echo "CHOOSE TO RUN\n"
 echo "cp ~/.dotfile/pacman.conf /etc/pacman.conf\n"

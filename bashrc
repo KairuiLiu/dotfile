@@ -145,3 +145,4 @@ if [[ -f ${alias_setting} ]]; then
 fi
 export PATH=$PATH:usr/bin 
 export PATH=$PATH:usr/include/c++
+export LANGUAGE="zh_CN:UTF-8"

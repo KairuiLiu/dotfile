@@ -146,3 +146,5 @@ fi
 export PATH=$PATH:usr/bin 
 export PATH=$PATH:usr/include/c++
 export LANGUAGE="zh_CN:UTF-8"
+export PATH="/home/liukairui/public/program/qt5-base-5.12.4-2-x86_64.pkg/usr/bin/:$PATH"
+

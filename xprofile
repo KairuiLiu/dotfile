@@ -9,3 +9,4 @@ XMODIFIERS    DEFAULT=\@im=fcitx
 SDL_IM_MODULE DEFAULT=fcitx
 
 touchegg &
+## echo "lkr0101" | sudo /usr/bin/python3 /usr/share/asus_touchpad_numpad-driver/asus_touchpad.py m433ia &

@@ -402,6 +402,7 @@ php
 picom-git
 playerctl
 polybar
+libpam_pwdfile
 qqmusic-bin
 qt4
 r

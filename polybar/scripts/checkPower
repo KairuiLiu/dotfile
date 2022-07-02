@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+while true; do
+        echo $(upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -i "energy-rate" | sed 's/energy\-rate: //g' | sed 's/[0-9]\{0,3\} W$/ W/g');sleep 1
+done

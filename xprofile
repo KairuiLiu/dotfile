@@ -1,0 +1,14 @@
+export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info:$INFOPATH
+export PATH=/usr/local/texlive/2022/bin/x86_64-linux:/home/liukairui/.local/bin:$PATH
+
+GTK_IM_MODULE DEFAULT=fcitx
+QT_IM_MODULE DEFAULT=fcitx
+XMODIFIERS DEFAULT=@im=fcitx
+SDL_IM_MODULE DEFAULT=fcitx
+
+# touchegg &
+## echo "lkr0101" | sudo /usr/bin/python3 /usr/share/asus_touchpad_numpad-driver/asus_touchpad.py m433ia &
+
+export LANG=zh_CN.UTF-8
+export LANGUAGE=zh_CN:en_US

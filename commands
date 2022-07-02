@@ -1,0 +1,113 @@
+sudo pacman -Syyu
+sudo pacman -S vim wget
+wget https://github.com/KairuiLiu/dotfile/archive/refs/heads/master.zip
+sudo vim /etc/pacman.d/mirrorlist
+sudo vim /etc/pacman.conf
+sudo cp ./.dotfile/archlinuxcn-mirrorlist /etc/pacman.d/
+
+#######################################
+## add archlinux cn source ->        ##
+#######################################
+
+## /etc/pacman.conf
+## [archlinuxcn]
+## Include = /etc/pacman.d/archlinuxcn-mirrorlist
+sudo pacman -S archlinuxcn-keyring yay qv2ray v2ray
+sudo pacman -Syyu
+
+#######################################
+## reload dotfile part 1             ##
+#######################################
+
+ln -s ~/.dotfile/vimrc ~/.vimrc
+ln -s ~/.dotfile/Xmodmap ~/.Xmodmap
+ln -s ~/.dotfile/xprofile ~/.xprofilre
+# ln -s ~/.dotfile/mpdconf ~/.mpdconf
+ln -s ~/.dotfile/Xresources ~/.Xresources
+ln -s ~/.dotfile/bashrc ~/.bashrc
+ln -s ~/.dotfile/face ~/.face
+# ln -s ~/.dotfile/touchegg.conf ~/.config/touchegg
+ln -s ~/.dotfile/pam_environment ~/.pam_environment
+mkdir fileTrans
+cd fileTrans
+mkdir {c..f}
+mkdir liukairuiFtp
+cd ~/.dotfile/
+ln -s ~/.dotfile/rofi ~/.config/rofi
+ln -s ~/.dotfile/mountWin.sh ~/fileTrans/.mountWin.sh
+chmod 755 ./mountWin.sh
+
+#######################################
+## copy win-disk file ->             ##
+## install texlive ->                ##
+## install windows-fonts ->          ##
+## install app i use ->              ##
+#######################################
+
+systemctl enable tlp.service
+systemctl enable NetworkManager-dispatcher.service
+systemctl mask systemd-rfkill.service systemd-rfkill.socket
+systemctl enable bluetooth.service
+sudo cp /home/liukairui/Public/fcitx5-**/* /usr/share/fcitx5/themes/ -r
+
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone http://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+wget https://mimosa-pudica.net/src/incr-0.2.zsh && mkdir ~/.oh-my-zsh/custom/plugins/incr && mv incr-0.2.zsh ~/.oh-my-zsh/custom/plugins/incr
+ln -s ~/.dotfile/zshrc ~/.zshrc
+ln -s ~/.dotfile/p10k.zsh ~/.p10k.zsh
+ln -s ~/.dotfile/xinitrc ~/.xinitrc
+
+#######################################
+## copy chrome proxy switch ->       ##
+## vim  PluginInstall                ##
+#######################################
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+cd .vim/plugged/xkb-switch
+mkdir build && cd build
+cmake ..
+make
+sudo ldconfig
+sudo make install
+cd .vim/plugged/YouCompleteMe
+./install.py
+
+#######################################
+## howdy config                      ##
+#######################################
+
+sudo vim /lib/security/howdy/config.ini
+# set
+# device_path = /dev/video2
+# dark_threshold 100
+# rev: 640 x 360
+sudo howdy add
+sudo howdy test
+# set /etc/pam.d/sudo
+# set /etc/pam.d/kde
+# with auth sufficient pam_python.so /lib/security/howdy/pam.py
+
+######################################
+## ASUS Numpad                      ##
+######################################
+
+sudo pacman -S libevdev python-libevdev i2c-tools git
+git clone https://github.com/mohamed-badaoui/asus-touchpad-numpad-driver
+cd asus-touchpad-numpad-driver
+sudo ./install.sh
+# choose 2
+
+#######################################
+## kde theme ->                      ##
+## restore others                    ##
+#######################################
+
+ln -s ~/.dotfile/i3_config ~/.config/i3/config
+ln -s ~/.dotfile/fcitx5_config_pinyin.conf ~/.config/fcitx5/conf/pinyin.conf
+ln -s ~/.dotfile/fcitx5_config ~/.config/fcitx5/config
+ln -s ~/.dotfile/ranger ~/.config/ranger
+ln -s ~/.dotfile/polybar ~/.config/polybar
+ln -s ~/.dotfile/picom ~/.config/picom

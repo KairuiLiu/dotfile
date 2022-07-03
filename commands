@@ -111,3 +111,9 @@ ln -s ~/.dotfile/fcitx5_config ~/.config/fcitx5/config
 ln -s ~/.dotfile/ranger ~/.config/ranger
 ln -s ~/.dotfile/polybar ~/.config/polybar
 ln -s ~/.dotfile/picom ~/.config/picom
+
+#######################################
+## others                            ##
+#######################################
+
+sudo chmod 4755 /usr/bin/light

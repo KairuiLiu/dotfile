@@ -403,6 +403,7 @@ php
 picom-git
 playerctl
 polybar
+light
 libpam_pwdfile
 qqmusic-bin
 qt4

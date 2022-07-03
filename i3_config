@@ -129,6 +129,8 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+bindsym $mod+Ctrl+j exec i3 gaps inner all plus 5
+bindsym $mod+Ctrl+k exec i3 gaps inner all minus 5
 
 #######################
 ## Workspace Setting ##

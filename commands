@@ -116,4 +116,6 @@ ln -s ~/.dotfile/picom ~/.config/picom
 ## others                            ##
 #######################################
 
-sudo chmod 4755 /usr/bin/light
+sudo chmod 4755 /usr/bin/light               # enable set backlight in i3
+# edit ~/.config/Typora/conf/conf.user.json  # for Typora fix
+# set autoHideMenuBar = true

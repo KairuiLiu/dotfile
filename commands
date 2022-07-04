@@ -119,3 +119,5 @@ ln -s ~/.dotfile/picom ~/.config/picom
 sudo chmod 4755 /usr/bin/light               # enable set backlight in i3
 # edit ~/.config/Typora/conf/conf.user.json  # for Typora fix
 # set autoHideMenuBar = true
+# edit /etc/sudoers                          # for sudo pwd feedback
+# set to tail Defaults pwfeedback

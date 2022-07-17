@@ -390,6 +390,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 npm
+nutstore
 obs-studio
 ocs-url
 opencv
@@ -492,3 +493,9 @@ zscroll-git
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
+dotnet-runtime
+dotnet-sdk
+bash-completion
+lttng-ust2.12
+aspnet-targeting-pack
+mono

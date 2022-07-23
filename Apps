@@ -499,3 +499,9 @@ bash-completion
 lttng-ust2.12
 aspnet-targeting-pack
 mono
+pulseaudio-bluetooth
+pavucontrol-qt
+pulseaudio-modules-bt
+slack-desktop
+gcc-fortran
+

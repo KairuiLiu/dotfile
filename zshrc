@@ -1,10 +1,4 @@
-alias gitBKCS="cd /home/liukairui/CODE/code-snippets && git add . && git commit -m $(date '+UpDate_%Y-%m-%d_%H:%M') && git push"
-alias gitBKDRY="cd /home/liukairui/CODE/diary && git add . && git commit -m $(date '+UpDate_%Y-%m-%d_%H:%M') && git push"
-alias mwin="/home/liukairui/fileTrans/.mountWin.sh "
-alias killwx="kill -SIGTERM -- -$(ps x -o "%r %c" | awk '{ n=substr($0,index($0,$2)); if(n~/uos/){print $1;exit} }')"
-alias please="sudo "
-alias weatherSWU="curl zh.wttr.in/重庆市北碚区天生路"
-
+source ~/.dotfile/sortcut
 
 export OPENCV_LOG_LEVEL=ERROR
 
@@ -88,11 +82,11 @@ export ZSH="/home/liukairui/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
-plugins=(git 
-	zsh-syntax-highlighting 
-	zsh-autosuggestions 
-	sudo 
-	extract 
+plugins=(git
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+	sudo
+	extract
 	autojump
 	)
 

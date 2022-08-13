@@ -14,7 +14,7 @@ case $label in
         diskId=5
         ;;
     'f')
-        diskId=9
+        diskId=6
         ;;
     *)
         exit 1;

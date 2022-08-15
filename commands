@@ -121,3 +121,5 @@ sudo chmod 4755 /usr/bin/light               # enable set backlight in i3
 # set autoHideMenuBar = true
 # edit /etc/sudoers                          # for sudo pwd feedback
 # set to tail Defaults pwfeedback
+# create ~/.xdmanrco
+# set like XDMAN_JAVA_HOME=/usr/lib/jvm/java-18-openjdk

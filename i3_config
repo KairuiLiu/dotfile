@@ -27,7 +27,7 @@ exec synclient PalmMinZ=100
 exec syndaemon -t -k -i 2 -d
 
 # screen timeout
-exec --no-startup-id xset dpms 600 800 900
+exec --no-startup-id xset dpms 14464 80000 90000
 
 # xrandr
 exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080
@@ -194,5 +194,5 @@ bindsym $mod+Return exec urxvt -sh 40
 new_window none
 new_window pixel 0
 hide_edge_borders both
-for_window [class="^.*"] none
-for_window [class="^.*"] border pixel 0
+for_window [all] border pixel 0
+for_window [all] none

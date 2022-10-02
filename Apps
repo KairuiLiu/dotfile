@@ -409,7 +409,8 @@ libpam_pwdfile
 qqmusic-bin
 qt4
 r
-rstudio-desktop-git
+rstudio-desktop-bin
+rstudio-fcitx5
 ranger
 rofi
 ruby

@@ -27,7 +27,8 @@ exec synclient PalmMinZ=100
 exec syndaemon -t -k -i 2 -d
 
 # screen timeout
-exec --no-startup-id xset dpms 14464 80000 90000
+# exec --no-startup-id xset dpms 14464 80000 90000
+exec --no-startup-id xset dpms 600 800 900
 
 # xrandr
 exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080

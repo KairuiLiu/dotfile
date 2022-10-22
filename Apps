@@ -25,7 +25,8 @@ fcitx5-chewing
 fcitx5-chinese-addons-git
 fcitx5-configtool-git
 fcitx5-git
-fcitx5-gtk-git
+fcitx5-gtk
+fcitx-qt4
 fcitx5-material-color
 fcitx5-pinyin-moegirl
 fcitx5-pinyin-zhwiki

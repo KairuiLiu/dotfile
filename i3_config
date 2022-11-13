@@ -187,6 +187,9 @@ bindsym $mod+Shift+g exec google-chrome-beta
 bindsym $mod+space exec ~/.config/polybar/scripts/launcher-alt
 bindsym $mod+Ctrl+space exec ~/.config/polybar/scripts/launcher-full
 bindsym $mod+Shift+z exec subl
+bindsym $mod+Shift+t exec typora
+bindsym $mod+Shift+a exec arandr
+bindsym $mod+Shift+x exec goland-eap
 bindsym $mod+Shift+w exec wechat-uos
 bindsym $mod+Shift+y exec yesplaymusic
 bindsym $mod+Return exec urxvt -sh 40

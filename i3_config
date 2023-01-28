@@ -7,7 +7,7 @@ set $down j
 set $left h
 set $right l
 set $mod Mod4
-gaps inner 0
+gaps inner 15
 new_window pixel 0
 font pango:monospace 8
 floating_modifier $mod

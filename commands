@@ -7,13 +7,17 @@ sudo cp ./.dotfile/archlinuxcn-mirrorlist /etc/pacman.d/
 
 #######################################
 ## add archlinux cn source ->        ##
+## add archlinux cn mirror ->        ##
+## https://archlinux.org/mirrorlist/ ##
 #######################################
 
 ## /etc/pacman.conf
 ## [archlinuxcn]
 ## Include = /etc/pacman.d/archlinuxcn-mirrorlist
-sudo pacman -S archlinuxcn-keyring yay qv2ray v2ray
+sudo pacman -S archlinuxcn-keyring v2ray
 sudo pacman -Syyu
+sudo pacman -S yay
+yay -S qv2ray
 
 #######################################
 ## reload dotfile part 1             ##

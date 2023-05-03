@@ -25,7 +25,7 @@ yay -S qv2ray
 
 ln -s ~/.dotfile/vimrc ~/.vimrc
 ln -s ~/.dotfile/Xmodmap ~/.Xmodmap
-ln -s ~/.dotfile/xprofile ~/.xprofilre
+ln -s ~/.dotfile/xprofile ~/.xprofile
 # ln -s ~/.dotfile/mpdconf ~/.mpdconf
 ln -s ~/.dotfile/Xresources ~/.Xresources
 ln -s ~/.dotfile/bashrc ~/.bashrc

@@ -32,7 +32,7 @@ exec --no-startup-id xset dpms 600 800 900
 
 # xrandr
 exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080
-exec --no-startup-id xrandr --output HDMI-1 --mode 2560x1440
+exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080
 exec_always light
 
 exec xmodmap ~/.Xmodmap
@@ -58,9 +58,9 @@ bindsym $mod+Shift+F5 exec light -A 5
 bindsym $mod+F12 exec --no-startup-id i3lock-fancy
 bindsym $mod+Shift+F12 exec --no-startup-id i3lock-fancy -p
 bindsym $mod+Shift+b exec blueman-manager
-bindsym $mod+Shift+p exec xrandr --output eDP1 --off --output HDMI1 --mode 2560x1440 && killall polybar && ~/.config/polybar/launch.sh
-bindsym $mod+Ctrl+p exec xrandr --output eDP1 --mode 1920x1080 --output HDMI1 --off && killall polybar && ~/.config/polybar/launch.sh
-bindsym $mod+Ctrl+Shift+p exec xrandr --output eDP1 --mode 1920x1080 --pos 0x782 --output HDMI1 --primary --mode 2560x1440 --pos 1920x0 && killall polybar && ~/.config/polybar/launch.sh
+bindsym $mod+Shift+p exec xrandr --output eDP-1 --off --output HDMI-1 --mode 1920x1080 && killall polybar && ~/.config/polybar/launch.sh
+bindsym $mod+Ctrl+p exec xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --off && killall polybar && ~/.config/polybar/launch.sh
+bindsym $mod+Ctrl+Shift+p exec xrandr --output eDP-1 --mode 1920x1080 --pos 1920x682 --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 && killall polybar && ~/.config/polybar/launch.sh
 bindsym $mod+Ctrl+n feh --bg-scale "/home/liukairui/Pictures/i3/bkg.png"
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
@@ -187,7 +187,7 @@ bindsym $mod+Shift+g exec google-chrome-beta
 bindsym $mod+space exec ~/.config/polybar/scripts/launcher-alt
 bindsym $mod+Ctrl+space exec ~/.config/polybar/scripts/launcher-full
 bindsym $mod+Shift+z exec subl
-bindsym $mod+Shift+t exec typora
+bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+Shift+a exec arandr
 bindsym $mod+Shift+x exec goland-eap
 bindsym $mod+Shift+w exec wechat-uos

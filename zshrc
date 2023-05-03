@@ -130,3 +130,7 @@ export PATH="./node_modules/.bin:$PATH"
 
 export PNPM_HOME="/home/liukairui/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
+source ~/.xinitrc
+
+clear

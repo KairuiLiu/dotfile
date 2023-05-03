@@ -1,14 +1,13 @@
-lockfileVersion: 5.4
-
-specifiers:
-  node-fetch: '2'
+lockfileVersion: '6.0'
 
 dependencies:
-  node-fetch: 2.6.7
+  node-fetch:
+    specifier: '2'
+    version: 2.6.7
 
 packages:
 
-  /node-fetch/2.6.7:
+  /node-fetch@2.6.7:
     resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
     engines: {node: 4.x || >=6.0.0}
     peerDependencies:
@@ -20,15 +19,15 @@ packages:
       whatwg-url: 5.0.0
     dev: false
 
-  /tr46/0.0.3:
+  /tr46@0.0.3:
     resolution: {integrity: sha1-gYT9NH2snNwYWZLzpmIuFLnZq2o=}
     dev: false
 
-  /webidl-conversions/3.0.1:
+  /webidl-conversions@3.0.1:
     resolution: {integrity: sha1-JFNCdeKnvGvnvIZhHMFq4KVlSHE=}
     dev: false
 
-  /whatwg-url/5.0.0:
+  /whatwg-url@5.0.0:
     resolution: {integrity: sha1-lmRU6HZUYuN2RNNib2dCzotwll0=}
     dependencies:
       tr46: 0.0.3

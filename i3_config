@@ -112,7 +112,8 @@ bindsym $mod+Shift+space floating toggle
 ### focus the parent container
 bindsym $mod+a focus parent
 ### move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus move scratchpad
+bindsym $mod+Shift+minus scratchpad show
 
 ### set boarder
 bindsym $mod+t border normal 0
@@ -196,7 +197,7 @@ bindsym $mod+Shift+x exec goland-eap
 bindsym $mod+Shift+w exec wechat-uos
 bindsym $mod+Shift+y exec yesplaymusic
 bindsym $mod+Return exec urxvt -sh 40
-
+bindsym $mod+Shift+F1 exec killall trayer || trayer --edge top --align right
 
 new_window none
 new_window pixel 0

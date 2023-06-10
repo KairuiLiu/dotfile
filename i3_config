@@ -7,7 +7,7 @@ set $down j
 set $left h
 set $right l
 set $mod Mod4
-gaps inner 15
+gaps inner 0
 new_window pixel 0
 font pango:monospace 8
 floating_modifier $mod
@@ -42,6 +42,8 @@ exec fcitx5
 exec killall polybar
 exec ~/.config/polybar/launch.sh
 
+exec systemctl start --user dunst
+
 #######################
 ## Function Shortcut ##
 #######################
@@ -57,7 +59,8 @@ bindsym $mod+Shift+F4 exec light -U 5
 bindsym $mod+Shift+F5 exec light -A 5
 bindsym $mod+F12 exec --no-startup-id i3lock-fancy
 bindsym $mod+Shift+F12 exec --no-startup-id i3lock-fancy -p
-bindsym $mod+Shift+b exec blueman-manager
+bindsym $mod+Shift+b exec binggpt
+bindsym $mod+Shift+m exec mail-spring
 bindsym $mod+Shift+p exec xrandr --output eDP-1 --off --output HDMI-1 --mode 1920x1080 && killall polybar && ~/.config/polybar/launch.sh
 bindsym $mod+Ctrl+p exec xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --off && killall polybar && ~/.config/polybar/launch.sh
 bindsym $mod+Ctrl+Shift+p exec xrandr --output eDP-1 --mode 1920x1080 --pos 1920x682 --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 && killall polybar && ~/.config/polybar/launch.sh

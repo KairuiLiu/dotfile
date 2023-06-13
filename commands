@@ -121,10 +121,12 @@ ln -s ~/.dotfile/picom ~/.config/picom
 ## others                            ##
 #######################################
 
-sudo chmod 4755 /usr/bin/light               # enable set backlight in i3
+sudo chmod 4755 /usr/bin/light # enable set backlight in i3
 # edit ~/.config/Typora/conf/conf.user.json  # for Typora fix
 # set autoHideMenuBar = true
 # edit /etc/sudoers                          # for sudo pwd feedback
 # set to tail Defaults pwfeedback
 # create ~/.xdmanrco
 # set like XDMAN_JAVA_HOME=/usr/lib/jvm/java-20-openjdk
+# sudo rm -rf ~/.config/QQ/.crash_files/*  # for QQ
+# sudo chattr +i ~/.config/QQ/.crash_files/

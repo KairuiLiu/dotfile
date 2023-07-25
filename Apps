@@ -416,6 +416,7 @@ qqmusic-bin
 qt4
 qtkeychain
 r
+radian
 rstudio-desktop-git
 rstudio-fcitx5
 ranger
@@ -485,7 +486,7 @@ virtualbox-host-modules-arch
 virtualbox-sdk
 visual-studio-code-insiders-bin
 vsftpd
-wechat-uos
+electronic-wechat-uos-bin
 wemeet-bin
 wireshark-cli
 wireshark-qt
@@ -516,6 +517,7 @@ pavucontrol-qt
 pulseaudio-modules-bt
 slack-desktop
 gcc-fortran
+gping
 pdfarranger
 aspnet-runtime
 intellij-idea-ultimate-edition-jre
@@ -525,6 +527,7 @@ translate-shell
 python-pip
 audacity
 v2ray
+vmware-horizon-client
 qv2ray-dev-git
 clash-for-windows-bin
 jetbrains-fleet

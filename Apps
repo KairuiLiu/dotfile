@@ -486,7 +486,7 @@ virtualbox-host-modules-arch
 virtualbox-sdk
 visual-studio-code-insiders-bin
 vsftpd
-electronic-wechat-uos-bin
+wechat-uos
 wemeet-bin
 wireshark-cli
 wireshark-qt

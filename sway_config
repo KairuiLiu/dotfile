@@ -13,7 +13,8 @@ xwayland enabled
 #######################
 ## auto exec         ##
 #######################
-exec fcitx5
+exec_always fcitx5
+exec_always mako
 
 #######################
 ## In/Output         ##
@@ -55,9 +56,9 @@ bindsym $mod+F12 exec swaylock-fancy
 bindsym $mod+Shift+F12 exec swaylock-fancy -p
 bindsym $mod+Shift+b exec binggpt
 bindsym $mod+Shift+m exec mail-spring
-bindsym $mod+Shift+p exec swaymsg 'output eDP-1 disable' && swaymsg 'output HDMI-1 enable' && swaymsg 'output HDMI-1 resolution 1920x1080 position 0 0'
-bindsym $mod+Ctrl+p exec swaymsg 'output eDP-1 enable' && swaymsg 'output eDP-1 resolution 2880x1800 position 0 0 scale 2' && swaymsg 'output HDMI-1 disable'
-bindsym $mod+Ctrl+Shift+p exec swaymsg 'output eDP-1 enable' && swaymsg 'output eDP-1 resolution 2880x1800 position 1920 682 scale 2' && swaymsg 'output HDMI-1 enable primary' && swaymsg 'output HDMI-1 resolution 1920x1080 position 0 0'
+bindsym $mod+Shift+p exec swaymsg 'output eDP-1 disable' && swaymsg 'output DP-3 enable' && swaymsg 'output DP-3 resolution 1920x1080 position 0 0'
+bindsym $mod+Ctrl+p exec swaymsg 'output eDP-1 enable' && swaymsg 'output eDP-1 resolution 2880x1800 position 0 0 scale 2' && swaymsg 'output DP-3 disable'
+bindsym $mod+Ctrl+Shift+p exec swaymsg 'output eDP-1 enable' && swaymsg 'output eDP-1 resolution 2880x1800 position 1920 682 scale 2' && swaymsg 'output DP-3 enable primary' && swaymsg 'output DP-3 resolution 1920x1080 position 0 0'
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 bindsym Print exec deepin-screenshot

@@ -134,3 +134,4 @@ sudo chmod 4755 /usr/bin/light # enable set backlight in i3
 # set like XDMAN_JAVA_HOME=/usr/lib/jvm/java-20-openjdk
 # sudo rm -rf ~/.config/QQ/.crash_files/*  # for QQ
 # sudo chattr +i ~/.config/QQ/.crash_files/
+# set wayland flag on chrome (chrome://flags)

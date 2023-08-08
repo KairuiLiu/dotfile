@@ -132,5 +132,6 @@ export PNPM_HOME="/home/liukairui/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 source ~/.xinitrc
+source ~/.dotfile/env.sh
 
 clear

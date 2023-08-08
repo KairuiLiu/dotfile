@@ -1,0 +1,4 @@
+mode=drun
+allow_images=true
+columns=2
+lines=10

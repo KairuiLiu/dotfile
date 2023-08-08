@@ -1,6 +1,6 @@
-export MANPATH=/usr/local/texlive/2022/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2022/texmf-dist/doc/info:$INFOPATH
-export PATH=/usr/local/texlive/2022/bin/x86_64-linux:/home/liukairui/.local/bin:$PATH
+export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
+export PATH=/usr/local/texlive/2023/bin/x86_64-linux:/home/liukairui/.local/bin:$PATH
 
 GTK_IM_MODULE DEFAULT=fcitx
 QT_IM_MODULE DEFAULT=fcitx
@@ -15,3 +15,12 @@ export LANGUAGE=zh_CN:en_US
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 
+# I3 HIDPI
+# _envs=(
+#   GDK_SCALE GDK_DPI_SCALE
+#   XCURSOR_THEME XCURSOR_SIZE
+#   XMODIFIERS QT_IM_MODULE GTK_IM_MODULE
+#   LIBVA_DRIVER_NAME GST_VAAPI_ALL_DRIVERS
+# )
+# dbus-update-activation-environment "${_envs[@]}"
+# systemctl --user import-environment "${_envs[@]}"

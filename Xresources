@@ -37,7 +37,6 @@ URxvt.saveLines:3000
 !!边框
 URxvt.borderLess:False
 !!字体设置
-Xft.dpi:96
 URxvt.font        					: xft:MesloLGS NF:pixelsize=17:antialias=true,xft:MesloLGS NF,xft:文泉驿等宽微米黑:pexelsize=18:antialias=true,xtf:Inconsolata for Powerline:pixelsize=17:antialias=true
 URxvt.boldFont    					: xft:MesloLGS NF:pixelsize=17:weight=bold:antialias=true,xft:MesloLGS NF,xft:文泉驿等宽微米黑:pexelsize=18:antialias=true,xtf:Powerline:pixelsize=17:antialias=true
 URxvt.italicFont  					: xft:MesloLGS NF:pixelsize=17:weight=italic:antialias=true,xft:MesloLGS NF,xft:文泉驿等宽微米黑:pexelsize=18:antialias=true,xtf:Powerline:pixelsize=17:antialias=true
@@ -45,3 +44,7 @@ URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 URxvt.keysym.Control-Meta-c: builtin-string:
 URxvt.keysym.Control-Meta-v: builtin-string:
+Xft.dpi:96
+!! I3 HIDPI
+!!Xft.dpi: 192
+!!Xcursor.size: 40

@@ -16,7 +16,6 @@ bluez-libs
 bluez-qt
 bluez-utils
 cairo
-cajviewer-appimage
 cmake
 cowsay
 ctags
@@ -34,6 +33,7 @@ fcitx5-configtool
 fcitx5-gtk
 fcitx5-pinyin-moegirl
 fcitx5-qt4-git
+fcitx5-qt5-git
 fcitx5-qt6-git
 feh
 feishu-bin
@@ -417,8 +417,7 @@ qt4
 qtkeychain
 r
 radian
-rstudio-desktop-git
-rstudio-fcitx5
+rstudio-desktop-bin
 ranger
 rofi
 ruby
@@ -545,3 +544,22 @@ rust
 sqlitestudio
 ttf-babelstone-han
 vi
+tlpui
+plasma-wayland-session
+wayland
+xorg-xwayland
+qt5-wayland
+qt6-wayland
+xorg-xlsclients
+glfw-wayland
+plasma
+kde-applications
+sway
+swayidel
+foot-terminfo
+dmenu
+foot
+swaybg
+swaylock-fancy-git
+mako
+rstudio-fcitx5 # only for git version

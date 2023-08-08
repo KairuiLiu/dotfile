@@ -31,7 +31,7 @@ exec syndaemon -t -k -i 2 -d
 exec --no-startup-id xset dpms 600 800 900
 
 # xrandr
-exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080
+exec --no-startup-id xrandr --output eDP-1 --mode 2880x1800 
 exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080
 exec_always light
 

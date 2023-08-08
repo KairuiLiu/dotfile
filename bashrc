@@ -145,7 +145,7 @@ alias_setting="~/bash_aliases"
 if [[ -f ${alias_setting} ]]; then
   . ${alias_setting}
 fi
-export PATH=$PATH:usr/bin 
+export PATH=$PATH:usr/bin
 export PATH=$PATH:usr/include/c++
 export LANGUAGE="zh_CN:UTF-8"
 export LANG="zh_CN.UTF-8"
@@ -155,5 +155,4 @@ export http_proxy=''
 export https_proxy=''
 export ftp_proxy=''
 export socks_proxy=''
-
 

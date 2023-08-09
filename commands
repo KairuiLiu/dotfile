@@ -120,6 +120,7 @@ ln -s ~/.dotfile/polybar ~/.config/polybar
 ln -s ~/.dotfile/picom ~/.config/picom
 ln -s ~/.dotfile/profile ~/.profile
 ln -s ~/.dotfile/mako_config ~/.config/mako/config
+ln -s ~/.dotfile/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 #######################################
 ## others                            ##
@@ -134,4 +135,15 @@ sudo chmod 4755 /usr/bin/light # enable set backlight in i3
 # set like XDMAN_JAVA_HOME=/usr/lib/jvm/java-20-openjdk
 # sudo rm -rf ~/.config/QQ/.crash_files/*  # for QQ
 # sudo chattr +i ~/.config/QQ/.crash_files/
+
+#######################################
+## sway                              ##
+#######################################
+# install sway-im via https://github.com/sunng87/sway-im.aur
+## git clone  git@github.com:sunng87/sway-im.aur.git
+## cd sway-im.aur
+## makepkg -s
+## yay -U sway-im-1:1.8.1-1-x86_64.pkg.tar.zst
 # set wayland flag on chrome (chrome://flags)
+# register gtk3.0 4.0 with comment gtk-modules gtk-im-module=fcitx
+# register local env to global

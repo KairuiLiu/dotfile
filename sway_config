@@ -7,13 +7,13 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term foot
+set $term alacritty
 xwayland enabled
 
 #######################
 ## auto exec         ##
 #######################
-exec_always fcitx5
+exec_always --no-startup-id fcitx5 -d --replace
 exec_always mako
 
 #######################
@@ -61,7 +61,7 @@ bindsym $mod+Ctrl+p exec swaymsg 'output eDP-1 enable' && swaymsg 'output eDP-1 
 bindsym $mod+Ctrl+Shift+p exec swaymsg 'output eDP-1 enable' && swaymsg 'output eDP-1 resolution 2880x1800 position 1920 682 scale 2' && swaymsg 'output DP-3 enable primary' && swaymsg 'output DP-3 resolution 1920x1080 position 0 0'
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
-bindsym Print exec deepin-screenshot
+bindsym Print exec grim -g "$(slurp)" - | swappy -f -
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
@@ -172,13 +172,13 @@ bindsym $mod+Shift+0 move container to workspace number 10
 ##################
 ## App Shortcut ##
 ##################
-bindsym $mod+Shift+s exec --no-startup-id deepin-screenshot
-bindsym $mod+Shift+d exec dolphin
-bindsym $mod+Shift+v exec qv2ray
+bindsym $mod+Shift+s exec --no-startup-id grim -g "$(slurp)" - | swappy -f -
+bindsym $mod+Shift+d exec source ~/.dotfile/env.sh && dolphin
+bindsym $mod+Shift+v exec source ~/.dotfile/env.sh && qv2ray
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec code-insiders
-bindsym $mod+Shift+g exec google-chrome-beta
-bindsym $mod+space exec wofi run
+bindsym $mod+Shift+g exec source ~/.dotfile/env.sh && /opt/google/chrome-beta/google-chrome-beta --gtk-version=4
+bindsym $mod+space exec source ~/.dotfile/env.sh && wofi run
 bindsym $mod+Shift+z exec subl
 bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+Shift+a exec arandr
@@ -187,6 +187,7 @@ bindsym $mod+Shift+w exec wechat-uos
 bindsym $mod+Shift+y exec yesplaymusic
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+F1 exec killall trayer || trayer --edge top --align right
+
 
 #
 # Status Bar:

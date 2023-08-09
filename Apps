@@ -417,7 +417,7 @@ qt4
 qtkeychain
 r
 radian
-rstudio-desktop-git
+rstudio-desktop-bin
 ranger
 rofi
 ruby
@@ -562,4 +562,15 @@ foot
 swaybg
 swaylock-fancy-git
 mako
+sway-im
+fish
+paru
+asp
+bat
+fcitx5-mozc-git
+swappy-git
+slurp
+shotman
+wl-clipboard
+grimshot
 rstudio-fcitx5 # only for git version

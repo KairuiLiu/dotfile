@@ -19,9 +19,9 @@ exec_always mako
 #######################
 ## In/Output         ##
 #######################
-output * bg /home/liukairui/Pictures/sway/bkg.png fill
-output eDP-1 resolution 2880x1800 position 0 0 scale 2
-output DP-3 resolution 1920x1080 position 0 0
+output * bg ~/Pictures/sway/bkg.png fill
+# output eDP-1 resolution 2880x1800 position 0 0 scale 2
+# output DP-3 resolution 1920x1080 position 0 0
 
 exec swayidle -w \
     timeout 300 'swaylock-fancy' \
@@ -56,9 +56,9 @@ bindsym $mod+F12 exec swaylock-fancy
 bindsym $mod+Shift+F12 exec swaylock-fancy -p
 bindsym $mod+Shift+b exec binggpt
 bindsym $mod+Shift+m exec mail-spring
-bindsym $mod+Shift+p exec swaymsg 'output eDP-1 disable' && swaymsg 'output DP-3 enable' && swaymsg 'output DP-3 resolution 1920x1080 position 0 0'
-bindsym $mod+Ctrl+p exec swaymsg 'output eDP-1 enable' && swaymsg 'output eDP-1 resolution 2880x1800 position 0 0 scale 2' && swaymsg 'output DP-3 disable'
-bindsym $mod+Ctrl+Shift+p exec swaymsg 'output eDP-1 enable' && swaymsg 'output eDP-1 resolution 2880x1800 position 1920 682 scale 2' && swaymsg 'output DP-3 enable primary' && swaymsg 'output DP-3 resolution 1920x1080 position 0 0'
+bindsym $mod+Shift+p exec ~/.dotfile/muti-monitor-switch.sh external_only
+bindsym $mod+Ctrl+p exec ~/.dotfile/muti-monitor-switch.sh edp_only
+bindsym $mod+Ctrl+Shift+p exec ~/.dotfile/muti-monitor-switch.sh both
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 bindsym Print exec grim -g "$(slurp)" - | swappy -f -
@@ -177,11 +177,12 @@ bindsym $mod+Shift+d exec source ~/.dotfile/env.sh && dolphin
 bindsym $mod+Shift+v exec source ~/.dotfile/env.sh && qv2ray
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec code-insiders
+# bindsym $mod+Ctrl+Shift+c exec code-insiders
 bindsym $mod+Shift+g exec source ~/.dotfile/env.sh && /opt/google/chrome-beta/google-chrome-beta --gtk-version=4
 bindsym $mod+space exec source ~/.dotfile/env.sh && wofi run
 bindsym $mod+Shift+z exec subl
 bindsym $mod+Shift+t exec telegram-desktop
-bindsym $mod+Shift+a exec arandr
+bindsym $mod+Shift+a exec wdisplays
 bindsym $mod+Shift+x exec goland-eap
 bindsym $mod+Shift+w exec wechat-uos
 bindsym $mod+Shift+y exec yesplaymusic

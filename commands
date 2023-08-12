@@ -121,6 +121,8 @@ ln -s ~/.dotfile/picom ~/.config/picom
 ln -s ~/.dotfile/profile ~/.profile
 ln -s ~/.dotfile/mako_config ~/.config/mako/config
 ln -s ~/.dotfile/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -s ~/.dotfile/clight.conf ~/.config/clight.conf
+ln -s ~/.dotfile/waybar ~/.config/waybar
 
 #######################################
 ## others                            ##

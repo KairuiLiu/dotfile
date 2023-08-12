@@ -574,3 +574,15 @@ shotman
 wl-clipboard
 grimshot
 rstudio-fcitx5 # only for git version
+tk
+v4l2-loopback
+wf-recorder
+v4l2loopback-dkms
+obs-v4l2sink
+xdg-desktop-portal
+xdg-desktop-portal-wlr
+v4l2loopback
+v4l2loopback-utils
+clightd
+waybar
+pavucontrol

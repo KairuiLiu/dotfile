@@ -1,0 +1,12 @@
+{
+    "name": "bar_tray",
+    "layer": "bottom",
+    "height": 22,
+    "spacing": 4,
+    "modules-left": [],
+    "modules-center": [],
+    "modules-right": ["tray"],
+    "tray": {
+        "spacing": 10
+    }
+}

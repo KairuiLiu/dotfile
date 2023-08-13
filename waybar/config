@@ -5,7 +5,7 @@
     "spacing": 4,
     "modules-left": ["custom/wofi", "sway/workspaces", "sway/mode", "sway/scratchpad", "custom/mrpis-control", "custom/mrpis-prev", "custom/mrpis-play-pause", "custom/mrpis-next", "custom/mrpis-process", "custom/mrpis-status", "custom/ypm-lyric"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/weather", "network", "cpu", "temperature", "memory", "disk", "pulseaudio", "battery", "backlight", "clock", "custom/tray_button"],
+    "modules-right": ["custom/weather", "network", "cpu", "temperature", "memory", "disk", "pulseaudio", "battery", "custom/power", "backlight", "clock", "custom/tray_button"],
 
     "custom/wofi":{
         "format": "",
@@ -49,17 +49,17 @@
     "custom/weather": {
         "format": "{}",
         "return-type": "text",
-        "exec": "curl -s wttr.in/Grafton%20Auckland?format=\"%c%t\"",
-        "interval": 900
+        "exec": "~/.config/waybar/scripts/weather.sh",
+        "interval": 1
     },
     "network": {
         "interval": 1,
-        "format-wifi": " {bandwidthDownBits}   {bandwidthUpBits}  󰖩  {essid}",
-        "format-ethernet": " {bandwidthDownBits}  {bandwidthUpBits}  󰈀  {ifname}",
+        "format-wifi": " {bandwidthDownBytes}   {bandwidthUpBytes}  󰖩  {essid}",
+        "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes}  󰈀  {ifname}",
         "tooltip-format": "󰈀 {ifname} via {gwaddr}",
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": " Disconnected",
-        "format-alt": " {bandwidthDownBits}   {bandwidthUpBits}  {ifname}@{signalStrength}%: {ipaddr}/{cidr} "
+        "format-alt": " {bandwidthDownBytes}   {bandwidthUpBytes}  {ifname}@{signalStrength}%: {ipaddr}/{cidr} "
     },
     "cpu": {
         "format": " {usage}%",
@@ -108,6 +108,12 @@
         "format-alt": "{icon} {time}",
         "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
     },
+    "custom/power": {
+        "format": "@ {}",
+        "return-type": "text",
+        "exec": "~/.config/waybar/scripts/power.sh",
+        "interval": 8
+    },
     "backlight": {
         "scroll-step": 3,
         "format": "{icon} {percent}%",
@@ -134,18 +140,18 @@
     },
 
     "custom/mrpis-prev": {
-        "format": "",
+        "format": "󰄽",
         "on-click": "~/.config/waybar/scripts/mpris/mpris_control.sh --previous"
     },
 
 
     "custom/mrpis-play-pause": {
-        "format": "",
+        "format": "󰐎",
         "on-click": "~/.config/waybar/scripts/mpris/mpris_control.sh --playpause"
     },
 
     "custom/mrpis-next": {
-        "format": "",
+        "format": "󰄾",
         "on-click": "~/.config/waybar/scripts/mpris/mpris_control.sh --next"
     },
 

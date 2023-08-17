@@ -15,7 +15,7 @@ xwayland enabled
 #######################
 exec_always --no-startup-id fcitx5 -d --replace
 exec_always mako
-exec --no-startup-id waybar
+exec_always "kill $(pgrep waybar); waybar"
 
 #######################
 ## In/Output         ##
@@ -97,6 +97,7 @@ bindsym $mod+v splitv
 
 ### enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
+# [WIP] bindsym $mod+Ctrl+f fullscreen toggle fake
 
 ### change layout
 bindsym $mod+s layout stacking
@@ -176,7 +177,7 @@ bindsym $mod+Shift+s exec --no-startup-id grim -g "$(slurp)" - | swappy -f -
 bindsym $mod+Shift+d exec source ~/.dotfile/env.sh && dolphin
 bindsym $mod+Shift+v exec source ~/.dotfile/env.sh && qv2ray
 bindsym $mod+Shift+f exec feishu
-bindsym $mod+Shift+c exec code-insiders
+bindsym $mod+Shift+c exec "code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
 # bindsym $mod+Ctrl+Shift+c exec code-insiders
 bindsym $mod+Shift+g exec source ~/.dotfile/env.sh && /opt/google/chrome-beta/google-chrome-beta --gtk-version=4
 bindsym $mod+space exec source ~/.dotfile/env.sh && wofi run
@@ -188,5 +189,7 @@ bindsym $mod+Shift+w exec wechat-uos
 bindsym $mod+Shift+y exec yesplaymusic
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+F1 exec pgrep -f 'waybar --config ~/.config/waybar/config_tray' && (ps aux | grep 'waybar --config ~/.config/waybar/config_tray' | grep -v grep | awk '{print $2}' | xargs kill) || (waybar --config ~/.config/waybar/config_tray &)
+
+# [WIP] for_window [app_id="code-insiders-url-handler"] fullscreen fake
 
 include /etc/sway/config.d/*

@@ -586,3 +586,16 @@ v4l2loopback-utils
 clightd
 waybar
 pavucontrol
+htop
+
+# flutter
+flutter
+android-sdk
+android-emulator
+android-sdk-platform-tools
+android-studio
+android-tools
+android-udev
+ncurses5-compat-libs
+android-tools
+android-udev

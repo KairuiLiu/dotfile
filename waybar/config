@@ -50,7 +50,7 @@
         "format": "{}",
         "return-type": "text",
         "exec": "~/.config/waybar/scripts/weather.sh",
-        "interval": 1
+        "interval": 600
     },
     "network": {
         "interval": 1,

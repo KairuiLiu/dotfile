@@ -5,16 +5,13 @@ label="$1"
 
 case $label in
     'c')
-        diskId=3
+        diskId=2
         ;;
     'd')
         diskId=4
         ;;
     'e')
         diskId=5
-        ;;
-    'f')
-        diskId=6
         ;;
     *)
         exit 1;

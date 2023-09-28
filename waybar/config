@@ -3,7 +3,7 @@
     "layer": "top",
     "height": 24,
     "spacing": 4,
-    "modules-left": ["custom/wofi", "sway/workspaces", "sway/mode", "sway/scratchpad", "custom/mrpis-control", "custom/mrpis-prev", "custom/mrpis-play-pause", "custom/mrpis-next", "custom/mrpis-process", "custom/mrpis-status", "custom/ypm-lyric"],
+    "modules-left": ["custom/wofi", "sway/workspaces", "custom/whv", "sway/mode", "sway/scratchpad", "custom/mrpis-control", "custom/mrpis-prev", "custom/mrpis-play-pause", "custom/mrpis-next", "custom/mrpis-process", "custom/mrpis-status", "custom/ypm-lyric"],
     "modules-center": ["sway/window"],
     "modules-right": ["custom/weather", "network", "cpu", "temperature", "memory", "disk", "pulseaudio", "battery", "custom/power", "backlight", "clock", "custom/tray_button"],
 
@@ -182,5 +182,12 @@
         "format": "{}",
         "return-type": "text",
         "exec": "~/.config/waybar/scripts/lyric/lyric.bash"
+    },
+
+    "custom/whv": {
+        "interval": 300,
+        "format": "{}",
+        "return-type": "text",
+        "exec": "~/.config/waybar/scripts/whv.bash"
     }
 }

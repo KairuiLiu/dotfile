@@ -113,8 +113,6 @@ sudo ./install.sh
 ln -s ~/.dotfile/i3_config ~/.config/i3/config
 ln -s ~/.dotfile/sway_config ~/.config/sway/config
 ln -s ~/.dotfile/dunstrc ~/.config/dunst/dunstrc
-ln -s ~/.dotfile/fcitx5_config_pinyin.conf ~/.config/fcitx5/conf/pinyin.conf
-ln -s ~/.dotfile/fcitx5_config ~/.config/fcitx5/config
 ln -s ~/.dotfile/ranger ~/.config/ranger
 ln -s ~/.dotfile/polybar ~/.config/polybar
 ln -s ~/.dotfile/picom ~/.config/picom
@@ -123,6 +121,7 @@ ln -s ~/.dotfile/mako_config ~/.config/mako/config
 ln -s ~/.dotfile/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -s ~/.dotfile/clight.conf ~/.config/clight.conf
 ln -s ~/.dotfile/waybar ~/.config/waybar
+ln -s ~/.dotfile/fcitx5 ~/.config/
 
 #######################################
 ## others                            ##

@@ -179,7 +179,7 @@ bindsym $mod+Shift+v exec source ~/.dotfile/env.sh && qv2ray
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec "code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
 # bindsym $mod+Ctrl+Shift+c exec code-insiders
-bindsym $mod+Shift+g exec source ~/.dotfile/env.sh && /opt/google/chrome-beta/google-chrome-beta --gtk-version=4
+bindsym $mod+Shift+g exec source ~/.dotfile/env.sh && /usr/bin/google-chrome-unstable --gtk-version=4
 bindsym $mod+space exec source ~/.dotfile/env.sh && wofi run
 bindsym $mod+Shift+z exec subl
 bindsym $mod+Shift+t exec telegram-desktop

@@ -175,7 +175,7 @@ bindsym $mod+Shift+0 move container to workspace number 10
 ##################
 bindsym $mod+Shift+s exec --no-startup-id grim -g "$(slurp)" - | swappy -f -
 bindsym $mod+Shift+d exec source ~/.dotfile/env.sh && dolphin
-bindsym $mod+Shift+v exec source ~/.dotfile/env.sh && qv2ray
+bindsym $mod+Shift+v exec source ~/.dotfile/env.sh && cfw
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec "code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
 # bindsym $mod+Ctrl+Shift+c exec code-insiders

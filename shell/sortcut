@@ -13,6 +13,7 @@ alias google-chrome-unstable-wayland="/usr/bin/google-chrome-unstable --gtk-vers
 alias rstudio-wayland="rstudio --gtk-version=3 --enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias code-insiders-wayland="code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
 alias android-studio-wayland="QT_QPA_PLATFORM=xcb android-studio"
+
 alias git-proxy="git config --global https.proxy http://127.0.0.1:37179 ; git config --global http.proxy http://127.0.0.1:37179"
 alias git-unproxy="git config --global --unset http.proxy ; git config --global --unset https.proxy"
 

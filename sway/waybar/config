@@ -9,7 +9,7 @@
 
     "custom/wofi":{
         "format": "",
-        "on-click": "source ~/.dotfile/env.sh && wofi run"
+        "on-click": "source ~/.dotfile/shell/env.sh && wofi run"
     },
 
     "sway/workspaces": {

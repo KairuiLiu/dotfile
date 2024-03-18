@@ -1,0 +1,154 @@
+#######################################
+## Get dotfile from github           ##
+#######################################
+
+sudo pacman -Syyu
+sudo pacman -S vim wget git
+ssh-keygen -t ed25519 -C "tclkr@live.com"
+cat .ssh/id_ed25519.pub
+# add ssh key to github
+git clone git@github.com:KairuiLiu/dotfile.git .dotfile
+
+#######################################
+## Pacman & aur config               ##
+#######################################
+
+# get mirrorlist from https://archlinux.org/mirrorlist/
+sudo vim /etc/pacman.d/mirrorlist
+sudo cp ./.dotfile/aur/archlinuxcn-mirrorlist /etc/pacman.d/
+sudo pacman -Syyu
+sudo pacman -S archlinuxcn-keyring
+sudo pacman -S clash-for-windows-bin yay
+
+#######################################
+## X.org config                      ##
+#######################################
+
+ln -s ~/.dotfile/x.org/Xresources ~/.Xresources
+ln -s ~/.dotfile/x.org/Xmodmap ~/.Xmodmap
+ln -s ~/.dotfile/x.org/xinitrc ~/.xinitrc
+ln -s ~/.dotfile/x.org/picom ~/.config/picom
+
+#######################################
+## shell                             ##
+#######################################
+
+ln -s ~/.dotfile/shell/zshrc ~/.zshrc
+ln -s ~/.dotfile/shell/bashrc ~/.bashrc
+ln -s ~/.dotfile/shell/xprofile ~/.xprofile
+ln -s ~/.dotfile/shell/p10k.zsh ~/.p10k.zsh
+ln -s ~/.dotfile/shell/pam_environment ~/.pam_environment
+ln -s ~/.dotfile/shell/profile ~/.profile
+
+git-proxy
+cli-proxy
+
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone http://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+wget https://mimosa-pudica.net/src/incr-0.2.zsh && mkdir ~/.oh-my-zsh/custom/plugins/incr && mv incr-0.2.zsh ~/.oh-my-zsh/custom/plugins/incr
+
+#######################################
+## windows files                     ##
+#######################################
+
+# copy win-disk file
+# install windows-fonts -> /usr/local/share/fonts/
+fc-cache
+sudo fc-cache
+
+mkdir -p fileTrans/{c..f} fileTrans/liukairuiFtp
+ln -s ~/.dotfile/shell/mountWin.sh ~/fileTrans/mountWin.sh
+chmod 755 .dotfile/shell/mountWin.sh
+
+#######################################
+## install software                  ##
+#######################################
+
+# install texlive
+# install aur/apps
+# copy chrome proxy switch
+systemctl enable tlp.service
+systemctl enable NetworkManager-dispatcher.service
+systemctl mask systemd-rfkill.service systemd-rfkill.socket
+systemctl enable bluetooth.service
+
+#######################################
+## sway config                       ##
+#######################################
+
+ln -s ~/.dotfile/sway/sway/sway_config ~/.config/sway/config
+ln -s ~/.dotfile/sway/mako_config ~/.config/mako/config
+ln -s ~/.dotfile/sway/waybar ~/.config/waybar
+ln -s ~/.dotfile/sway/alacritty.yml ~/.config/alacritty/alacritty.yml
+# set wayland flag on chrome (chrome://flags)
+ln -s ~/.dotfile/sway/wofi ~/.config/wofi
+
+#######################################
+## i3 config                         ##
+#######################################
+
+ln -s ~/.dotfile/i3wm/i3_config ~/.config/i3/config
+ln -s ~/.dotfile/i3wm/polybar ~/.config/polybar
+ln -s ~/.dotfile/i3wm/dunstrc ~/.config/dunst/dunstrc
+ln -s ~/.dotfile/i3wm/rofi ~/.config/rofi
+sudo chmod 4755 /usr/bin/light # enable set backlight in i3
+# ln -s ~/.dotfile/i3wm/touchegg.conf ~/.config/touchegg
+
+#######################################
+## howdy config                      ##
+#######################################
+
+sudo vim /lib/security/howdy/config.ini
+# set
+# device_path = /dev/video2
+# dark_threshold 100
+# rev: 640 x 360
+sudo howdy add
+sudo howdy test
+# set /etc/pam.d/sudo
+# set /etc/pam.d/kde
+# with auth sufficient pam_python.so /lib/security/howdy/pam.py
+
+#######################################
+## Vim                               ##
+#######################################
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+ln -s ~/.dotfile/misc/vimrc ~/.vimrc
+cd .vim/plugged/xkb-switch
+mkdir build && cd build
+cmake ..
+make
+sudo ldconfig
+sudo make install
+cd .vim/plugged/YouCompleteMe
+./install.py
+
+#######################################
+## misc                              ##
+#######################################
+
+ln -s ~/.dotfile/misc/ranger ~/.config/ranger
+ln -s ~/.dotfile/misc/clight.conf ~/.config/clight.conf
+ln -s ~/.dotfile/fcitx5 ~/.config/
+sudo cp /home/liukairui/Public/fcitx5-**/* /usr/share/fcitx5/themes/ -r
+
+# Typora Fix
+vim ~/.config/Typora/conf/conf.user.json
+# set autoHideMenuBar = true
+
+# Sudo Pwd Feedback
+edit /etc/sudoers
+# set to tail Defaults pwfeedback
+
+# create ~/.xdmanrco
+# set like XDMAN_JAVA_HOME=/usr/lib/jvm/java-20-openjdk
+
+# QQ Crash File Fix
+sudo rm -rf ~/.config/QQ/.crash_files/*
+sudo chattr +i ~/.config/QQ/.crash_files/
+
+ln -s ~/.dotfile/misc/mpdconf ~/.mpdconf
+ln -s ~/.dotfile/misc/face ~/.face

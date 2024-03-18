@@ -1,4 +1,4 @@
-source ~/.dotfile/sortcut
+source ~/.dotfile/shell/sortcut
 
 export OPENCV_LOG_LEVEL=ERROR
 
@@ -122,8 +122,8 @@ eval $(thefuck --alias)
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.dotfile/p10k.zsh.
-[[ ! -f ~/.dotfile/p10k.zsh ]] || source ~/.dotfile/p10k.zsh
+# To customize prompt, run `p10k configure` or edit ~/.dotfile/shell/p10k.zsh.
+[[ ! -f ~/.dotfile/shell/p10k.zsh ]] || source ~/.dotfile/shell/p10k.zsh
 
 export PATH="./node_modules/.bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
@@ -132,6 +132,6 @@ export PNPM_HOME="/home/liukairui/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
 source ~/.xinitrc
-source ~/.dotfile/env.sh
+source ~/.dotfile/shell/env.sh
 
 clear

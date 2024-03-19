@@ -27,6 +27,7 @@
     - ffmpeg
     - feh
     - opencv
+    - w3m // image viewer
   - Bluetooth:
     - bluez
     - bluez-libs
@@ -593,6 +594,7 @@
   - gping // better ping
   - lolcat
   - parallel
+  - fzf // fuzzy finder
   - Editor:
     - ctags
     - neovim

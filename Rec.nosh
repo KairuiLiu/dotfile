@@ -154,3 +154,5 @@ sudo chattr +i ~/.config/QQ/.crash_files/
 
 ln -s ~/.dotfile/misc/mpdconf ~/.mpdconf
 ln -s ~/.dotfile/misc/face ~/.face
+
+# Check export

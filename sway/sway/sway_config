@@ -182,7 +182,7 @@ bindsym $mod+space exec ~/.dotfile/sway/sway/run-rofi.sh
 bindsym $mod+Shift+z exec subl
 bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+Shift+a exec wdisplays
-# bindsym $mod+Shift+x exec goland
+bindsym $mod+Shift+x exec $term -e ranger
 bindsym $mod+Shift+w exec wechat-uos
 bindsym $mod+Shift+y exec /opt/YesPlayMusic/yesplaymusic
 bindsym $mod+Return exec $term

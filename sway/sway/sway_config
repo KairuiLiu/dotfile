@@ -1,4 +1,3 @@
-exec source ~/.dotfile/shell/env.sh
 #######################
 ## sway setting      ##
 #######################
@@ -53,8 +52,8 @@ bindsym $mod+F4 exec light -U 1
 bindsym $mod+F5 exec light -A 1
 bindsym $mod+Shift+F4 exec light -U 5
 bindsym $mod+Shift+F5 exec light -A 5
-bindsym $mod+F12 exec source ~/.dotfile/shell/env.sh && swaylock-fancy
-bindsym $mod+Shift+F12 exec source ~/.dotfile/shell/env.sh && swaylock-fancy -p
+bindsym $mod+F12 exec swaylock-fancy
+bindsym $mod+Shift+F12 exec swaylock-fancy -p
 bindsym $mod+Shift+b exec binggpt
 bindsym $mod+Shift+p exec ~/.dotfile/sway/sway/muti-monitor-switch.sh external_only
 bindsym $mod+Ctrl+p exec ~/.dotfile/sway/sway/muti-monitor-switch.sh edp_only
@@ -174,14 +173,14 @@ bindsym $mod+Shift+0 move container to workspace number 10
 ## App Shortcut ##
 ##################
 bindsym $mod+Shift+s exec --no-startup-id grim -g "$(slurp)" - | swappy -f -
-bindsym $mod+Shift+d exec source ~/.dotfile/shell/env.sh && dolphin
-bindsym $mod+Shift+v exec source ~/.dotfile/shell/env.sh && cfw
+bindsym $mod+Shift+d exec dolphin
+bindsym $mod+Shift+v exec cfw
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec "code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
-bindsym $mod+Shift+g exec source ~/.dotfile/shell/env.sh && /usr/bin/google-chrome-beta --gtk-version=4
-bindsym $mod+space exec source ~/.dotfile/shell/env.sh && ~/.dotfile/sway/sway/run-rofi.sh
-bindsym $mod+Shift+z exec source ~/.dotfile/shell/env.sh && subl
-bindsym $mod+Shift+t exec source ~/.dotfile/shell/env.sh && telegram-desktop
+bindsym $mod+Shift+g exec /usr/bin/google-chrome-beta --gtk-version=4
+bindsym $mod+space exec ~/.dotfile/sway/sway/run-rofi.sh
+bindsym $mod+Shift+z exec subl
+bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+Shift+a exec wdisplays
 # bindsym $mod+Shift+x exec goland
 bindsym $mod+Shift+w exec wechat-uos

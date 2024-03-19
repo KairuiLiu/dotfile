@@ -84,7 +84,7 @@ ln -s ~/.dotfile/sway/waybar ~/.config/waybar
 ln -s ~/.dotfile/sway/alacritty.yml ~/.config/alacritty/alacritty.yml
 # set wayland flag on chrome (chrome://flags)
 ln -s ~/.dotfile/sway/wofi ~/.config/wofi
-sudo ln -s ~/.dotfile/sway/sway/sway-custom.desktop /usr/share/wayland-sessions/
+sudo cp ~/.dotfile/sway/sway/sway-custom-env.desktop /usr/share/wayland-sessions/
 
 #######################################
 ## i3 config                         ##
@@ -135,6 +135,7 @@ ln -s ~/.dotfile/misc/ranger ~/.config/ranger
 ln -s ~/.dotfile/misc/clight.conf ~/.config/clight.conf
 ln -s ~/.dotfile/fcitx5 ~/.config/
 sudo cp /home/liukairui/Public/fcitx5-**/* /usr/share/fcitx5/themes/ -r
+# Set Kde Virtual Keyboard as fcitx5
 
 # Typora Fix
 vim ~/.config/Typora/conf/conf.user.json

@@ -511,6 +511,7 @@
   - rabbitmq
   - qemu-base
   - virt-manager // virtual machine manager
+  - sublime-merge
 - Proxy:
   - openvpn
   - qv2ray-dev-git

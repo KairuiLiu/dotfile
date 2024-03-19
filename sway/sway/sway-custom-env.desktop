@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Sway with Custom Environment
+Name=Sway(Changed Env)
 Comment=This session logs you into Sway with custom environment variables
-Exec=~/.dotfile/sway/sway/start-sway.sh
+Exec=/home/liukairui/.dotfile/sway/sway/start-sway.sh
 Type=Application
 

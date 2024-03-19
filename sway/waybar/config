@@ -9,7 +9,7 @@
 
     "custom/rofi":{
         "format": "",
-        "on-click": "source ~/.dotfile/shell/env.sh && ~/.dotfile/sway/sway/run-rofi.sh"
+        "on-click": "~/.dotfile/sway/sway/run-rofi.sh"
     },
 
     "sway/workspaces": {

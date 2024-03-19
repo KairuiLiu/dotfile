@@ -3,13 +3,13 @@
     "layer": "top",
     "height": 24,
     "spacing": 4,
-    "modules-left": ["custom/wofi", "sway/workspaces", "sway/mode", "sway/scratchpad", "custom/mrpis-control", "custom/mrpis-prev", "custom/mrpis-play-pause", "custom/mrpis-next", "custom/mrpis-process", "custom/mrpis-status", "custom/ypm-lyric"],
+    "modules-left": ["custom/rofi", "sway/workspaces", "sway/mode", "sway/scratchpad", "custom/mrpis-control", "custom/mrpis-prev", "custom/mrpis-play-pause", "custom/mrpis-next", "custom/mrpis-process", "custom/mrpis-status", "custom/ypm-lyric"],
     "modules-center": ["sway/window"],
     "modules-right": ["custom/weather", "network", "cpu", "temperature", "memory", "disk", "pulseaudio", "battery", "custom/power", "backlight", "clock", "custom/tray_button"],
 
-    "custom/wofi":{
+    "custom/rofi":{
         "format": "",
-        "on-click": "source ~/.dotfile/shell/env.sh && wofi run"
+        "on-click": "source ~/.dotfile/shell/env.sh && ~/.dotfile/sway/sway/run-rofi.sh"
     },
 
     "sway/workspaces": {

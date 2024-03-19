@@ -1,15 +1,12 @@
 #!/bin/bash
 
-# 检查是否提供了一个命令行参数
 if [[ $# -ne 1 ]]; then
     echo "Usage: $0 <path-to-app-list.yaml>"
     exit 1
 fi
 
-# 从命令行参数获取 app-list.yaml 文件的路径
 APP_LIST_PATH="$1"
 
-# 解析 app-list.yaml 文件以获取备份应用列表，忽略以冒号结尾的名称
 parseBackedApp() {
     local apps=()
     while IFS= read -r line; do
@@ -22,7 +19,6 @@ parseBackedApp() {
     echo "${apps[*]}"
 }
 
-# 获取软件包的组
 getGroups() {
     local software="$1"
     local groups
@@ -34,12 +30,10 @@ getGroups() {
     fi
 }
 
-# 获取已安装的包
 getInstalledPackage() {
     yay -Qqe | tr '\n' ' '
 }
 
-# 生成差异
 genDiff() {
     read -ra backedPackages <<< "$(parseBackedApp)"
     read -ra installedPackages <<< "$(getInstalledPackage)"
@@ -85,6 +79,5 @@ genDiff() {
     } > diff-app.txt
 }
 
-# 执行生成差异函数
 genDiff
 yay -Qqe > new-app-list.txt

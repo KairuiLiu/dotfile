@@ -116,7 +116,7 @@ label:focus {
 }
 
 #custom-tray_button,
-#custom-wofi {
+#custom-rofi {
   background-color: #546e7a;
   color: #f5f5f5;
   padding: 0 5px;

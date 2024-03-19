@@ -1,0 +1,669 @@
+base:	System Service/Base	
+base-devel:	System Service/Base	
+linux:	System Service/Base	
+linux-firmware:	System Service/Base	
+linux-headers:	System Service/Base	
+grub:	System Service/Base	
+reflector:	System Service/Base	
+efibootmgr:	System Service/Base	
+intel-ucode:	System Service/Base	
+sddm:	System Service/Base	
+sudo:	System Service/Base	
+os-prober:	System Service/Base	detectotheros
+alsa-firmware:	System Service/Audio	
+alsa-utils:	System Service/Audio	
+alsa-plugins:	System Service/Audio	
+sof-firmware:	System Service/Audio	intelDSPsoundcardfirmware
+playerctl:	System Service/Audio	mediaplayercontrol
+pulseaudio-bluetooth:	System Service/Audio	
+pulseaudio-modules-bt:	System Service/Audio	
+pavucontrol:	System Service/Audio	pulseaudiocontrol
+pavucontrol-qt:	System Service/Audio	pulseaudiocontrol
+sox:	System Service/Audio	audioplayer&processor
+ffmpeg:	System Service/Image & Video	
+feh:	System Service/Image & Video	
+opencv:	System Service/Image & Video	
+bluez:	System Service/Bluetooth	
+bluez-libs:	System Service/Bluetooth	
+bluez-utils:	System Service/Bluetooth	
+bluez-qt:	System Service/Bluetooth	
+bluedevil:	System Service/Bluetooth	
+blueman:	System Service/Bluetooth	
+tlp:	System Service/Power Control	
+tlp-rdw:	System Service/Power Control	
+tlpui:	System Service/Power Control	
+archlinux-keyring:	System Service/Package Management	
+archlinuxcn-keyring:	System Service/Package Management	
+paru:	System Service/Package Management	aurhelper
+asp:	System Service/Package Management	packagebuilder
+yay:	System Service/Package Management	
+vi:	System Service/Editor	
+vim:	System Service/Editor	
+timeshift:	System Service/Backup	
+inetutils:	System Service/Network	ping,telnet,ftp,etc.
+nmap:	System Service/Network	networkscanner
+bridge-utils:	System Service/Network	networkbridge
+openssh:	System Service/Network	
+openssl:	System Service/Network	
+curl:	System Service/Network	
+wireless_tools:	System Service/Network	
+wget:	System Service/Network	
+vde2:	System Service/Network	forvirtualnetwork
+ebtables:	System Service/Network	fornetworkbridge
+networkmanager:	System Service/Network	
+wpa_supplicant:	System Service/Network	
+openbsd-netcat:	System Service/Network	networkdebug
+samba:	System Service/File Service	
+vsftpd:	System Service/File Service	
+gzip:	System Service/Zip	
+unzip:	System Service/Zip	
+unrar:	System Service/Zip	
+p7zip:	System Service/Zip	
+gtk-vnc:	System Service/GUI	
+gtk2:	System Service/GUI	
+gtk3:	System Service/GUI	
+gtk4:	System Service/GUI	
+gtkmm3:	System Service/GUI	
+qt4:	System Service/GUI	
+qtkeychain:	System Service/GUI	
+tk:	System Service/GUI	
+xdg-desktop-portal:	System Service/GUI	desktopportalforflatpak
+xdg-desktop-portal-wlr:	System Service/GUI	
+xorg:	System Service/GUI	
+ntfs-3g:	System Service/File System	
+dosfstools:	System Service/File System	forFATfilesystem
+mtools:	System Service/File System	forFATfilesystem
+hfsprogs:	System Service/File System	formacosfilesystem
+light:	System Service/BackLight	
+clightd:	System Service/BackLight	
+clight-gui-git:	System Service/BackLight	
+make:	System Service/Dev Tools & Lib	
+libpam_pwdfile:	System Service/Dev Tools & Lib	passwordfileforpam
+lttng-ust2.12:	System Service/Dev Tools & Lib	
+llvm:	System Service/Dev Tools & Lib	
+git:	System Service/Dev Tools & Lib	
+cairo:	System Service/Dev Tools & Lib	2Dgraphicslibrary
+imath:	System Service/Dev Tools & Lib	2Dgraphicslibrary
+glfw:	System Service/Dev Tools & Lib	multi-platformlibraryforOpenGL
+fcitx5-chinese-addons:	Fcitx	
+fcitx5-git:	Fcitx	
+fcitx5-material-color:	Fcitx	
+fcitx5-pinyin-zhwiki:	Fcitx	
+fcitx5-qt5-git:	Fcitx	
+fcitx5-chewing:	Fcitx	
+fcitx5-configtool:	Fcitx	
+fcitx5-gtk:	Fcitx	
+fcitx5-pinyin-moegirl:	Fcitx	
+fcitx5-qt4-git:	Fcitx	
+fcitx5-qt5-git:	Fcitx	
+fcitx5-qt6-git:	Fcitx	
+xf86-input-synaptics:	Fcitx	
+fcitx5-mozc-git:	Fcitx	
+dotnet-runtime:	Develop Language/C Sharp	
+dotnet-sdk:	Develop Language/C Sharp	
+aspnet-runtime:	Develop Language/C Sharp	
+aspnet-targeting-pack:	Develop Language/C Sharp	
+mono:	Develop Language/C Sharp	.netcrossplatformruntime(run.exeonlinux)
+gcc:	Develop Language/C Sharp	
+gdb:	Develop Language/C Sharp	
+cmake:	Develop Language/C Sharp	
+gcc-fortran:	Develop Language/C Sharp	
+haskell-adjunctions:	Develop Language/Haskell	
+haskell-aeson:	Develop Language/Haskell	
+haskell-aeson-pretty:	Develop Language/Haskell	
+haskell-algebraic-graphs:	Develop Language/Haskell	
+haskell-annotated-wl-pprint:	Develop Language/Haskell	
+haskell-ansi-terminal:	Develop Language/Haskell	
+haskell-ansi-wl-pprint:	Develop Language/Haskell	
+haskell-appar:	Develop Language/Haskell	
+haskell-apply-refact:	Develop Language/Haskell	
+haskell-asn1-encoding:	Develop Language/Haskell	
+haskell-asn1-parse:	Develop Language/Haskell	
+haskell-asn1-types:	Develop Language/Haskell	
+haskell-assoc:	Develop Language/Haskell	
+haskell-async:	Develop Language/Haskell	
+haskell-attoparsec:	Develop Language/Haskell	
+haskell-attoparsec-iso8601:	Develop Language/Haskell	
+haskell-auto-update:	Develop Language/Haskell	
+haskell-base-compat:	Develop Language/Haskell	
+haskell-base-compat-batteries:	Develop Language/Haskell	
+haskell-base-orphans:	Develop Language/Haskell	
+haskell-base16-bytestring:	Develop Language/Haskell	
+haskell-base64-bytestring:	Develop Language/Haskell	
+haskell-basement:	Develop Language/Haskell	
+haskell-bifunctors:	Develop Language/Haskell	
+haskell-blaze-builder:	Develop Language/Haskell	
+haskell-blaze-html:	Develop Language/Haskell	
+haskell-blaze-markup:	Develop Language/Haskell	
+haskell-blaze-textual:	Develop Language/Haskell	
+haskell-byteable:	Develop Language/Haskell	
+haskell-byteorder:	Develop Language/Haskell	
+haskell-bytestring-encoding:	Develop Language/Haskell	
+haskell-call-stack:	Develop Language/Haskell	
+haskell-casa-client:	Develop Language/Haskell	
+haskell-casa-types:	Develop Language/Haskell	
+haskell-case-insensitive:	Develop Language/Haskell	
+haskell-cereal:	Develop Language/Haskell	
+haskell-charset:	Develop Language/Haskell	
+haskell-clock:	Develop Language/Haskell	
+haskell-cmdargs:	Develop Language/Haskell	
+haskell-colour:	Develop Language/Haskell	
+haskell-comonad:	Develop Language/Haskell	
+haskell-conduit:	Develop Language/Haskell	
+haskell-conduit-extra:	Develop Language/Haskell	
+haskell-conduit-parse:	Develop Language/Haskell	
+haskell-connection:	Develop Language/Haskell	
+haskell-constraints:	Develop Language/Haskell	
+haskell-constraints-extras:	Develop Language/Haskell	
+haskell-contravariant:	Develop Language/Haskell	
+haskell-cookie:	Develop Language/Haskell	
+haskell-cpphs:	Develop Language/Haskell	
+haskell-cryptohash-md5:	Develop Language/Haskell	
+haskell-cryptohash-sha1:	Develop Language/Haskell	
+haskell-cryptohash-sha256:	Develop Language/Haskell	
+haskell-cryptonite:	Develop Language/Haskell	
+haskell-cryptonite-conduit:	Develop Language/Haskell	
+haskell-data-default:	Develop Language/Haskell	
+haskell-data-default-class:	Develop Language/Haskell	
+haskell-data-default-instances-containers:	Develop Language/Haskell	
+haskell-data-default-instances-dlist:	Develop Language/Haskell	
+haskell-data-default-instances-old-locale:	Develop Language/Haskell	
+haskell-data-fix:	Develop Language/Haskell	
+haskell-dependent-map:	Develop Language/Haskell	
+haskell-dependent-sum:	Develop Language/Haskell	
+haskell-dependent-sum-template:	Develop Language/Haskell	
+haskell-diff:	Develop Language/Haskell	
+haskell-digest:	Develop Language/Haskell	
+haskell-direct-sqlite:	Develop Language/Haskell	
+haskell-distributive:	Develop Language/Haskell	
+haskell-dlist:	Develop Language/Haskell	
+haskell-easy-file:	Develop Language/Haskell	
+haskell-echo:	Develop Language/Haskell	
+haskell-ed25519:	Develop Language/Haskell	
+haskell-edit-distance:	Develop Language/Haskell	
+haskell-enclosed-exceptions:	Develop Language/Haskell	
+haskell-entropy:	Develop Language/Haskell	
+haskell-erf:	Develop Language/Haskell	
+haskell-extra:	Develop Language/Haskell	
+haskell-fast-logger:	Develop Language/Haskell	
+haskell-file-embed:	Develop Language/Haskell	
+haskell-filelock:	Develop Language/Haskell	
+haskell-filemanip:	Develop Language/Haskell	
+haskell-filepattern:	Develop Language/Haskell	
+haskell-fingertree:	Develop Language/Haskell	
+haskell-floskell:	Develop Language/Haskell	
+haskell-foldl:	Develop Language/Haskell	
+haskell-fourmolu:	Develop Language/Haskell	
+haskell-free:	Develop Language/Haskell	
+haskell-fsnotify:	Develop Language/Haskell	
+haskell-fuzzy:	Develop Language/Haskell	
+haskell-generic-deriving:	Develop Language/Haskell	
+haskell-ghc-api-compat:	Develop Language/Haskell	
+haskell-ghc-bignum-orphans:	Develop Language/Haskell	
+haskell-ghc-check:	Develop Language/Haskell	
+haskell-ghc-exactprint:	Develop Language/Haskell	
+haskell-ghc-lib-parser:	Develop Language/Haskell	
+haskell-ghc-lib-parser-ex:	Develop Language/Haskell	
+haskell-ghc-paths:	Develop Language/Haskell	
+haskell-ghc-trace-events:	Develop Language/Haskell	
+haskell-ghcide:	Develop Language/Haskell	
+haskell-githash:	Develop Language/Haskell	
+haskell-gitrev:	Develop Language/Haskell	
+haskell-glob:	Develop Language/Haskell	
+haskell-hackage-security:	Develop Language/Haskell	
+haskell-haddock-library:	Develop Language/Haskell	
+haskell-hashable:	Develop Language/Haskell	
+haskell-hashtables:	Develop Language/Haskell	
+haskell-heaps:	Develop Language/Haskell	
+haskell-heapsize:	Develop Language/Haskell	
+haskell-hi-file-parser:	Develop Language/Haskell	
+haskell-hie-bios:	Develop Language/Haskell	
+haskell-hie-compat:	Develop Language/Haskell	
+haskell-hiedb:	Develop Language/Haskell	
+haskell-hinotify:	Develop Language/Haskell	
+haskell-hls-call-hierarchy-plugin:	Develop Language/Haskell	
+haskell-hls-eval-plugin:	Develop Language/Haskell	
+haskell-hls-explicit-imports-plugin:	Develop Language/Haskell	
+haskell-hls-floskell-plugin:	Develop Language/Haskell	
+haskell-hls-fourmolu-plugin:	Develop Language/Haskell	
+haskell-hls-graph:	Develop Language/Haskell	
+haskell-hls-haddock-comments-plugin:	Develop Language/Haskell	
+haskell-hls-hlint-plugin:	Develop Language/Haskell	
+haskell-hls-module-name-plugin:	Develop Language/Haskell	
+haskell-hls-ormolu-plugin:	Develop Language/Haskell	
+haskell-hls-plugin-api:	Develop Language/Haskell	
+haskell-hls-pragmas-plugin:	Develop Language/Haskell	
+haskell-hls-retrie-plugin:	Develop Language/Haskell	
+haskell-hls-stylish-haskell-plugin:	Develop Language/Haskell	
+haskell-hourglass:	Develop Language/Haskell	
+haskell-hpack:	Develop Language/Haskell	
+haskell-hscolour:	Develop Language/Haskell	
+haskell-hslogger:	Develop Language/Haskell	
+haskell-hsyaml:	Develop Language/Haskell	
+haskell-hsyaml-aeson:	Develop Language/Haskell	
+haskell-http:	Develop Language/Haskell	
+haskell-http-api-data:	Develop Language/Haskell	
+haskell-http-client:	Develop Language/Haskell	
+haskell-http-client-tls:	Develop Language/Haskell	
+haskell-http-conduit:	Develop Language/Haskell	
+haskell-http-download:	Develop Language/Haskell	
+haskell-http-types:	Develop Language/Haskell	
+haskell-hxt:	Develop Language/Haskell	
+haskell-hxt-charproperties:	Develop Language/Haskell	
+haskell-hxt-regex-xmlschema:	Develop Language/Haskell	
+haskell-hxt-unicode:	Develop Language/Haskell	
+haskell-implicit-hie:	Develop Language/Haskell	
+haskell-implicit-hie-cradle:	Develop Language/Haskell	
+haskell-indexed-traversable:	Develop Language/Haskell	
+haskell-indexed-traversable-instances:	Develop Language/Haskell	
+haskell-infer-license:	Develop Language/Haskell	
+haskell-integer-logarithms:	Develop Language/Haskell	
+haskell-invariant:	Develop Language/Haskell	
+haskell-iproute:	Develop Language/Haskell	
+haskell-js-dgtable:	Develop Language/Haskell	
+haskell-js-flot:	Develop Language/Haskell	
+haskell-js-jquery:	Develop Language/Haskell	
+haskell-kan-extensions:	Develop Language/Haskell	
+haskell-language-server:	Develop Language/Haskell	
+haskell-lens:	Develop Language/Haskell	
+haskell-libyaml:	Develop Language/Haskell	
+haskell-lift-type:	Develop Language/Haskell	
+haskell-lifted-async:	Develop Language/Haskell	
+haskell-lifted-base:	Develop Language/Haskell	
+haskell-list-t:	Develop Language/Haskell	
+haskell-logict:	Develop Language/Haskell	
+haskell-lsp:	Develop Language/Haskell	
+haskell-lsp-test:	Develop Language/Haskell	
+haskell-lsp-types:	Develop Language/Haskell	
+haskell-lucid:	Develop Language/Haskell	
+haskell-lukko:	Develop Language/Haskell	
+haskell-megaparsec:	Develop Language/Haskell	
+haskell-memory:	Develop Language/Haskell	
+haskell-microlens:	Develop Language/Haskell	
+haskell-microlens-mtl:	Develop Language/Haskell	
+haskell-microlens-th:	Develop Language/Haskell	
+haskell-mime-types:	Develop Language/Haskell	
+haskell-mintty:	Develop Language/Haskell	
+haskell-mmorph:	Develop Language/Haskell	
+haskell-monad-control:	Develop Language/Haskell	
+haskell-monad-dijkstra:	Develop Language/Haskell	
+haskell-monad-logger:	Develop Language/Haskell	
+haskell-monad-loops:	Develop Language/Haskell	
+haskell-monadrandom:	Develop Language/Haskell	
+haskell-mono-traversable:	Develop Language/Haskell	
+haskell-monoid-subclasses:	Develop Language/Haskell	
+haskell-mustache:	Develop Language/Haskell	
+haskell-neat-interpolation:	Develop Language/Haskell	
+haskell-network:	Develop Language/Haskell	
+haskell-network-bsd:	Develop Language/Haskell	
+haskell-network-info:	Develop Language/Haskell	
+haskell-network-uri:	Develop Language/Haskell	
+haskell-old-locale:	Develop Language/Haskell	
+haskell-old-time:	Develop Language/Haskell	
+haskell-onetuple:	Develop Language/Haskell	
+haskell-only:	Develop Language/Haskell	
+haskell-open-browser:	Develop Language/Haskell	
+haskell-opentelemetry:	Develop Language/Haskell	
+haskell-optparse-applicative:	Develop Language/Haskell	
+haskell-optparse-generic:	Develop Language/Haskell	
+haskell-optparse-simple:	Develop Language/Haskell	
+haskell-ormolu:	Develop Language/Haskell	
+haskell-pantry:	Develop Language/Haskell	
+haskell-parallel:	Develop Language/Haskell	
+haskell-parser-combinators:	Develop Language/Haskell	
+haskell-parsers:	Develop Language/Haskell	
+haskell-path:	Develop Language/Haskell	
+haskell-path-io:	Develop Language/Haskell	
+haskell-path-pieces:	Develop Language/Haskell	
+haskell-pem:	Develop Language/Haskell	
+haskell-persistent:	Develop Language/Haskell	
+haskell-persistent-sqlite:	Develop Language/Haskell	
+haskell-polyparse:	Develop Language/Haskell	
+haskell-pretty-simple:	Develop Language/Haskell	
+haskell-prettyprinter:	Develop Language/Haskell	
+haskell-prettyprinter-ansi-terminal:	Develop Language/Haskell	
+haskell-primes:	Develop Language/Haskell	
+haskell-primitive:	Develop Language/Haskell	
+haskell-profunctors:	Develop Language/Haskell	
+haskell-project-template:	Develop Language/Haskell	
+haskell-psqueues:	Develop Language/Haskell	
+haskell-quickcheck:	Develop Language/Haskell	
+haskell-random:	Develop Language/Haskell	
+haskell-random-shuffle:	Develop Language/Haskell	
+haskell-refact:	Develop Language/Haskell	
+haskell-reflection:	Develop Language/Haskell	
+haskell-regex-base:	Develop Language/Haskell	
+haskell-regex-posix:	Develop Language/Haskell	
+haskell-regex-tdfa:	Develop Language/Haskell	
+haskell-resolv:	Develop Language/Haskell	
+haskell-resource-pool:	Develop Language/Haskell	
+haskell-resourcet:	Develop Language/Haskell	
+haskell-retrie:	Develop Language/Haskell	
+haskell-retry:	Develop Language/Haskell	
+haskell-rio:	Develop Language/Haskell	
+haskell-rio-orphans:	Develop Language/Haskell	
+haskell-rio-prettyprint:	Develop Language/Haskell	
+haskell-rope-utf16-splay:	Develop Language/Haskell	
+haskell-safe:	Develop Language/Haskell	
+haskell-safe-exceptions:	Develop Language/Haskell	
+haskell-scientific:	Develop Language/Haskell	
+haskell-semigroupoids:	Develop Language/Haskell	
+haskell-shake:	Develop Language/Haskell	
+haskell-shelly:	Develop Language/Haskell	
+haskell-silently:	Develop Language/Haskell	
+haskell-socks:	Develop Language/Haskell	
+haskell-some:	Develop Language/Haskell	
+haskell-sorted-list:	Develop Language/Haskell	
+haskell-split:	Develop Language/Haskell	
+haskell-splitmix:	Develop Language/Haskell	
+haskell-sqlite-simple:	Develop Language/Haskell	
+haskell-src-exts:	Develop Language/Haskell	
+haskell-statevar:	Develop Language/Haskell	
+haskell-stm-chans:	Develop Language/Haskell	
+haskell-streaming-commons:	Develop Language/Haskell	
+haskell-strict:	Develop Language/Haskell	
+haskell-syb:	Develop Language/Haskell	
+haskell-system-filepath:	Develop Language/Haskell	
+haskell-tagged:	Develop Language/Haskell	
+haskell-tar:	Develop Language/Haskell	
+haskell-tar-conduit:	Develop Language/Haskell	
+haskell-temporary:	Develop Language/Haskell	
+haskell-terminal-size:	Develop Language/Haskell	
+haskell-text-metrics:	Develop Language/Haskell	
+haskell-th-abstraction:	Develop Language/Haskell	
+haskell-th-compat:	Develop Language/Haskell	
+haskell-th-expand-syns:	Develop Language/Haskell	
+haskell-th-extras:	Develop Language/Haskell	
+haskell-th-lift:	Develop Language/Haskell	
+haskell-th-lift-instances:	Develop Language/Haskell	
+haskell-th-reify-many:	Develop Language/Haskell	
+haskell-these:	Develop Language/Haskell	
+haskell-time-compat:	Develop Language/Haskell	
+haskell-tls:	Develop Language/Haskell	
+haskell-transformers-base:	Develop Language/Haskell	
+haskell-transformers-compat:	Develop Language/Haskell	
+haskell-type-equality:	Develop Language/Haskell	
+haskell-typed-process:	Develop Language/Haskell	
+haskell-unicode-data:	Develop Language/Haskell	
+haskell-unicode-transforms:	Develop Language/Haskell	
+haskell-uniplate:	Develop Language/Haskell	
+haskell-unix-compat:	Develop Language/Haskell	
+haskell-unix-time:	Develop Language/Haskell	
+haskell-unliftio:	Develop Language/Haskell	
+haskell-unliftio-core:	Develop Language/Haskell	
+haskell-unordered-containers:	Develop Language/Haskell	
+haskell-utf8-string:	Develop Language/Haskell	
+haskell-uuid:	Develop Language/Haskell	
+haskell-uuid-types:	Develop Language/Haskell	
+haskell-vault:	Develop Language/Haskell	
+haskell-vector:	Develop Language/Haskell	
+haskell-vector-algorithms:	Develop Language/Haskell	
+haskell-void:	Develop Language/Haskell	
+haskell-x509:	Develop Language/Haskell	
+haskell-x509-store:	Develop Language/Haskell	
+haskell-x509-system:	Develop Language/Haskell	
+haskell-x509-validation:	Develop Language/Haskell	
+haskell-yaml:	Develop Language/Haskell	
+haskell-zip-archive:	Develop Language/Haskell	
+haskell-zlib:	Develop Language/Haskell	
+jdk-openjdk:	Develop Language/Java	
+java-environment-common:	Develop Language/Java	
+java-runtime-common:	Develop Language/Java	
+jre-openjdk:	Develop Language/Java	
+jre-openjdk-headless:	Develop Language/Java	
+jre8-openjdk:	Develop Language/Java	
+jre8-openjdk-headless:	Develop Language/Java	
+kotlin:	Develop Language/Java	
+flutter:	Develop Language/Flutter	
+android-sdk:	Develop Language/Flutter	
+android-emulator:	Develop Language/Flutter	
+android-sdk-platform-tools:	Develop Language/Flutter	
+android-tools:	Develop Language/Flutter	
+android-udev:	Develop Language/Flutter	
+ncurses5-compat-libs:	Develop Language/Flutter	
+android-tools:	Develop Language/Flutter	
+android-udev:	Develop Language/Flutter	
+android-emulator-dummy:	Develop Language/Flutter	
+go-tools:	Develop Language/GoLang	
+go:	Develop Language/GoLang	
+nodejs:	Develop Language/JavaScript	
+npm:	Develop Language/JavaScript	
+yarn:	Develop Language/JavaScript	
+python-pip:	Develop Language/Python	
+python-azure-storage-blob:	Develop Language/Python	
+python-flask:	Develop Language/Python	
+python-ipykernel:	Develop Language/Python	
+python-matplotlib:	Develop Language/Python	
+python-opencv:	Develop Language/Python	
+python-pandas:	Develop Language/Python	
+python-pyodbc:	Develop Language/Python	
+python-scikit-learn:	Develop Language/Python	
+python-tensorflow:	Develop Language/Python	
+r:	Develop Language/R	
+radian:	Develop Language/R	
+perl:	Develop Language/Perl	
+rust:	Develop Language/Rust	
+php:	Develop Language/PHP	
+ruby:	Develop Language/Ruby	
+lua:	Develop Language/Lua	
+jetbrains-fleet:	Develop Language/IDE	
+intellij-idea-ultimate-edition-jre:	Develop Language/IDE	
+intellij-idea-ultimate-edition:	Develop Language/IDE	
+goland-jre:	Develop Language/IDE	
+goland:	Develop Language/IDE	
+android-studio:	Develop Language/IDE	
+sublime-text-4:	Develop Language/IDE	
+visual-studio-code-insiders-bin:	Develop Language/IDE	
+rstudio-desktop-bin:	Develop Language/IDE	
+rstudio-fcitx5:	Develop Language/IDE	onlyforgitversion
+apipost-bin:	Dev-Ops	
+postman-bin:	Dev-Ops	
+mysql-workbench:	Dev-Ops	
+mariadb:	Dev-Ops	
+mycli:	Dev-Ops	
+sqlite:	Dev-Ops	
+sqlitestudio:	Dev-Ops	
+nginx:	Dev-Ops	
+apache:	Dev-Ops	
+wireshark-cli:	Dev-Ops	
+wireshark-qt:	Dev-Ops	
+virtualbox:	Dev-Ops	
+virtualbox-host-modules-arch:	Dev-Ops	
+virtualbox-sdk:	Dev-Ops	
+vmware-horizon-client:	Dev-Ops	
+azure-cli:	Dev-Ops	
+docker:	Dev-Ops	
+dbvis:	Dev-Ops	DatabaseVisualizer
+rabbitmq:	Dev-Ops	
+qemu-base:	Dev-Ops	
+virt-manager:	Dev-Ops	virtualmachinemanager
+openvpn:	Proxy	
+qv2ray-dev-git:	Proxy	
+clash:	Proxy	
+clash-verge:	Proxy	
+clash-for-windows-bin:	Proxy	
+v2ray:	Proxy	
+forticlient-vpn:	Proxy	
+kde-cli-tools:	Kde Plasma	
+kde-dev-scripts:	Kde Plasma	
+kde-dev-utils:	Kde Plasma	
+kde-gtk-config:	Kde Plasma	
+krita:	Kde Plasma	
+plasma:	Kde Plasma	
+kde-applications:	Kde Plasma	
+ocs-url:	Kde Plasma	
+latte-dock-git:	Kde Plasma	
+picom-git:	Kde Plasma	
+digikam:	Kde Plasma	photomanagement
+i3-wm:	I3	
+i3lock:	I3	
+i3lock-fancy-git:	I3	
+i3status:	I3	statusbar
+dunst:	I3	notification
+trayer:	I3	systemtray
+rofi:	I3	
+rofimoji:	I3	emojipicker
+arandr:	I3	
+polybar:	I3	
+picom-git:	I3	
+touchegg:	I3	touchpadgesture
+dmenu:	I3	applicationlauncher
+plasma-wayland-session:	Sway	
+wayland:	Sway	
+xorg-xwayland:	Sway	
+qt5-wayland:	Sway	
+qt6-wayland:	Sway	
+xorg-xlsclients:	Sway	
+glfw-wayland:	Sway	waylandsupportforglfw
+sway-git:	Sway	
+swayidle:	Sway	
+sway-audio-idle-inhibit-git:	Sway	
+swaylock-fancy-git:	Sway	
+mako:	Sway	notification
+trayer:	Sway	systemtray
+wofi:	Sway	
+waybar:	Sway	
+wdisplays-git:	Sway	displaymanager
+scrot:	Sway	screenshot
+wl-clipboard:	Sway	clipboard
+bemenu-wayland:	Sway	applicationlauncher
+kwayland-integration:	Sway	
+v4l2-loopback:	Sway/ScreenRecord	
+v4l2loopback-dkms:	Sway/ScreenRecord	
+v4l2loopback:	Sway/ScreenRecord	
+v4l2loopback-utils:	Sway/ScreenRecord	
+wf-recorder:	Sway/ScreenRecord	
+swappy-git:	Sway/ScreenShot	
+grimshot:	Sway/ScreenShot	
+slurp:	Sway/ScreenShot	
+dmenu:	Sway	applicationlauncher
+bc:	Shell	BasicCalculator
+bat:	Shell	catwithsyntaxhighlight
+dialog:	Shell	
+neofetch:	Shell	
+zscroll-git:	Shell	
+tree:	Shell	
+cowsay:	Shell	
+ranger:	Shell	
+gtop:	Shell	betterbettertop
+htop:	Shell	bettertop
+gping:	Shell	betterping
+lolcat:	Shell	
+parallel:	Shell	
+ctags:	Shell/Editor	
+neovim:	Shell/Editor	
+neovim-qt:	Shell/Editor	
+nano:	Shell/Editor	
+zsh:	Shell/Zsh	
+zsh-autosuggestions:	Shell/Zsh	
+zsh-syntax-highlighting:	Shell/Zsh	
+thefuck:	Shell/Zsh	
+autojump:	Shell/Zsh	
+bash-completion:	Shell/Zsh	
+foot-terminfo:	Shell/Terminal	
+foot:	Shell/Terminal	
+fish:	Shell/Terminal	
+urxvt-perls:	Shell/Terminal	
+rxvt-unicode:	Shell/Terminal	
+rxvt-unicode-terminfo:	Shell/Terminal	
+alacritty:	Shell/Terminal	
+chromium:	Browser	
+google-chrome:	Browser	
+google-chrome-beta:	Browser	
+google-chrome-dev:	Browser	
+firefox:	Browser	
+firefox-nightly-zh-cn:	Browser	
+microsoft-edge-dev-bin:	Browser	
+adobe-source-code-pro-fonts:	Fonts	
+adobe-source-han-sans-cn-fonts:	Fonts	
+noto-fonts:	Fonts	
+noto-fonts-cjk:	Fonts	
+noto-fonts-emoji:	Fonts	
+noto-fonts-extra:	Fonts	
+ttf-bitstream-vera:	Fonts	
+ttf-dejavu:	Fonts	
+ttf-droid:	Fonts	
+ttf-font-awesome:	Fonts	
+ttf-hack:	Fonts	
+ttf-inconsolata:	Fonts	
+ttf-indic-otf:	Fonts	
+ttf-liberation:	Fonts	
+ttf-icomoon-feather:	Fonts	
+ttf-ms-fonts:	Fonts	
+ttf-opensans:	Fonts	
+ttf-sarasa-gothic:	Fonts	
+ttf-wps-fonts:	Fonts	
+wqy-bitmapfont:	Fonts	
+wqy-microhei:	Fonts	
+wqy-microhei-lite:	Fonts	
+wqy-zenhei:	Fonts	
+ttf-babelstone-han:	Fonts	
+ttf-jetbrains-mono-nerd:	Fonts	
+otf-font-awesome:	Fonts	
+texstudio:	LaTeX	
+texinfo:	LaTeX	
+texlive-bibtexextra:	LaTeX	
+texlive-bin:	LaTeX	
+texlive-core:	LaTeX	
+texlive-fontsextra:	LaTeX	
+texlive-formatsextra:	LaTeX	
+texlive-games:	LaTeX	
+texlive-humanities:	LaTeX	
+texlive-langchinese:	LaTeX	
+texlive-langcyrillic:	LaTeX	
+texlive-langextra:	LaTeX	
+texlive-langgreek:	LaTeX	
+texlive-langjapanese:	LaTeX	
+texlive-langkorean:	LaTeX	
+texlive-latexextra:	LaTeX	
+texlive-music:	LaTeX	
+texlive-pictures:	LaTeX	
+texlive-pstricks:	LaTeX	
+texlive-publishers:	LaTeX	
+texlive-science:	LaTeX	
+wps-office-cn:	Others/Office	
+wps-office-fonts:	Others/Office	
+wps-office-mime-cn:	Others/Office	
+wps-office-mui-zh-cn:	Others/Office	
+yesplaymusic:	Others/Player	
+qqmusic-bin:	Others/Player	
+slack-desktop:	Others/IM	
+linuxqq:	Others/IM	
+icalingua++:	Others/IM	
+feishu-bin:	Others/IM	
+wechat-uos:	Others/IM	
+discord:	Others/IM	
+telegram-desktop:	Others/IM	
+teams-for-linux:	Others/IM	
+zoom:	Others/Meet	
+wemeet-bin:	Others/Meet	
+teamviewer:	Others/Remote	
+todesk-bin:	Others/Remote	
+sunloginclient:	Others/Remote	
+tigervnc-viewer:	Others/Remote	
+obs-v4l2sink:	Others/Audio & Video	
+obs-studio:	Others/Audio & Video	screenrecord&stream
+audacity:	Others/Audio & Video	audiorecord&editor
+pandoc-cli:	Others	
+mathjax:	Others	
+typora:	Others	
+i4tools-bin:	Others	
+howdy:	Others	faceunlock
+nutstore:	Others	
+translate-shell:	Others	
+goldendict-git:	Others	
+geogebra:	Others	
+binggpt-desktop-bin:	Others	
+filezilla:	Others	
+deepin-screenshot:	Others	
+scrcpy-git:	Others	androidscreenmirror
+steam:	Others	
+pdfarranger:	Others	
+mailspring:	Others	
+grub-customizer:	Others	
+obsidian:	Others	notetaking
+osdlyrics:	Others	desktoplyrics
+patchelf:	Others	modifyrpathofELFexecutables
+packagekit-qt5:	Others	
+packagekit-qt6:	Others	
+

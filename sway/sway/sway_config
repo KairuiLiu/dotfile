@@ -1,3 +1,4 @@
+exec source ~/.dotfile/shell/env.sh
 #######################
 ## sway setting      ##
 #######################
@@ -43,19 +44,18 @@ input "type:keyboard" {
 #######################
 ## Function Shortcut ##
 #######################
-bindsym $mod+F3 exec amixer set Master 1%+
-bindsym $mod+F2 exec amixer set Master 1%-
-bindsym $mod+Shift+F3 exec amixer set Master 5%+
-bindsym $mod+Shift+F2 exec amixer set Master 5%-
 bindsym $mod+F1 exec amixer set Master toggle
+bindsym $mod+F2 exec amixer set Master 1%-
+bindsym $mod+F3 exec amixer set Master 1%+
+bindsym $mod+Shift+F2 exec amixer set Master 5%-
+bindsym $mod+Shift+F3 exec amixer set Master 5%+
 bindsym $mod+F4 exec light -U 1
 bindsym $mod+F5 exec light -A 1
 bindsym $mod+Shift+F4 exec light -U 5
 bindsym $mod+Shift+F5 exec light -A 5
-bindsym $mod+F12 exec swaylock-fancy
-bindsym $mod+Shift+F12 exec swaylock-fancy -p
+bindsym $mod+F12 exec source ~/.dotfile/shell/env.sh && swaylock-fancy
+bindsym $mod+Shift+F12 exec source ~/.dotfile/shell/env.sh && swaylock-fancy -p
 bindsym $mod+Shift+b exec binggpt
-bindsym $mod+Shift+m exec mail-spring
 bindsym $mod+Shift+p exec ~/.dotfile/sway/sway/muti-monitor-switch.sh external_only
 bindsym $mod+Ctrl+p exec ~/.dotfile/sway/sway/muti-monitor-switch.sh edp_only
 bindsym $mod+Ctrl+Shift+p exec ~/.dotfile/sway/sway/muti-monitor-switch.sh both
@@ -104,7 +104,7 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
-bindsym $mod+Ctrl+space focus mode_toggle
+# [WIP] bindsym $mod+Ctrl+space focus mode_toggle
 
 ### focus the parent container
 bindsym $mod+a focus parent
@@ -178,18 +178,18 @@ bindsym $mod+Shift+d exec source ~/.dotfile/shell/env.sh && dolphin
 bindsym $mod+Shift+v exec source ~/.dotfile/shell/env.sh && cfw
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec "code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
-# bindsym $mod+Ctrl+Shift+c exec code-insiders
 bindsym $mod+Shift+g exec source ~/.dotfile/shell/env.sh && /usr/bin/google-chrome-beta --gtk-version=4
-bindsym $mod+space exec source ~/.dotfile/shell/env.sh && wofi run
-bindsym $mod+Shift+z exec subl
-bindsym $mod+Shift+t exec telegram-desktop
+bindsym $mod+space exec source ~/.dotfile/shell/env.sh && ~/.dotfile/sway/sway/run-rofi.sh
+bindsym $mod+Shift+z exec source ~/.dotfile/shell/env.sh && subl
+bindsym $mod+Shift+t exec source ~/.dotfile/shell/env.sh && telegram-desktop
 bindsym $mod+Shift+a exec wdisplays
-bindsym $mod+Shift+x exec goland-eap
+# bindsym $mod+Shift+x exec goland
 bindsym $mod+Shift+w exec wechat-uos
-bindsym $mod+Shift+y exec yesplaymusic
+bindsym $mod+Shift+y exec /opt/YesPlayMusic/yesplaymusic
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+F1 exec pgrep -f 'waybar --config ~/.config/waybar/config_tray' && (ps aux | grep 'waybar --config ~/.config/waybar/config_tray' | grep -v grep | awk '{print $2}' | xargs kill) || (waybar --config ~/.config/waybar/config_tray &)
 
 # [WIP] for_window [app_id="code-insiders-url-handler"] fullscreen fake
+# [WIP] for_window [app_id="wofi"] border none
 
 include /etc/sway/config.d/*

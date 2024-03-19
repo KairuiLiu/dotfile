@@ -1,0 +1,13 @@
+font= SegoeUI 10
+background-color=#F9FAFBDD
+text-color=#444444FF
+on-button-left=dismiss
+on-button-right=invoke-default-action
+border-radius=20
+border-color=#BBBBBB99
+padding=10
+anchor=top-right
+icon-path=~/.config/mako/icon/Tela-circle
+icons=1
+actions=1
+progress-color=#4A90E2EE

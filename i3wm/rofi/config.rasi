@@ -187,10 +187,11 @@ element-text {
   background-color: inherit;
   text-color: inherit;
   vertical-align: 0.5;
+  padding: 0 0 0 8;
 }
 
 element-icon {
-  size: 30;
+  size: 23;
 }
 
 entry {

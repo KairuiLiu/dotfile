@@ -560,6 +560,7 @@
   - mako // notification
   - trayer // system tray
   - wofi
+  - rofi
   - waybar
   - wdisplays-git // display manager
   - scrot // screenshot

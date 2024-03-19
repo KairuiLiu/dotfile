@@ -1,35 +1,36 @@
-*{
-	border-radius: 3px;
-	border: none;
+* {
+  border: none;
 }
 
 window {
-	font-family: "Roboto Mono Medium", sans-serif;
-	background-color: rgba(50, 50, 50, 0.9);
-	color: #ffffff;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  font-family: 'Roboto Mono Medium', sans-serif;
+  background-color: rgba(50, 50, 50, 0.9);
+  color: #ffffff;
 }
 
-#entry{
-	padding: .25em;
+#entry {
+  padding: 0.25em;
 }
 
 #entry:selected {
-	background-color: #bbccdd;
-	background: linear-gradient(90deg, #bbccdd, #cca5dd);
-	color: #333333;
+  background-color: #bbccdd;
+  background: linear-gradient(90deg, #bbccdd, #cca5dd);
+  color: #333333;
 }
 
 #text:selected {
-	color: #333333;
+  color: #333333;
 }
 
 #input {
-	background-color: rgba(50, 50, 50, 0.5);
-	color: #ffffff;
-	padding: .25em;
+  background-color: rgba(50, 50, 50, 0.5);
+  color: #ffffff;
+  padding: 0.25em;
 }
 
-image{
-	margin-left: .25em;
-	margin-right: .25em;
+image {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
 }

@@ -147,4 +147,4 @@ fi
 export PATH=$PATH:usr/bin
 export PATH=$PATH:usr/include/c++
 
-source /home/liukairui/.dotfile/shell/env.sh
+source ~/.dotfile/shell/env.sh

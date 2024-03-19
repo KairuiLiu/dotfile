@@ -1,4 +1,4 @@
-source ~/.dotfile/shell/sortcut
+source ~/.dotfile/shell/sortcut.sh
 
 export OPENCV_LOG_LEVEL=ERROR
 

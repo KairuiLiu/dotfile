@@ -54,4 +54,16 @@ cd aur
 ./backup.sh ./app-list.yaml
 ```
 
+**Existing Bugs**
 
+- Fcitx: focus point and the candidate box are not on the same screen in Chrome.
+- wofi: fcitx5 will flash on wofi.
+- sway: inhibit_fullscreen not support
+- Vars
+  - chrome:
+    - `--gtk-version=4` to enable fcitx [Will Fix in Chrome 124]
+    - `--ozone-platform=wayland` to force chrome running on wayland
+  - vscode
+    - `--enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland`: to force working on wayland
+  - android-studio
+    - `QT_QPA_PLATFORM=xcb`: Enable Android Emulator

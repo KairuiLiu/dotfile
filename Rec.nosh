@@ -152,9 +152,15 @@ edit /etc/sudoers
 sudo rm -rf ~/.config/QQ/.crash_files/*
 sudo chattr +i ~/.config/QQ/.crash_files/
 
-# config postman workspace
+# vsftpd
+sudo cp ~/.dotfile/misc/vsftpd.conf /etc/vsftpd.conf
+ln -s /srv/ftp ~/fileTrans/ftp
+mkdir /srv/ftp/anon ; chmod 777 /srv/ftp/anon
 
 ln -s ~/.dotfile/misc/mpdconf ~/.mpdconf
 ln -s ~/.dotfile/misc/face ~/.face
 
-
+# Tips:
+# config postman workspace
+# check export
+# check default export & setting

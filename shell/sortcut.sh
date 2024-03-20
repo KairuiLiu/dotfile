@@ -13,6 +13,8 @@ alias android-studio-wayland="QT_QPA_PLATFORM=xcb android-studio"
 alias aur-backup="cd ~/.dotfile/aur && ./backup.sh ./app-list.yaml"
 alias aur-build="cd ~/.dotfile/aur && ./build-db.sh ./app-list.yaml"
 alias aur-query="cd ~/.dotfile/aur && ./query.sh ./app-list.db"
+alias ra="ranger"
+alias fzfh="FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob \"!.git/*\" --glob \"!.node_modules/*\"' fzf"
 
 alias git-proxy="git config --global https.proxy http://127.0.0.1:37179 ; git config --global http.proxy http://127.0.0.1:37179"
 alias git-unproxy="git config --global --unset http.proxy ; git config --global --unset https.proxy"

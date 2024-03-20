@@ -152,7 +152,9 @@ edit /etc/sudoers
 sudo rm -rf ~/.config/QQ/.crash_files/*
 sudo chattr +i ~/.config/QQ/.crash_files/
 
+# config postman workspace
+
 ln -s ~/.dotfile/misc/mpdconf ~/.mpdconf
 ln -s ~/.dotfile/misc/face ~/.face
 
-# Check export
+

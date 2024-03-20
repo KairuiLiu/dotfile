@@ -109,3 +109,4 @@ test
 /**/node_modules
 aur/diff-app.txt
 aur/new-app-list.txt
+misc/ranger/**/__pycache__/

@@ -42,3 +42,7 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 export GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/liukairui/.gtkrc-2.0:/home/liukairui/.config/gtkrc-2.0
 export GTK_RC_FILES=/etc/gtk/gtkrc:/home/liukairui/.gtkrc:/home/liukairui/.config/gtkrc
+export FZF_DEFAULT_COMMAND='rg --files --follow --glob "!.git/*" --glob "!.node_modules"'
+
+export GOPATH=~/.go
+export R_LIBS_USER=~/.R

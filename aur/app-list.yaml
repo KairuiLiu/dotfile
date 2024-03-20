@@ -27,7 +27,6 @@
     - ffmpeg
     - feh
     - opencv
-    - w3m // image viewer
   - Bluetooth:
     - bluez
     - bluez-libs
@@ -583,6 +582,7 @@
 - Shell:
   - bc // Basic Calculator
   - bat // cat with syntax highlight
+  - ccat // cat with syntax highlight
   - dialog
   - neofetch
   - zscroll-git
@@ -595,6 +595,7 @@
   - lolcat
   - parallel
   - fzf // fuzzy finder
+  - atool // archive tool
   - Editor:
     - ctags
     - neovim

@@ -97,6 +97,7 @@ handle_extension() {
     esac
 }
 
+# Not work in sway + alacritty
 handle_image() {
     # Size of the preview if there are multiple options or it has to be rendered
     # from vector graphics. If the conversion program allows specifying only one
@@ -105,16 +106,18 @@ handle_image() {
 
     local mimetype="${1}"
     case "${mimetype}" in
-    # SVG
-    # image/svg+xml)
-    #     convert -- "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
-    #     exit 1;;
+    #  SVG
+    image/svg+xml)
+        convert -- "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
+        exit 1
+        ;;
 
     # DjVu
-    # image/vnd.djvu)
-    #     ddjvu -format=tiff -quality=90 -page=1 -size="${DEFAULT_SIZE}" \
-    #           - "${IMAGE_CACHE_PATH}" < "${FILE_PATH}" \
-    #           && exit 6 || exit 1;;
+    image/vnd.djvu)
+        ddjvu -format=tiff -quality=90 -page=1 -size="${DEFAULT_SIZE}" \
+            - "${IMAGE_CACHE_PATH}" <"${FILE_PATH}" &&
+            exit 6 || exit 1
+        ;;
 
     # Image
     image/*)
@@ -139,7 +142,7 @@ handle_image() {
         exit 1
         ;;
 
-        # PDF
+    # PDF
     application/pdf)
         pdftoppm -f 1 -l 1 \
             -scale-to-x "${DEFAULT_SIZE%x*}" \
@@ -150,13 +153,13 @@ handle_image() {
             exit 6 || exit 1
         ;;
 
-        # ePub, MOBI, FB2 (using Calibre)
+    # ePub, MOBI, FB2 (using Calibre)
     application/epub+zip | application/x-mobipocket-ebook | application/x-fictionbook+xml)
         ebook-meta --get-cover="${IMAGE_CACHE_PATH}" -- "${FILE_PATH}" >/dev/null &&
             exit 6 || exit 1
         ;;
 
-        # ePub (using <https://github.com/marianosimone/epub-thumbnailer>)
+    # ePub (using <https://github.com/marianosimone/epub-thumbnailer>)
     application/epub+zip)
         epub-thumbnailer \
             "${FILE_PATH}" "${IMAGE_CACHE_PATH}" "${DEFAULT_SIZE%x*}" &&
@@ -183,8 +186,8 @@ handle_image() {
         fi
         ;;
 
-        # Preview archives using the first image inside.
-    #(Very useful for comic book collections for example.)
+    # Preview archives using the first image inside.
+    # (Very useful for comic book collections for example.)
     application/zip | application/x-rar | application/x-7z-compressed | \
         application/x-xz | application/x-bzip2 | application/x-gzip | application/x-tar)
         local fn=""
@@ -205,8 +208,8 @@ handle_image() {
             { [ "$zip" ] && fn=$(zipinfo -1 -- "${FILE_PATH}"); } || return
 
         fn=$(echo "$fn" | python -c "import sys; import mimetypes as m; \
-                     [ print(l, end='') for l in sys.stdin if \
-                       (m.guess_type(l[:-1])[0] or '').startswith('image/') ]" |
+                    [ print(l, end='') for l in sys.stdin if \
+                    (m.guess_type(l[:-1])[0] or '').startswith('image/') ]" |
             sort -V | head -n 1)
         [ "$fn" = "" ] && return
         [ "$bsd" ] && fn=$(printf '%b' "$fn")

@@ -59,6 +59,7 @@ cd aur
 - Fcitx: focus point and the candidate box are not on the same screen in Chrome.
 - wofi: fcitx5 will flash on wofi.
 - sway: inhibit_fullscreen not support
+- ranger: image can not preview (in sway + alacritty)
 - Vars
   - chrome:
     - `--gtk-version=4` to enable fcitx [Will Fix in Chrome 124]

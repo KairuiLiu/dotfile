@@ -19,10 +19,10 @@ case $label in
 esac
 
 if [ "$2" = 'u' ];then
-	exec sudo umount /home/liukairui/FileTrans/$label;
+	exec sudo umount /home/liukairui/fileTrans/$label;
 else
-    sudo mount /dev/nvme0n1p$diskId /home/liukairui/FileTrans/$label;
+    sudo mount /dev/nvme0n1p$diskId /home/liukairui/fileTrans/$label;
     if [ "$2" = 'd' -o "$3" = 'd' ];then
-        exec dolphin /home/liukairui/FileTrans/$label --new-window 2>/dev/null
+        exec dolphin /home/liukairui/fileTrans/$label --new-window 2>/dev/null
     fi
 fi

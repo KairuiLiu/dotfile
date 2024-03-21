@@ -1,5 +1,5 @@
 alias gitBKCS="cd /home/liukairui/CODE/code-segments && git add . && git commit -m $(date '+UpDate_%Y-%m-%d_%H:%M') && git push"
-alias mwin="/home/liukairui/FileTrans/.shell/mountWin.sh "
+alias mwin="/home/liukairui/fileTrans/mountWin.sh "
 alias killwx="kill -SIGTERM -- -$(ps x -o "%r %c" | awk '{ n=substr($0,index($0,$2)); if(n~/uos/){print $1;exit} }')"
 alias weatherUoA="curl zh.wttr.in/Grafton%20Auckland"
 alias rr="ranger"

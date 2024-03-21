@@ -25,8 +25,8 @@ export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
 # Flutter and Android Setting
 export PATH=/opt/flutter/bin:$PATH
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-beta"
-export ANDROID_HOME="/home/liukairui/Android/Sdk"
-export ANDROID_SDK_ROOT='/home/liukairui/Android/Sdk'
+export ANDROID_HOME="/home/liukairui/.andriodHome/Sdk"
+export ANDROID_SDK_ROOT='/home/liukairui/.andriodHome/Sdk'
 export PUB_HOSTED_URL="https://pub.flutter-io.cn"
 export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 

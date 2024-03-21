@@ -173,7 +173,8 @@ bindsym $mod+Shift+0 move container to workspace number 10
 ## App Shortcut ##
 ##################
 bindsym $mod+Shift+s exec --no-startup-id grim -g "$(slurp)" - | swappy -f -
-bindsym $mod+Shift+d exec dolphin
+bindsym $mod+Shift+x exec dolphin
+bindsym $mod+Shift+d exec $term -e ranger
 bindsym $mod+Shift+v exec cfw
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec "code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
@@ -182,7 +183,6 @@ bindsym $mod+space exec ~/.dotfile/sway/sway/run-rofi.sh
 bindsym $mod+Shift+z exec subl
 bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+Shift+a exec wdisplays
-bindsym $mod+Shift+x exec $term -e ranger
 bindsym $mod+Shift+w exec wechat-uos
 bindsym $mod+Shift+y exec /opt/YesPlayMusic/yesplaymusic
 bindsym $mod+Return exec $term

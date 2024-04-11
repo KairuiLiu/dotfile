@@ -19,7 +19,7 @@ URxvt.color12:DodgerBlue
 URxvt.color14:Cyan2
 URxvt.color15:Gray95
 !!URL操作
-URxvt.urlLauncher:google-chrome-beta
+URxvt.urlLauncher:google-chrome-unstable
 URxvt.matcher.button:1
 Urxvt.perl-ext-common:matcher
 !!滚动条设置

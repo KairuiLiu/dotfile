@@ -63,6 +63,9 @@
     - networkmanager
     - wpa_supplicant
     - openbsd-netcat // network debug
+    - hostapd // wifi + hotspot
+    - wihotspot // wifi + hotspot Config GUI
+    - haveged // Random MAC address
   - File Service:
     - samba
     - vsftpd

@@ -178,13 +178,13 @@ bindsym $mod+Shift+d exec $term -e ranger
 bindsym $mod+Shift+v exec cfw
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec "code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
-bindsym $mod+Shift+g exec /usr/bin/google-chrome-beta --gtk-version=4
+bindsym $mod+Shift+g exec /usr/bin/google-chrome-unstable # --gtk-version=4 --enable-feature=UseOzonPlatform --ozone-platform=wayland"
 bindsym $mod+space exec ~/.dotfile/sway/sway/run-rofi.sh
 bindsym $mod+Shift+z exec subl
 bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+Shift+a exec wdisplays
 bindsym $mod+Shift+w exec wechat-uos
-bindsym $mod+Shift+y exec /opt/YesPlayMusic/yesplaymusic
+bindsym $mod+Shift+y exec /opt/YesPlayMusic/yesplaymusic  --enable-features=UseOzonePlatform --ozone-platform=wayland --gtk-version=4
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+F1 exec pgrep -f 'waybar --config ~/.config/waybar/config_tray' && (ps aux | grep 'waybar --config ~/.config/waybar/config_tray' | grep -v grep | awk '{print $2}' | xargs kill) || (waybar --config ~/.config/waybar/config_tray &)
 

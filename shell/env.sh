@@ -16,6 +16,9 @@ export INPUT_METHOD=fcitx
 export XMODIFIERS=@im=fcitx
 export IMSETTINGS_MODULE=fcitx
 export SDL_IM_MODULE=fcitx
+export XIM=fcitx
+export XIM_PROGRAM=fcitx
+export GDK_BACKEND=wayland
 
 # Path Setting
 export PATH=/usr/local/texlive/2023/bin/x86_64-linux:/home/liukairui/.local/bin:$PATH
@@ -24,7 +27,7 @@ export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
 
 # Flutter and Android Setting
 export PATH=/opt/flutter/bin:$PATH
-export CHROME_EXECUTABLE="/usr/bin/google-chrome-beta"
+export CHROME_EXECUTABLE="/usr/bin/google-chrome-unstable"
 export ANDROID_HOME="/home/liukairui/.andriodHome/Sdk"
 export ANDROID_SDK_ROOT='/home/liukairui/.andriodHome/Sdk'
 export PUB_HOSTED_URL="https://pub.flutter-io.cn"

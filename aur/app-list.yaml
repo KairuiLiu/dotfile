@@ -438,14 +438,13 @@
   - Flutter:
     - flutter
     - android-sdk
-    - android-emulator
     - android-sdk-platform-tools
-    - android-tools
     - android-udev
-    - ncurses5-compat-libs
-    - android-tools
-    - android-udev
-    - android-emulator-dummy
+    - android-emulator // Not Necessary
+    - android-tools // Not Necessary
+    - ncurses5-compat-libs // Not Necessary
+    - android-tools // Not Necessary
+    - android-emulator-dummy // Not Necessary
   - GoLang:
     - go-tools
     - go
@@ -483,7 +482,7 @@
     - intellij-idea-ultimate-edition
     - goland-jre
     - goland
-    - android-studio
+    - android-studio // Not Necessary
     - sublime-text-4
     - visual-studio-code-insiders-bin
     - rstudio-desktop-bin

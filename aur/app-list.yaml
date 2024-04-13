@@ -432,8 +432,6 @@
     - jdk-openjdk
     - java-environment-common
     - java-runtime-common
-    - jre-openjdk
-    - jre-openjdk-headless
     - jre8-openjdk
     - jre8-openjdk-headless
     - kotlin

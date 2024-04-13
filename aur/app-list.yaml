@@ -66,6 +66,7 @@
     - hostapd // wifi + hotspot
     - wihotspot // wifi + hotspot Config GUI
     - haveged // Random MAC address
+    - network-manager-applet
   - File Service:
     - samba
     - vsftpd
@@ -105,20 +106,21 @@
     - imath // 2D graphics library
     - glfw // multi-platform library for OpenGL
 - Fcitx:
+  - fcitx5
+  // - fcitx5-git
   - fcitx5-chinese-addons
-  - fcitx5-git
   - fcitx5-material-color
   - fcitx5-pinyin-zhwiki
-  - fcitx5-qt5-git
   - fcitx5-chewing
   - fcitx5-configtool
   - fcitx5-gtk
   - fcitx5-pinyin-moegirl
-  - fcitx5-qt4-git
-  - fcitx5-qt5-git
-  - fcitx5-qt6-git
+  // - fcitx5-qt4-git
+  // - fcitx5-qt5-git
+  // - fcitx5-qt6-git
+  - fcitx5-mozc
+  // - fcitx5-mozc-git
   - xf86-input-synaptics
-  - fcitx5-mozc-git
 - Develop Language:
   - C Sharp:
     - dotnet-runtime
@@ -251,7 +253,6 @@
     - haskell-hls-floskell-plugin
     - haskell-hls-fourmolu-plugin
     - haskell-hls-graph
-    - haskell-hls-haddock-comments-plugin
     - haskell-hls-hlint-plugin
     - haskell-hls-module-name-plugin
     - haskell-hls-ormolu-plugin
@@ -424,9 +425,6 @@
     - haskell-vector-algorithms
     - haskell-void
     - haskell-x509
-    - haskell-x509-store
-    - haskell-x509-system
-    - haskell-x509-validation
     - haskell-yaml
     - haskell-zip-archive
     - haskell-zlib

@@ -15,7 +15,10 @@ git clone git@github.com:KairuiLiu/dotfile.git .dotfile
 
 # get mirrorlist from https://archlinux.org/mirrorlist/
 sudo vim /etc/pacman.d/mirrorlist
-sudo cp ./.dotfile/aur/archlinuxcn-mirrorlist /etc/pacman.d/
+# sudo vim /etc/pacman.conf
+## [archlinuxcn]
+## Include = /etc/pacman.d/archlinuxcn-mirrorlist
+sudo cp ~/.dotfile/aur/archlinuxcn-mirrorlist /etc/pacman.d/
 sudo pacman -Syyu
 sudo pacman -S archlinuxcn-keyring
 sudo pacman -S clash-for-windows-bin yay

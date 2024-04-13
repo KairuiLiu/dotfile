@@ -545,7 +545,6 @@
   - touchegg // touchpad gesture
   - dmenu // application launcher
 - Sway:
-  - plasma-wayland-session
   - wayland
   - xorg-xwayland
   - qt5-wayland
@@ -567,7 +566,6 @@
   - bemenu-wayland // application launcher
   - kwayland-integration
   - ScreenRecord:
-    - v4l2-loopback
     - v4l2loopback-dkms
     - v4l2loopback
     - v4l2loopback-utils
@@ -714,7 +712,6 @@
   - filezilla
   - deepin-screenshot
   - scrcpy-git // android screen mirror
-  - steam
   - pdfarranger
   - mailspring
   - grub-customizer

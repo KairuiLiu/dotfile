@@ -18,8 +18,6 @@
     - alsa-plugins
     - sof-firmware // intel DSP sound card firmware
     - playerctl // media player control
-    - pulseaudio-bluetooth
-    - pulseaudio-modules-bt
     - pavucontrol // pulseaudio control
     - pavucontrol-qt // pulseaudio control
     - sox // audio player & processor
@@ -64,6 +62,7 @@
     - wpa_supplicant
     - openbsd-netcat // network debug
     - hostapd // wifi + hotspot
+    - linux-wifi-hotspot
     - wihotspot // wifi + hotspot Config GUI
     - haveged // Random MAC address
     - network-manager-applet
@@ -93,7 +92,7 @@
     - mtools // for FAT file system
     - hfsprogs // for macos file system
   - BackLight:
-    - light
+    - light-git
     - clightd
     - clight-gui-git
   - Dev Tools & Lib:
@@ -178,7 +177,6 @@
     - haskell-conduit
     - haskell-conduit-extra
     - haskell-conduit-parse
-    - haskell-connection
     - haskell-constraints
     - haskell-constraints-extras
     - haskell-contravariant
@@ -224,7 +222,6 @@
     - haskell-fsnotify
     - haskell-fuzzy
     - haskell-generic-deriving
-    - haskell-ghc-api-compat
     - haskell-ghc-bignum-orphans
     - haskell-ghc-check
     - haskell-ghc-exactprint
@@ -443,7 +440,6 @@
     - android-emulator // Not Necessary
     - android-tools // Not Necessary
     - ncurses5-compat-libs // Not Necessary
-    - android-tools // Not Necessary
     - android-emulator-dummy // Not Necessary
   - GoLang:
     - go-tools
@@ -649,26 +645,9 @@
   - otf-font-awesome
 - LaTeX:
   - texstudio
-  - texinfo
-  - texlive-bibtexextra
-  - texlive-bin
-  - texlive-core
-  - texlive-fontsextra
-  - texlive-formatsextra
-  - texlive-games
-  - texlive-humanities
-  - texlive-langchinese
-  - texlive-langcyrillic
-  - texlive-langextra
-  - texlive-langgreek
-  - texlive-langjapanese
-  - texlive-langkorean
-  - texlive-latexextra
-  - texlive-music
-  - texlive-pictures
-  - texlive-pstricks
-  - texlive-publishers
-  - texlive-science
+  - texlive
+  - texlive-lang
+  - biber
 - Others:
   - Office:
     - wps-office-cn
@@ -677,9 +656,8 @@
     - wps-office-mui-zh-cn
   - Player:
     - yesplaymusic
-    - qqmusic-bin
+    - qqmusic-appimage
   - IM:
-    - slack-desktop
     - linuxqq
     - icalingua++
     - feishu-bin
@@ -711,7 +689,8 @@
   - binggpt-desktop-bin
   - filezilla
   - deepin-screenshot
-  - scrcpy-git // android screen mirror
+  - deepin-screen-recorder
+  - scrcpy // android screen mirror
   - pdfarranger
   - mailspring
   - grub-customizer

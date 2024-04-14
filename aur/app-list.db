@@ -15,8 +15,6 @@ alsa-utils:	System Service/Audio
 alsa-plugins:	System Service/Audio	
 sof-firmware:	System Service/Audio	intelDSPsoundcardfirmware
 playerctl:	System Service/Audio	mediaplayercontrol
-pulseaudio-bluetooth:	System Service/Audio	
-pulseaudio-modules-bt:	System Service/Audio	
 pavucontrol:	System Service/Audio	pulseaudiocontrol
 pavucontrol-qt:	System Service/Audio	pulseaudiocontrol
 sox:	System Service/Audio	audioplayer&processor
@@ -53,6 +51,11 @@ ebtables:	System Service/Network	fornetworkbridge
 networkmanager:	System Service/Network	
 wpa_supplicant:	System Service/Network	
 openbsd-netcat:	System Service/Network	networkdebug
+hostapd:	System Service/Network	wifi+hotspot
+linux-wifi-hotspot:	System Service/Network	
+wihotspot:	System Service/Network	wifi+hotspotConfigGUI
+haveged:	System Service/Network	RandomMACaddress
+network-manager-applet:	System Service/Network	
 samba:	System Service/File Service	
 vsftpd:	System Service/File Service	
 gzip:	System Service/Zip	
@@ -74,7 +77,7 @@ ntfs-3g:	System Service/File System
 dosfstools:	System Service/File System	forFATfilesystem
 mtools:	System Service/File System	forFATfilesystem
 hfsprogs:	System Service/File System	formacosfilesystem
-light:	System Service/BackLight	
+light-git:	System Service/BackLight	
 clightd:	System Service/BackLight	
 clight-gui-git:	System Service/BackLight	
 make:	System Service/Dev Tools & Lib	
@@ -85,20 +88,16 @@ git:	System Service/Dev Tools & Lib
 cairo:	System Service/Dev Tools & Lib	2Dgraphicslibrary
 imath:	System Service/Dev Tools & Lib	2Dgraphicslibrary
 glfw:	System Service/Dev Tools & Lib	multi-platformlibraryforOpenGL
+fcitx5:	Fcitx	
 fcitx5-chinese-addons:	Fcitx	
-fcitx5-git:	Fcitx	
 fcitx5-material-color:	Fcitx	
 fcitx5-pinyin-zhwiki:	Fcitx	
-fcitx5-qt5-git:	Fcitx	
 fcitx5-chewing:	Fcitx	
 fcitx5-configtool:	Fcitx	
 fcitx5-gtk:	Fcitx	
 fcitx5-pinyin-moegirl:	Fcitx	
-fcitx5-qt4-git:	Fcitx	
-fcitx5-qt5-git:	Fcitx	
-fcitx5-qt6-git:	Fcitx	
+fcitx5-mozc:	Fcitx	
 xf86-input-synaptics:	Fcitx	
-fcitx5-mozc-git:	Fcitx	
 dotnet-runtime:	Develop Language/C Sharp	
 dotnet-sdk:	Develop Language/C Sharp	
 aspnet-runtime:	Develop Language/C Sharp	
@@ -152,7 +151,6 @@ haskell-comonad:	Develop Language/Haskell
 haskell-conduit:	Develop Language/Haskell	
 haskell-conduit-extra:	Develop Language/Haskell	
 haskell-conduit-parse:	Develop Language/Haskell	
-haskell-connection:	Develop Language/Haskell	
 haskell-constraints:	Develop Language/Haskell	
 haskell-constraints-extras:	Develop Language/Haskell	
 haskell-contravariant:	Develop Language/Haskell	
@@ -198,7 +196,6 @@ haskell-free:	Develop Language/Haskell
 haskell-fsnotify:	Develop Language/Haskell	
 haskell-fuzzy:	Develop Language/Haskell	
 haskell-generic-deriving:	Develop Language/Haskell	
-haskell-ghc-api-compat:	Develop Language/Haskell	
 haskell-ghc-bignum-orphans:	Develop Language/Haskell	
 haskell-ghc-check:	Develop Language/Haskell	
 haskell-ghc-exactprint:	Develop Language/Haskell	
@@ -227,7 +224,6 @@ haskell-hls-explicit-imports-plugin:	Develop Language/Haskell
 haskell-hls-floskell-plugin:	Develop Language/Haskell	
 haskell-hls-fourmolu-plugin:	Develop Language/Haskell	
 haskell-hls-graph:	Develop Language/Haskell	
-haskell-hls-haddock-comments-plugin:	Develop Language/Haskell	
 haskell-hls-hlint-plugin:	Develop Language/Haskell	
 haskell-hls-module-name-plugin:	Develop Language/Haskell	
 haskell-hls-ormolu-plugin:	Develop Language/Haskell	
@@ -400,30 +396,23 @@ haskell-vector:	Develop Language/Haskell
 haskell-vector-algorithms:	Develop Language/Haskell	
 haskell-void:	Develop Language/Haskell	
 haskell-x509:	Develop Language/Haskell	
-haskell-x509-store:	Develop Language/Haskell	
-haskell-x509-system:	Develop Language/Haskell	
-haskell-x509-validation:	Develop Language/Haskell	
 haskell-yaml:	Develop Language/Haskell	
 haskell-zip-archive:	Develop Language/Haskell	
 haskell-zlib:	Develop Language/Haskell	
 jdk-openjdk:	Develop Language/Java	
 java-environment-common:	Develop Language/Java	
 java-runtime-common:	Develop Language/Java	
-jre-openjdk:	Develop Language/Java	
-jre-openjdk-headless:	Develop Language/Java	
 jre8-openjdk:	Develop Language/Java	
 jre8-openjdk-headless:	Develop Language/Java	
 kotlin:	Develop Language/Java	
 flutter:	Develop Language/Flutter	
 android-sdk:	Develop Language/Flutter	
-android-emulator:	Develop Language/Flutter	
 android-sdk-platform-tools:	Develop Language/Flutter	
-android-tools:	Develop Language/Flutter	
 android-udev:	Develop Language/Flutter	
-ncurses5-compat-libs:	Develop Language/Flutter	
-android-tools:	Develop Language/Flutter	
-android-udev:	Develop Language/Flutter	
-android-emulator-dummy:	Develop Language/Flutter	
+android-emulator:	Develop Language/Flutter	NotNecessary
+android-tools:	Develop Language/Flutter	NotNecessary
+ncurses5-compat-libs:	Develop Language/Flutter	NotNecessary
+android-emulator-dummy:	Develop Language/Flutter	NotNecessary
 go-tools:	Develop Language/GoLang	
 go:	Develop Language/GoLang	
 nodejs:	Develop Language/JavaScript	
@@ -451,7 +440,7 @@ intellij-idea-ultimate-edition-jre:	Develop Language/IDE
 intellij-idea-ultimate-edition:	Develop Language/IDE	
 goland-jre:	Develop Language/IDE	
 goland:	Develop Language/IDE	
-android-studio:	Develop Language/IDE	
+android-studio:	Develop Language/IDE	NotNecessary
 sublime-text-4:	Develop Language/IDE	
 visual-studio-code-insiders-bin:	Develop Language/IDE	
 rstudio-desktop-bin:	Develop Language/IDE	
@@ -477,6 +466,7 @@ dbvis:	Dev-Ops	DatabaseVisualizer
 rabbitmq:	Dev-Ops	
 qemu-base:	Dev-Ops	
 virt-manager:	Dev-Ops	virtualmachinemanager
+sublime-merge:	Dev-Ops	
 openvpn:	Proxy	
 qv2ray-dev-git:	Proxy	
 clash:	Proxy	
@@ -508,7 +498,6 @@ polybar:	I3
 picom-git:	I3	
 touchegg:	I3	touchpadgesture
 dmenu:	I3	applicationlauncher
-plasma-wayland-session:	Sway	
 wayland:	Sway	
 xorg-xwayland:	Sway	
 qt5-wayland:	Sway	
@@ -522,13 +511,13 @@ swaylock-fancy-git:	Sway
 mako:	Sway	notification
 trayer:	Sway	systemtray
 wofi:	Sway	
+rofi:	Sway	
 waybar:	Sway	
 wdisplays-git:	Sway	displaymanager
 scrot:	Sway	screenshot
 wl-clipboard:	Sway	clipboard
 bemenu-wayland:	Sway	applicationlauncher
 kwayland-integration:	Sway	
-v4l2-loopback:	Sway/ScreenRecord	
 v4l2loopback-dkms:	Sway/ScreenRecord	
 v4l2loopback:	Sway/ScreenRecord	
 v4l2loopback-utils:	Sway/ScreenRecord	
@@ -539,6 +528,7 @@ slurp:	Sway/ScreenShot
 dmenu:	Sway	applicationlauncher
 bc:	Shell	BasicCalculator
 bat:	Shell	catwithsyntaxhighlight
+ccat:	Shell	catwithsyntaxhighlight
 dialog:	Shell	
 neofetch:	Shell	
 zscroll-git:	Shell	
@@ -550,6 +540,8 @@ htop:	Shell	bettertop
 gping:	Shell	betterping
 lolcat:	Shell	
 parallel:	Shell	
+fzf:	Shell	fuzzyfinder
+atool:	Shell	archivetool
 ctags:	Shell/Editor	
 neovim:	Shell/Editor	
 neovim-qt:	Shell/Editor	
@@ -601,33 +593,15 @@ ttf-babelstone-han:	Fonts
 ttf-jetbrains-mono-nerd:	Fonts	
 otf-font-awesome:	Fonts	
 texstudio:	LaTeX	
-texinfo:	LaTeX	
-texlive-bibtexextra:	LaTeX	
-texlive-bin:	LaTeX	
-texlive-core:	LaTeX	
-texlive-fontsextra:	LaTeX	
-texlive-formatsextra:	LaTeX	
-texlive-games:	LaTeX	
-texlive-humanities:	LaTeX	
-texlive-langchinese:	LaTeX	
-texlive-langcyrillic:	LaTeX	
-texlive-langextra:	LaTeX	
-texlive-langgreek:	LaTeX	
-texlive-langjapanese:	LaTeX	
-texlive-langkorean:	LaTeX	
-texlive-latexextra:	LaTeX	
-texlive-music:	LaTeX	
-texlive-pictures:	LaTeX	
-texlive-pstricks:	LaTeX	
-texlive-publishers:	LaTeX	
-texlive-science:	LaTeX	
+texlive:	LaTeX	
+texlive-lang:	LaTeX	
+biber:	LaTeX	
 wps-office-cn:	Others/Office	
 wps-office-fonts:	Others/Office	
 wps-office-mime-cn:	Others/Office	
 wps-office-mui-zh-cn:	Others/Office	
 yesplaymusic:	Others/Player	
-qqmusic-bin:	Others/Player	
-slack-desktop:	Others/IM	
+qqmusic-appimage:	Others/Player	
 linuxqq:	Others/IM	
 icalingua++:	Others/IM	
 feishu-bin:	Others/IM	
@@ -656,8 +630,8 @@ geogebra:	Others
 binggpt-desktop-bin:	Others	
 filezilla:	Others	
 deepin-screenshot:	Others	
-scrcpy-git:	Others	androidscreenmirror
-steam:	Others	
+deepin-screen-recorder:	Others	
+scrcpy:	Others	androidscreenmirror
 pdfarranger:	Others	
 mailspring:	Others	
 grub-customizer:	Others	

@@ -21,9 +21,10 @@ export XIM_PROGRAM=fcitx
 export GDK_BACKEND=wayland
 
 # Path Setting
-export PATH=/usr/local/texlive/2023/bin/x86_64-linux:/home/liukairui/.local/bin:$PATH
-export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
+export PATH=/home/liukairui/.local/bin:$PATH
+# export PATH=/usr/local/texlive/2023/bin/x86_64-linux:/home/liukairui/.local/bin:$PATH
+# export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
+# export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
 
 # Flutter and Android Setting
 export PATH=/opt/flutter/bin:$PATH

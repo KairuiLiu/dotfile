@@ -21,7 +21,7 @@ sudo vim /etc/pacman.d/mirrorlist
 sudo cp ~/.dotfile/aur/archlinuxcn-mirrorlist /etc/pacman.d/
 sudo pacman -Syyu
 sudo pacman -S archlinuxcn-keyring
-sudo pacman -S clash-for-windows-bin yay
+sudo pacman -S clash-for-windows-bin yay zsh
 
 #######################################
 ## X.org config                      ##
@@ -69,7 +69,6 @@ chmod 755 .dotfile/shell/mountWin.sh
 ## install software                  ##
 #######################################
 
-# install texlive
 # install aur/apps
 # copy chrome proxy switch
 systemctl enable tlp.service
@@ -84,7 +83,7 @@ systemctl enable bluetooth.service
 ln -s ~/.dotfile/sway/sway/sway_config ~/.config/sway/config
 ln -s ~/.dotfile/sway/mako ~/.config/mako
 ln -s ~/.dotfile/sway/waybar ~/.config/waybar
-ln -s ~/.dotfile/sway/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -s ~/.dotfile/shell/alacritty.yml ~/.config/alacritty/alacritty.yml
 # set wayland flag on chrome (chrome://flags)
 ln -s ~/.dotfile/sway/wofi ~/.config/wofi
 sudo cp ~/.dotfile/sway/sway/sway-custom-env.desktop /usr/share/wayland-sessions/

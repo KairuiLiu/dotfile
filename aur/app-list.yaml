@@ -66,6 +66,7 @@
     - wihotspot // wifi + hotspot Config GUI
     - haveged // Random MAC address
     - network-manager-applet
+    - wscat
   - File Service:
     - samba
     - vsftpd
@@ -85,6 +86,7 @@
     - tk
     - xdg-desktop-portal // desktop portal for flatpak
     - xdg-desktop-portal-wlr
+    - xdg-desktop-portal-kde
     - xorg
   - File System:
     - ntfs-3g
@@ -491,6 +493,8 @@
   - mycli
   - sqlite
   - sqlitestudio
+  - mongodb-bin
+  - coturn
   - nginx
   - apache
   - wireshark-cli
@@ -566,6 +570,7 @@
     - v4l2loopback
     - v4l2loopback-utils
     - wf-recorder
+    - pipewire-pulse
   - ScreenShot:
     - swappy-git
     - grimshot
@@ -699,3 +704,4 @@
   - patchelf //  modify rpath of ELF executables
   - packagekit-qt5
   - packagekit-qt6
+  - minecraft-launcher

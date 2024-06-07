@@ -63,7 +63,7 @@ cd aur
 - chrome: GTK4 flag notwork
 - Vars
   - chrome:
-    - `--gtk-version=4` to enable fcitx [Will Fix in Chrome 124]
+    - `--gtk-version=4` to enable fcitx5
     - `--ozone-platform=wayland` to force chrome running on wayland
   - vscode
     - `--enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland`: to force working on wayland

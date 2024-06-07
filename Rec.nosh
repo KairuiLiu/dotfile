@@ -162,6 +162,20 @@ mkdir /srv/ftp/anon ; chmod 777 /srv/ftp/anon
 ln -s ~/.dotfile/misc/mpdconf ~/.mpdconf
 ln -s ~/.dotfile/misc/face ~/.face
 
+# Fix Chrome-[stable|beta|unstabel] GTK4 on wayland
+cd /opt/google/chrome-beta/
+sudo cp google-chrome-beta google-chrome-beta.bak
+# edit google-chrome-beta to comment out the line
+# Always use our versions of ffmpeg libs.
+# This also makes RPMs find the compatibly-named library symlinks.
+# if [[ -n "$LD_LIBRARY_PATH" ]]; then
+#   LD_LIBRARY_PATH="$HERE:$HERE/lib:$LD_LIBRARY_PATH"
+# else
+#   LD_LIBRARY_PATH="$HERE:$HERE/lib"
+# fi
+# export LD_LIBRARY_PATH
+
+
 # Tips:
 # config postman workspace
 # check export

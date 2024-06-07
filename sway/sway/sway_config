@@ -16,6 +16,7 @@ set $term alacritty
 exec_always --no-startup-id fcitx5 -d --replace
 exec_always mako
 exec_always "kill $(pgrep waybar); waybar"
+exec --no-startup-id /usr/lib/xdg-desktop-portal -r
 
 #######################
 ## In/Output         ##
@@ -178,7 +179,7 @@ bindsym $mod+Shift+d exec $term -e ranger
 bindsym $mod+Shift+v exec cfw
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec "code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
-bindsym $mod+Shift+g exec /usr/bin/google-chrome-unstable # --gtk-version=4 --enable-feature=UseOzonPlatform --ozone-platform=wayland"
+bindsym $mod+Shift+g exec "LD_PRELOAD=/usr/lib/libgtk-4.so google-chrome-unstable --ozone-platform=wayland --gtk-version=4"
 bindsym $mod+space exec ~/.dotfile/sway/sway/run-rofi.sh
 bindsym $mod+Shift+z exec subl
 bindsym $mod+Shift+t exec telegram-desktop

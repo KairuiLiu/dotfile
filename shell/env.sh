@@ -20,6 +20,7 @@ export XIM=fcitx
 export XIM_PROGRAM=fcitx
 export GDK_BACKEND=wayland
 
+
 # Path Setting
 export PATH=/home/liukairui/.local/bin:$PATH
 # export PATH=/usr/local/texlive/2023/bin/x86_64-linux:/home/liukairui/.local/bin:$PATH
@@ -41,7 +42,6 @@ export SDL_VIDEODRIVER=wayland
 export MOZ_ENABLE_WAYLAND=1
 export MOZ_WEBRENDER=1
 export XDG_SESSION_TYPE=wayland
-export XDG_CURRENT_DESKTOP=sway
 export QT_QPA_PLATFORMTHEME=qt5ct
 
 export GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/liukairui/.gtkrc-2.0:/home/liukairui/.config/gtkrc-2.0
@@ -50,3 +50,6 @@ export FZF_DEFAULT_COMMAND='rg --files --follow --glob "!.git/*" --glob "!.node_
 
 export GOPATH=~/.go
 export R_LIBS_USER=~/.R
+
+export GEM_HOME="~/.gems"
+export GEM_PATH="~/.gems"

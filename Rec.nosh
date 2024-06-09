@@ -83,7 +83,7 @@ systemctl enable bluetooth.service
 ln -s ~/.dotfile/sway/sway/sway_config ~/.config/sway/config
 ln -s ~/.dotfile/sway/mako ~/.config/mako
 ln -s ~/.dotfile/sway/waybar ~/.config/waybar
-ln -s ~/.dotfile/shell/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -s ~/.dotfile/shell/kitty.conf ~/.config/kitty/kitty.conf
 # set wayland flag on chrome (chrome://flags)
 ln -s ~/.dotfile/sway/wofi ~/.config/wofi
 sudo cp ~/.dotfile/sway/sway/sway-custom-env.desktop /usr/share/wayland-sessions/

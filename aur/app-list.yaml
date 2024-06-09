@@ -613,6 +613,7 @@
     - rxvt-unicode
     - rxvt-unicode-terminfo
     - alacritty
+    - kitty
 - Browser:
   - chromium
   - google-chrome

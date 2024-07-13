@@ -9,7 +9,7 @@ if [ -n "$external_output" ]; then
   "external_only")
     swaymsg "output eDP-1 disable" &&
       swaymsg "output $external_output enable" &&
-      swaymsg "output $external_output resolution 1920x1080 position 0 0"
+      swaymsg "output $external_output resolution 2560x1440 scale 1.2 position 0 0"
     ;;
   "edp_only")
     swaymsg "output eDP-1 enable" &&
@@ -18,9 +18,9 @@ if [ -n "$external_output" ]; then
     ;;
   "both")
     swaymsg "output eDP-1 enable" &&
-      swaymsg "output eDP-1 resolution 2880x1800 position 1920 523 scale 1.75" &&
+      swaymsg "output eDP-1 resolution 2880x1800 position 2134 831 scale 1.75" &&
       swaymsg "output $external_output enable" &&
-      swaymsg "output $external_output resolution 1920x1080 position 0 0"
+      swaymsg "output $external_output resolution 2560x1440 scale 1.2 position 0 0"
     ;;
   *)
     echo "Unknown option: $1"

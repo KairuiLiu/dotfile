@@ -133,5 +133,6 @@ export PATH="$PNPM_HOME:$PATH"
 
 source ~/.xinitrc
 source ~/.dotfile/shell/env.sh
+source /opt/ros/iron/setup.zsh
 
 clear

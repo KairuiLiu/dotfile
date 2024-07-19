@@ -22,12 +22,24 @@ alias git-unproxy="git config --global --unset http.proxy ; git config --global 
 function cli-proxy() {
     export http_proxy=http://127.0.0.1:37179
     export https_proxy=$http_proxy
-    echo -e "proxy on"
+    export socks_proxy=socks5://127.0.0.1:37179
+    echo -e "HTTP & WS Proxy on"
 }
 
 function cli-unproxy() {
-    unset http_proxy https_proxy
-    echo -e "proxy off"
+    unset http_proxy
+    unset https_proxy
+    unset socks_proxy
+    echo -e "HTTP & WS Proxy off"
+}
+
+function ross() {
+    if [ -f "./install/setup.zsh" ]; then
+        source "./install/setup.zsh"
+        echo "Sourced ./install/setup.zsh"
+    else
+        echo "No ./install/setup.zsh found in current directory"
+    fi
 }
 
 ex() {

@@ -147,12 +147,6 @@ endfunction
 "====================================
 "=== Plug config ====================
 "====================================
-"------- xkb-switch --------
-"copy dll to $VIM, and note bit
-let g:XkbSwitchEnabled     = 1
-let g:XkbSwitchIMappings   = ['cn']
-let g:XkbSwitchIMappingsTr = {'cn': {'<': '', '>': ''}}
-
 "------- ondotree ----------
 map <F5> :UndotreeToggle<CR>
 
@@ -420,8 +414,6 @@ let g:startify_files_number = 5
 "=== VIM-Plug ======================
 "===================================
 call plug#begin('~/.vim/plugged')
-Plug 'lyokha/vim-xkbswitch'                 "neovim notsupport
-Plug 'grwlf/xkb-switch'                  "neoivm norsupport
 Plug 'vim-airline/vim-airline'
 Plug 'connorholyday/vim-snazzy'
 Plug 'preservim/nerdtree'
@@ -444,7 +436,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'mhinz/vim-startify'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'vim-scripts/taglist.vim'
-Plug 'ycm-core/YouCompleteMe'
+"Plug 'ycm-core/YouCompleteMe'
 Plug 'wakatime/vim-wakatime'
 Plug 'joshdick/onedark.vim'
 Plug 'tomasr/molokai'

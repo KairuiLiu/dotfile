@@ -118,4 +118,4 @@ export PATH=$PATH:usr/bin
 export PATH=$PATH:usr/include/c++
 
 source ~/.dotfile/shell/shortcut.sh
-source ~/.dotfile/shell/env.sh
+

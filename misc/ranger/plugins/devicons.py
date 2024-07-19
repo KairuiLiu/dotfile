@@ -177,7 +177,7 @@ dir_node_exact_matches = {
     'Book'                             : '',
     'CODE'                             : '',
     '.git'                             : '',
-    'Desktop'                          : '',
+    # 'Desktop'                          : '',
     'Documents'                        : '',
     'fileTrans'                        : '󰘕',
     'Downloads'                        : '',

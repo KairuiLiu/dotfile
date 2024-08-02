@@ -1,13 +1,19 @@
 alias weatherUoA="curl zh.wttr.in/Beijing%20Haidian"
-alias rr="ranger"
+alias rr="/opt/homebrew/bin/im-select com.apple.keylayout.ABC ; ranger"
 alias fzfh="FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob \"!.git/*\" --glob \"!.node_modules/*\"' fzf"
 alias cp="cp -i"
 alias df='df -h'
 alias free='free -m'
 alias np='nano -w PKGBUILD'
 alias python='python3'
-
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alias chrome-dev='/Applications/Google\ Chrome\ Dev.app/Contents/MacOS/Google\ Chrome\ Dev'
+alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
+alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
+alias krita='/Applications/krita.app/Contents/MacOS/krita'
 alias more=less
+alias cat='ccat'
+alias top='gtop'
 
 function ross() {
     if [ -f "./install/setup.zsh" ]; then

@@ -1,4 +1,4 @@
-alias weatherUoA="curl zh.wttr.in/Beijing%20Haidian"
+alias weatherHD="curl zh.wttr.in/Beijing%20Haidian"
 alias rr="/opt/homebrew/bin/im-select com.apple.keylayout.ABC ; ranger"
 alias fzfh="FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob \"!.git/*\" --glob \"!.node_modules/*\"' fzf"
 alias cp="cp -i"
@@ -14,6 +14,7 @@ alias krita='/Applications/krita.app/Contents/MacOS/krita'
 alias more=less
 alias cat='ccat'
 alias top='gtop'
+alias pnpx='pnpm --dlx '
 
 function ross() {
     if [ -f "./install/setup.zsh" ]; then

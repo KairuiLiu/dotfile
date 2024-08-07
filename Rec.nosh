@@ -28,3 +28,4 @@ cd .vim/plugged/YouCompleteMe
 ln -s ~/.dotfile/misc/ranger ~/.config/ranger
 edit /etc/sudoers
 # set to tail Defaults pwfeedback
+# setup input method following: https://blog.zhheo.com/p/5e08f6be.html

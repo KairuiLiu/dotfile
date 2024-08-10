@@ -179,7 +179,7 @@ bindsym $mod+Shift+d exec "fcitx5-remote -s keyboard-us; $term -e ranger"
 bindsym $mod+Shift+v exec cfw
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec "code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
-bindsym $mod+Shift+g exec "LD_PRELOAD=/usr/lib/libgtk-4.so google-chrome-unstable --ozone-platform=wayland --gtk-version=4"
+bindsym $mod+Shift+g exec "google-chrome-unstable"
 bindsym $mod+space exec ~/.dotfile/sway/sway/run-rofi.sh
 bindsym $mod+Shift+z exec subl
 bindsym $mod+Shift+t exec telegram-desktop

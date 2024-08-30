@@ -12,8 +12,10 @@ alias firefox='/Applications/Firefox.app/Contents/MacOS/firefox'
 alias vlc='/Applications/VLC.app/Contents/MacOS/VLC'
 alias krita='/Applications/krita.app/Contents/MacOS/krita'
 alias more=less
+alias _cat='cat'
 alias cat='ccat'
-alias top='gtop'
+alias _top='top'
+alias top='htop'
 alias pnpx='pnpm --dlx '
 
 function ross() {

@@ -45,7 +45,7 @@ esac
 source ~/.dotfile/shell/shortcut.sh
 export OPENCV_LOG_LEVEL=ERROR
 eval $(thefuck --alias)
-
+source <(fzf --zsh)
 
 # source /opt/ros/iron/setup.zsh
 

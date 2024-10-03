@@ -11,6 +11,8 @@ alias android-studio-wayland="QT_QPA_PLATFORM=xcb android-studio"
 alias aur-backup="cd ~/.dotfile/aur && ./backup.sh ./app-list.yaml"
 alias aur-build="cd ~/.dotfile/aur && ./build-db.sh ./app-list.yaml"
 alias aur-query="cd ~/.dotfile/aur && ./query.sh ./app-list.db"
+alias google-chrome-beta-wayland="LD_PRELOAD=/usr/lib/libgtk-4.so google-chrome-beta --ozone-platform=wayland --gtk-version=4"
+alias google-chrome-unstable-wayland="google-chrome-unstable --enable-wayland-ime --wayland-text-input-version=3 --enable-feature=UseOzonPlatform --ozone-platform=wayland --enable-wayland-ime"
 alias ra="ranger"
 alias fzfh="FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob \"!.git/*\" --glob \"!.node_modules/*\"' fzf"
 

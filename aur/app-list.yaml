@@ -103,6 +103,7 @@
     - lttng-ust2.12
     - llvm
     - git
+    - git-lfs
     - cairo // 2D graphics library
     - imath // 2D graphics library
     - glfw // multi-platform library for OpenGL
@@ -447,7 +448,7 @@
     - go-tools
     - go
   - JavaScript:
-    - nodejs
+    - nvm
     - npm
     - yarn
   - Python:
@@ -493,7 +494,7 @@
   - mycli
   - sqlite
   - sqlitestudio
-  - mongodb-bin
+  - mongodb-compass
   - coturn
   - nginx
   - apache
@@ -505,6 +506,7 @@
   - vmware-horizon-client
   - azure-cli
   - docker
+  - docker-compose
   - dbvis // Database Visualizer
   - rabbitmq
   - qemu-base
@@ -518,6 +520,7 @@
   - clash-for-windows-bin
   - v2ray
   - forticlient-vpn
+  - frpc
 - Kde Plasma:
   - kde-cli-tools
   - kde-dev-scripts
@@ -551,7 +554,7 @@
   - qt6-wayland
   - xorg-xlsclients
   - glfw-wayland // wayland support for glfw
-  - sway-git
+  - sway-hidpi-git
   - swayidle
   - sway-audio-idle-inhibit-git
   - swaylock-fancy-git

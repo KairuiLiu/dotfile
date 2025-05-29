@@ -56,6 +56,7 @@ linux-wifi-hotspot:	System Service/Network
 wihotspot:	System Service/Network	wifi+hotspotConfigGUI
 haveged:	System Service/Network	RandomMACaddress
 network-manager-applet:	System Service/Network	
+wscat:	System Service/Network	
 samba:	System Service/File Service	
 vsftpd:	System Service/File Service	
 gzip:	System Service/Zip	
@@ -72,6 +73,7 @@ qtkeychain:	System Service/GUI
 tk:	System Service/GUI	
 xdg-desktop-portal:	System Service/GUI	desktopportalforflatpak
 xdg-desktop-portal-wlr:	System Service/GUI	
+xdg-desktop-portal-kde:	System Service/GUI	
 xorg:	System Service/GUI	
 ntfs-3g:	System Service/File System	
 dosfstools:	System Service/File System	forFATfilesystem
@@ -85,6 +87,7 @@ libpam_pwdfile:	System Service/Dev Tools & Lib	passwordfileforpam
 lttng-ust2.12:	System Service/Dev Tools & Lib	
 llvm:	System Service/Dev Tools & Lib	
 git:	System Service/Dev Tools & Lib	
+git-lfs:	System Service/Dev Tools & Lib	
 cairo:	System Service/Dev Tools & Lib	2Dgraphicslibrary
 imath:	System Service/Dev Tools & Lib	2Dgraphicslibrary
 glfw:	System Service/Dev Tools & Lib	multi-platformlibraryforOpenGL
@@ -415,7 +418,7 @@ ncurses5-compat-libs:	Develop Language/Flutter	NotNecessary
 android-emulator-dummy:	Develop Language/Flutter	NotNecessary
 go-tools:	Develop Language/GoLang	
 go:	Develop Language/GoLang	
-nodejs:	Develop Language/JavaScript	
+nvm:	Develop Language/JavaScript	
 npm:	Develop Language/JavaScript	
 yarn:	Develop Language/JavaScript	
 python-pip:	Develop Language/Python	
@@ -452,6 +455,8 @@ mariadb:	Dev-Ops
 mycli:	Dev-Ops	
 sqlite:	Dev-Ops	
 sqlitestudio:	Dev-Ops	
+mongodb-compass:	Dev-Ops	
+coturn:	Dev-Ops	
 nginx:	Dev-Ops	
 apache:	Dev-Ops	
 wireshark-cli:	Dev-Ops	
@@ -462,6 +467,7 @@ virtualbox-sdk:	Dev-Ops
 vmware-horizon-client:	Dev-Ops	
 azure-cli:	Dev-Ops	
 docker:	Dev-Ops	
+docker-compose:	Dev-Ops	
 dbvis:	Dev-Ops	DatabaseVisualizer
 rabbitmq:	Dev-Ops	
 qemu-base:	Dev-Ops	
@@ -474,6 +480,7 @@ clash-verge:	Proxy
 clash-for-windows-bin:	Proxy	
 v2ray:	Proxy	
 forticlient-vpn:	Proxy	
+frpc:	Proxy	
 kde-cli-tools:	Kde Plasma	
 kde-dev-scripts:	Kde Plasma	
 kde-dev-utils:	Kde Plasma	
@@ -504,7 +511,7 @@ qt5-wayland:	Sway
 qt6-wayland:	Sway	
 xorg-xlsclients:	Sway	
 glfw-wayland:	Sway	waylandsupportforglfw
-sway-git:	Sway	
+sway-hidpi-git:	Sway	
 swayidle:	Sway	
 sway-audio-idle-inhibit-git:	Sway	
 swaylock-fancy-git:	Sway	
@@ -522,6 +529,7 @@ v4l2loopback-dkms:	Sway/ScreenRecord
 v4l2loopback:	Sway/ScreenRecord	
 v4l2loopback-utils:	Sway/ScreenRecord	
 wf-recorder:	Sway/ScreenRecord	
+pipewire-pulse:	Sway/ScreenRecord	
 swappy-git:	Sway/ScreenShot	
 grimshot:	Sway/ScreenShot	
 slurp:	Sway/ScreenShot	
@@ -559,6 +567,7 @@ urxvt-perls:	Shell/Terminal
 rxvt-unicode:	Shell/Terminal	
 rxvt-unicode-terminfo:	Shell/Terminal	
 alacritty:	Shell/Terminal	
+kitty:	Shell/Terminal	
 chromium:	Browser	
 google-chrome:	Browser	
 google-chrome-beta:	Browser	
@@ -640,4 +649,5 @@ osdlyrics:	Others	desktoplyrics
 patchelf:	Others	modifyrpathofELFexecutables
 packagekit-qt5:	Others	
 packagekit-qt6:	Others	
+minecraft-launcher:	Others	
 

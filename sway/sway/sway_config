@@ -24,10 +24,10 @@ exec --no-startup-id /usr/lib/xdg-desktop-portal -r
 output * bg ~/Pictures/sway/bkg.png fill
 output eDP-1 resolution 2880x1800 position 0 0 scale 1.75
 
-exec swayidle -w \
-    timeout 300 'swaylock-fancy' \
-    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    before-sleep 'swaylock-fancy'
+# exec swayidle -w \
+#     timeout 300 'swaylock-fancy' \
+#     timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#     before-sleep 'swaylock-fancy'
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 input "1267:12737:ASUE120C:00_04F3:31C1_Touchpad" {
@@ -193,3 +193,4 @@ bindsym $mod+Shift+F1 exec pgrep -f 'waybar --config ~/.config/waybar/config_tra
 # [WIP] for_window [app_id="wofi"] border none
 
 include /etc/sway/config.d/*
+

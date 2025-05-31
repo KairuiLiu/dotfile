@@ -21,7 +21,7 @@ sudo vim /etc/pacman.d/mirrorlist
 sudo cp ~/.dotfile/aur/archlinuxcn-mirrorlist /etc/pacman.d/
 sudo pacman -Syyu
 sudo pacman -S archlinuxcn-keyring
-sudo pacman -S clash-for-windows-bin yay zsh
+sudo pacman -S clash-verge yay zsh
 
 #######################################
 ## X.org config                      ##
@@ -126,6 +126,7 @@ cmake ..
 make
 sudo ldconfig
 sudo make install
+cd
 cd .vim/plugged/YouCompleteMe
 ./install.py
 

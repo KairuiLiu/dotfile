@@ -55,7 +55,7 @@ bindsym $mod+Shift+F4 exec light -U 5
 bindsym $mod+Shift+F5 exec light -A 5
 bindsym $mod+F12 exec swaylock-fancy
 bindsym $mod+Shift+F12 exec swaylock-fancy -p
-bindsym $mod+Shift+b exec binggpt
+bindsym $mod+Shift+b exec blueman-manager
 bindsym $mod+Shift+p exec ~/.dotfile/sway/sway/muti-monitor-switch.sh external_only
 bindsym $mod+Ctrl+p exec ~/.dotfile/sway/sway/muti-monitor-switch.sh edp_only
 bindsym $mod+Ctrl+Shift+p exec ~/.dotfile/sway/sway/muti-monitor-switch.sh both
@@ -176,7 +176,7 @@ bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+Shift+s exec --no-startup-id grim -g "$(slurp)" - | swappy -f -
 bindsym $mod+Shift+x exec dolphin
 bindsym $mod+Shift+d exec "fcitx5-remote -s keyboard-us; $term -e ranger"
-bindsym $mod+Shift+v exec cfw
+bindsym $mod+Shift+v exec clash-verge
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec "code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
 bindsym $mod+Shift+g exec "google-chrome-unstable --enable-wayland-ime --wayland-text-input-version=3 --enable-feature=UseOzonPlatform --ozone-platform=wayland --enable-wayland-ime"
@@ -184,7 +184,7 @@ bindsym $mod+space exec ~/.dotfile/sway/sway/run-rofi.sh
 bindsym $mod+Shift+z exec subl
 bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+Shift+a exec wdisplays
-bindsym $mod+Shift+w exec wechat-uos
+bindsym $mod+Shift+w exec wechat-universal
 bindsym $mod+Shift+y exec /opt/YesPlayMusic/yesplaymusic  --enable-features=UseOzonePlatform --ozone-platform=wayland --gtk-version=4
 bindsym $mod+Return exec "fcitx5-remote -s keyboard-us ; $term"
 bindsym $mod+Shift+F1 exec pgrep -f 'waybar --config ~/.config/waybar/config_tray' && (ps aux | grep 'waybar --config ~/.config/waybar/config_tray' | grep -v grep | awk '{print $2}' | xargs kill) || (waybar --config ~/.config/waybar/config_tray &)

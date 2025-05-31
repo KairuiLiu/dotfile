@@ -74,7 +74,7 @@
     - gzip
     - unzip
     - unrar
-    - p7zip
+    - 7zip
   - GUI:
     - gtk-vnc
     - gtk2
@@ -99,7 +99,7 @@
     - clight-gui-git
   - Dev Tools & Lib:
     - make
-    - libpam_pwdfile // password file for pam
+    - libpam-pwdfile-rs-bin
     - lttng-ust2.12
     - llvm
     - git
@@ -493,8 +493,8 @@
   - mariadb
   - mycli
   - sqlite
-  - sqlitestudio
-  - mongodb-compass
+  - sqlitestudio-bin
+  - mongodb-compass-bin
   - coturn
   - nginx
   - apache
@@ -515,9 +515,7 @@
 - Proxy:
   - openvpn
   - qv2ray-dev-git
-  - clash
-  - clash-verge
-  - clash-for-windows-bin
+  - clash-verge-rev-bin
   - v2ray
   - forticlient-vpn
   - frpc
@@ -554,9 +552,11 @@
   - qt6-wayland
   - xorg-xlsclients
   - glfw-wayland // wayland support for glfw
-  - sway-hidpi-git
+  - sway
+  - swaybg
   - swayidle
   - sway-audio-idle-inhibit-git
+  - xdg-desktop-portal-gtk
   - swaylock-fancy-git
   - mako // notification
   - trayer // system tray
@@ -670,7 +670,7 @@
     - linuxqq
     - icalingua++
     - feishu-bin
-    - wechat-uos
+    - wechat-universal-bwrap
     - discord
     - telegram-desktop
     - teams-for-linux

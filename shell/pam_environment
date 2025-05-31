@@ -1,6 +1,6 @@
 INPUT_METHOD  DEFAULT=fcitx
 GTK_IM_MODULE DEFAULT=fcitx
-QT_IM_MODULE  DEFAULT=fcitx
+QT_IM_MODULE  DEFAULT="wayland;fcitx;ibus"
 XMODIFIERS    DEFAULT=@im=fcitx
 SDL_IM_MODULE DEFAULT=fcitx
 XIM                  =fcitx

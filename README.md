@@ -1,5 +1,10 @@
 # DotFile
 
+**Target Device & System:**
+- **Device**: ASUS ZenBook UX3404VA (ZenBook 14X)
+- **OS**: Arch Linux x86_64
+- **Use Case**: Development laptop with dual X11/Wayland desktop environment support
+
 **Environment:**
 
 ```
@@ -24,28 +29,39 @@
  .`                                 `/
 ```
 
+**Hardware Specifications:**
+- **CPU**: 13th Gen Intel i9-13900H (20 cores) @ 5.200GHz
+- **GPU**: Intel Raptor Lake-P [Iris Xe Graphics] 
+- **Memory**: 32GB RAM
+- **Display**: 2880x1800 resolution
+- **Host**: Zenbook UX3404VA_UX3404VA 1.0
+
+**Desktop Environments:**
+- **Primary**: Sway (Wayland) with Waybar, Wofi, Mako
+- **Secondary**: i3 (X11) with Polybar, Rofi, Dunst
+
 **Config Files For:**
 
 - Package backup
-- fcitx5
-- x.org
-- picom
-- i3
-  - polybar
-  - rofi
-  - dunst
-  - touchegg
-- sway
-  - waybar
-  - wofi
-  - mako
-- alactitty
-- zsh
-- ranger
-- clight
-- mpd
-- vim
-- howdy
+- fcitx5 (Chinese input method)
+- x.org (X11 support)
+- picom (compositor)
+- i3 (X11 window manager)
+  - polybar (status bar)
+  - rofi (application launcher)
+  - dunst (notifications)
+  - touchegg (touchpad gestures)
+- sway (Wayland window manager)
+  - waybar (status bar)
+  - wofi (application launcher)
+  - mako (notifications)
+- alacritty (terminal emulator)
+- zsh (shell)
+- ranger (file manager)
+- clight (adaptive brightness)
+- mpd (music player daemon)
+- vim (text editor)
+- howdy (facial recognition login)
 
 **Generate Difference of Backup List & System Package**
 

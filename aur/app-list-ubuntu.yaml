@@ -1,0 +1,240 @@
+1.- System Service:
+2.  - Base:
+3.    - ubuntu-desktop-minimal # base ubuntu
+4.    - build-essential # development tools (replaces base-devel)
+5.    - linux-generic # kernel
+6.    - linux-firmware # firmware
+7.    - linux-headers-generic # kernel headers
+8.    - grub-efi-amd64 # grub bootloader
+9.    - apt-transport-https # for package management
+10.    - intel-microcode # cpu microcode
+11.    - sddm # display manager
+12.    - sudo # sudo access
+13.    - os-prober # detect other os
+14.  - Audio:
+15.    - alsa-utils # alsa utilities
+16.    - pulseaudio # audio system
+17.    - pavucontrol # pulseaudio control
+18.    - playerctl # media player control
+19.    - sox # audio player & processor
+20.  - Image & Video:
+21.    - ffmpeg # video processing
+22.    - feh # image viewer
+23.    - libopencv-dev # opencv
+24.  - Bluetooth:
+25.    - bluez # bluetooth stack
+26.    - bluez-tools # bluetooth utilities
+27.    - blueman # bluetooth manager
+28.  - Power Control:
+29.    - tlp # power management
+30.    - tlp-rdw # tlp radio device wizard
+31.  - Package Management:
+32.    - apt # package manager
+33.    - snap # snap packages
+34.    - flatpak # flatpak packages
+35.    - gnome-software-plugin-flatpak # flatpak integration
+36.  - Editor:
+37.    - vim # vim editor
+38.    - nano # nano editor
+39.  - Backup:
+40.    - timeshift # system backup
+41.  - Network:
+42.    - iputils-ping # ping utility
+43.    - net-tools # network tools
+44.    - nmap # network scanner
+45.    - bridge-utils # network bridge
+46.    - openssh-client # ssh client
+47.    - openssh-server # ssh server
+48.    - openssl # ssl library
+49.    - curl # http client
+50.    - wireless-tools # wireless utilities
+51.    - wget # web downloader
+52.    - network-manager # network manager
+53.    - wpasupplicant # wpa supplicant
+54.    - netcat-openbsd # network debug
+55.    - hostapd # wifi hotspot
+56.    - network-manager-gnome # network manager gui
+57.  - File Service:
+58.    - samba # file sharing
+59.    - vsftpd # ftp server
+60.  - Zip:
+61.    - gzip # compression
+62.    - unzip # zip extraction
+63.    - unrar # rar extraction
+64.    - p7zip-full # 7zip
+65.  - GUI:
+66.    - libgtk-3-dev # gtk3
+67.    - libgtk-4-dev # gtk4
+68.    - qt5-default # qt5
+69.    - qtbase5-dev # qt5 development
+70.    - xdg-desktop-portal # desktop portal
+71.    - xdg-desktop-portal-gtk # gtk portal
+72.    - xorg # x11 server
+73.  - File System:
+74.    - ntfs-3g # ntfs support
+75.    - dosfstools # fat filesystem tools
+76.    - mtools # fat filesystem utilities
+77.    - hfsprogs # macos filesystem
+78.  - BackLight:
+79.    - light # backlight control
+80.  - Dev Tools & Lib:
+81.    - make # build tool
+82.    - llvm # llvm compiler
+83.    - git # version control
+84.    - git-lfs # git large file support
+85.    - libcairo2-dev # 2D graphics library
+86.    - libglfw3-dev # OpenGL library
+87.- Input Method:
+88.  - fcitx5 # input method framework
+89.  - fcitx5-chinese-addons # chinese input
+90.  - fcitx5-config-qt # fcitx5 configuration
+91.  - fcitx5-frontend-gtk3 # gtk3 frontend
+92.  - fcitx5-frontend-gtk4 # gtk4 frontend
+93.  - fcitx5-frontend-qt5 # qt5 frontend
+94.  - xserver-xorg-input-synaptics # touchpad driver
+95.- Develop Language:
+96.  - C Sharp:
+97.    - dotnet-sdk-8.0 # .net sdk
+98.    - aspnetcore-runtime-8.0 # asp.net runtime
+99.    - mono-complete # mono runtime
+100.  - C/C++:
+101.    - gcc # gcc compiler
+102.    - g++ # g++ compiler
+103.    - gdb # debugger
+104.    - cmake # build system
+105.    - gfortran # fortran compiler
+106.  - Java:
+107.    - openjdk-11-jdk # java development kit
+108.    - openjdk-8-jdk # java 8
+109.    - kotlin # kotlin language
+110.  - Flutter:
+111.    - snapd # for flutter snap
+112.    # flutter # install via snap: snap install flutter --classic
+113.    - android-sdk # android development
+114.  - GoLang:
+115.    - golang-go # go language
+116.  - JavaScript:
+117.    - nodejs # node.js
+118.    - npm # node package manager
+119.    - yarn # alternative package manager
+120.  - Python:
+121.    - python3-pip # python package manager
+122.    - python3-flask # flask framework
+123.    - python3-matplotlib # plotting library
+124.    - python3-opencv # computer vision
+125.    - python3-pandas # data analysis
+126.    - python3-sklearn # machine learning
+127.    - python3-tensorflow # tensorflow (if available)
+128.  - R:
+129.    - r-base # r language
+130.    - r-base-dev # r development
+131.  - Perl:
+132.    - perl # perl language
+133.  - Rust:
+134.    - rustc # rust compiler
+135.    - cargo # rust package manager
+136.  - PHP:
+137.    - php # php language
+138.  - Ruby:
+139.    - ruby-full # ruby language
+140.  - Lua:
+141.    - lua5.3 # lua language
+142.  - IDE:
+143.    # Most IDEs will be installed via snap/flatpak
+144.    - code # visual studio code (via apt if available)
+145.- Dev-Ops:
+146.  - mysql-server # mysql database
+147.  - mysql-client # mysql client
+148.  - sqlite3 # sqlite database
+149.  - nginx # web server
+150.  - apache2 # apache web server
+151.  - wireshark # network analyzer
+152.  - virtualbox # virtualization
+153.  - docker.io # containerization
+154.  - docker-compose # docker compose
+155.  - qemu-kvm # virtualization
+156.  - virt-manager # virtual machine manager
+157.- Proxy:
+158.  - openvpn # vpn client
+159.  - v2ray # proxy tool (via snap/manual install)
+160.- Desktop Environment:
+161.  - I3:
+162.    - i3 # i3 window manager
+163.    - i3lock # screen locker
+164.    - i3status # status bar
+165.    - dunst # notification daemon
+166.    - rofi # application launcher
+167.    - arandr # display configuration
+168.    - polybar # status bar (via ppa or build)
+169.    - picom # compositor
+170.    - dmenu # application launcher
+171.  - Sway:
+172.    - sway # wayland compositor
+173.    - swaybg # wallpaper
+174.    - swayidle # idle manager
+175.    - swaylock # screen locker
+176.    - mako-notifier # notification daemon
+177.    - wofi # application launcher
+178.    - waybar # status bar
+179.    - wl-clipboard # clipboard manager
+180.    - grim # screenshot
+181.    - slurp # area selection
+182.- Shell:
+183.  - bc # calculator
+184.  - bat # better cat
+185.  - dialog # dialog boxes
+186.  - neofetch # system info
+187.  - tree # tree view
+188.  - cowsay # ascii art
+189.  - ranger # file manager
+190.  - htop # process viewer
+191.  - fzf # fuzzy finder
+192.  - atool # archive tool
+193.  - Editor:
+194.    - ctags # code indexing
+195.    - neovim # vim editor
+196.    - nano # simple editor
+197.  - Zsh:
+198.    - zsh # z shell
+199.    - zsh-autosuggestions # autosuggestions
+200.    - zsh-syntax-highlighting # syntax highlighting
+201.    - thefuck # command correction
+202.    - autojump # directory jumping
+203.    - bash-completion # bash completion
+204.  - Terminal:
+205.    - foot # terminal emulator (may need ppa)
+206.    - fish # fish shell
+207.    - rxvt-unicode # terminal emulator
+208.    - alacritty # terminal emulator
+209.    - kitty # terminal emulator
+210.- Browser:
+211.  - chromium-browser # chromium browser
+212.  - firefox # firefox browser
+213.  # google-chrome via deb package
+214.  # microsoft-edge via deb package
+215.- Fonts:
+216.  - fonts-noto # noto fonts
+217.  - fonts-noto-cjk # cjk fonts
+218.  - fonts-noto-color-emoji # emoji fonts
+219.  - fonts-liberation # liberation fonts
+220.  - fonts-dejavu # dejavu fonts
+221.  - fonts-hack # hack font
+222.  - fonts-inconsolata # inconsolata font
+223.  - fonts-font-awesome # font awesome
+224.- LaTeX:
+225.  - texlive-full # complete tex live
+226.  - texstudio # tex editor
+227.  - biber # bibliography processor
+228.- Others:
+229.  - Audio & Video:
+230.    - obs-studio # screen recording
+231.    - audacity # audio editor
+232.  - pandoc # document converter
+233.  - typora # markdown editor (via deb)
+234.  - translate-shell # translation tool
+235.  - geogebra # mathematics software
+236.  - filezilla # ftp client
+237.  - scrcpy # android screen mirror
+238.  - pdftk # pdf toolkit
+239.  - obsidian # note taking (via snap/deb)
+240.  - grub-customizer # grub configuration

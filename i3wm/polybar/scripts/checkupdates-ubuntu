@@ -1,0 +1,118 @@
+#!/usr/bin/bash
+#
+#   checkupdates: Safely print a list of pending updates for Ubuntu.
+#
+#   Adapted from Arch Linux checkupdates script for Ubuntu systems.
+#   Uses apt to check for available updates.
+#
+
+declare -r myname='checkupdates'
+declare -r myver='1.0.0-ubuntu'
+
+plain() {
+	(( QUIET )) && return
+	local mesg=$1; shift
+	printf "${BOLD}    ${mesg}${ALL_OFF}\n" "$@" >&1
+}
+
+msg() {
+	(( QUIET )) && return
+	local mesg=$1; shift
+	printf "${GREEN}==>${ALL_OFF}${BOLD} ${mesg}${ALL_OFF}\n" "$@" >&1
+}
+
+msg2() {
+	(( QUIET )) && return
+	local mesg=$1; shift
+	printf "${BLUE}  ->${ALL_OFF}${BOLD} ${mesg}${ALL_OFF}\n" "$@" >&1
+}
+
+ask() {
+	local mesg=$1; shift
+	printf "${BLUE}::${ALL_OFF}${BOLD} ${mesg}${ALL_OFF}" "$@" >&1
+}
+
+warning() {
+	local mesg=$1; shift
+	printf "${YELLOW}==> WARNING:${ALL_OFF}${BOLD} ${mesg}${ALL_OFF}\n" "$@" >&2
+}
+
+error() {
+	local mesg=$1; shift
+	printf "${RED}==> ERROR:${ALL_OFF}${BOLD} ${mesg}${ALL_OFF}\n" "$@" >&2
+}
+
+# check if messages are to be printed using color
+unset ALL_OFF BOLD BLUE GREEN RED YELLOW
+if [[ -t 2 && ! $USE_COLOR = "n" ]]; then
+	# prefer terminal safe colored and bold text when tput is supported
+	if tput setaf 0 &>/dev/null; then
+		ALL_OFF="$(tput sgr0)"
+		BOLD="$(tput bold)"
+		BLUE="${BOLD}$(tput setaf 4)"
+		GREEN="${BOLD}$(tput setaf 2)"
+		RED="${BOLD}$(tput setaf 1)"
+		YELLOW="${BOLD}$(tput setaf 3)"
+	else
+		ALL_OFF="\e[1;0m"
+		BOLD="\e[1;1m"
+		BLUE="${BOLD}\e[1;34m"
+		GREEN="${BOLD}\e[1;32m"
+		RED="${BOLD}\e[1;31m"
+		YELLOW="${BOLD}\e[1;33m"
+	fi
+fi
+readonly ALL_OFF BOLD BLUE GREEN RED YELLOW
+
+if (( $# > 0 )); then
+	echo "${myname} v${myver}"
+	echo
+	echo "Safely print a list of pending updates for Ubuntu"
+	echo
+	echo "Usage: ${myname}"
+	echo
+	echo 'Note: This script checks for apt, snap, and flatpak updates.'
+	exit 0
+fi
+
+# Function to check apt updates
+check_apt_updates() {
+	# Update package cache quietly
+	sudo apt update >/dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		error 'Cannot update apt package cache'
+		return 1
+	fi
+	
+	# List upgradable packages
+	apt list --upgradable 2>/dev/null | grep -v "^Listing" | grep -v "WARNING"
+}
+
+# Function to check snap updates
+check_snap_updates() {
+	if command -v snap >/dev/null 2>&1; then
+		snap refresh --list 2>/dev/null | grep -v "^All snaps up to date"
+	fi
+}
+
+# Function to check flatpak updates
+check_flatpak_updates() {
+	if command -v flatpak >/dev/null 2>&1; then
+		flatpak remote-ls --updates 2>/dev/null
+	fi
+}
+
+echo "=== APT Updates ==="
+check_apt_updates
+
+echo ""
+echo "=== Snap Updates ==="
+check_snap_updates
+
+echo ""
+echo "=== Flatpak Updates ==="
+check_flatpak_updates
+
+exit 0
+
+# vim: set noet:

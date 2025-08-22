@@ -1,6 +1,10 @@
 # DotFile
 
-**Environment:**
+**Multi-Distribution Support:**
+
+This dotfile configuration now supports both **Arch Linux** and **Ubuntu**.
+
+**Environment (Original Arch Linux):**
 
 ```
                    -`                    liukairui@KarryZenBook14X
@@ -23,6 +27,25 @@
  `++:.                           `-/+/
  .`                                 `/
 ```
+
+## Quick Setup
+
+### Auto-detect and configure:
+```bash
+./configure.sh detect
+```
+
+### Manual configuration:
+```bash
+# For Arch Linux
+./configure.sh arch
+
+# For Ubuntu
+./configure.sh ubuntu
+```
+
+### Ubuntu Migration
+For detailed Ubuntu migration instructions, see [UBUNTU_MIGRATION.md](UBUNTU_MIGRATION.md).
 
 **Config Files For:**
 
@@ -49,9 +72,29 @@
 
 **Generate Difference of Backup List & System Package**
 
+Arch Linux:
 ```bash
 cd aur
 ./backup.sh ./app-list.yaml
+```
+
+Ubuntu:
+```bash
+cd aur
+./backup-ubuntu.sh ./app-list-ubuntu.yaml
+```
+
+**Install Packages**
+
+Arch Linux (original):
+```bash
+# Manual installation required - see app-list.yaml
+```
+
+Ubuntu:
+```bash
+cd aur
+./install-ubuntu.sh ./app-list-ubuntu.yaml
 ```
 
 **Existing Bugs**

@@ -1,3 +1,5 @@
 #!/bin/bash
 
-termite -e "sudo pacman -Syu"
+# Use gnome-terminal as termite is not commonly available on Ubuntu
+# You can also use other terminals like alacritty, kitty, or xterm
+gnome-terminal -- bash -c "sudo apt update && sudo apt upgrade -y; read -p 'Press enter to continue...'"

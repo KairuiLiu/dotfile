@@ -119,3 +119,4 @@ export PATH=$PATH:usr/include/c++
 
 source ~/.dotfile/shell/shortcut.sh
 
+. "$HOME/.cargo/env"

@@ -1,0 +1,92 @@
+#######################
+## Function Shortcut ##
+#######################
+
+alt - f12 : pmset displaysleepnow
+shift + alt - q : zsh ~/.dotfile/yabai/script/close-window.sh
+shift + alt - r : ~/.dotfile/yabai/script/reload.sh
+
+
+#####################
+## Window Shortcut ##
+#####################
+
+### change focus
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+### move focused window
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+### split window
+alt - g : yabai -m window --insert east
+alt - v : yabai -m window --insert south
+
+### enter fullscreen mode for the focused container
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+### toggle float mode
+shift + alt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
+alt - r : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+### resize window
+ctrl + alt - h : yabai -m window --resize left:-50:0 || yabai -m window --resize right:-50:0
+ctrl + alt - j : yabai -m window --resize bottom:0:50 || yabai -m window --resize top:0:50
+ctrl + alt - k : yabai -m window --resize top:0:-50 || yabai -m window --resize bottom:0:-50
+ctrl + alt - l : yabai -m window --resize right:50:0 || yabai -m window --resize left:50:0
+
+### focus the parent container
+alt - a : yabai -m window --focus stack.prev || yabai -m window --focus stack.first
+
+### move the currently focused window to the scratchpad
+alt - 0x1B : yabai -m window --minimize  # 0x1B = minus key
+shift + alt - 0x1B : yabai -m window recent --focus || \
+    yabai -m window $(yabai -m query --windows | jq 'map(select(."is-minimized" == true)) | .[0].id') --focus
+
+#######################
+## Workspace Setting ##
+#######################
+# switch to workspace
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+alt - 6 : yabai -m space --focus 6
+alt - 7 : yabai -m space --focus 7
+alt - 8 : yabai -m space --focus 8
+alt - 9 : yabai -m space --focus 9
+alt - 0 : yabai -m space --focus 10
+
+# move focused container to workspace
+shift + alt - 1 : yabai -m window --space 1
+shift + alt - 2 : yabai -m window --space 2
+shift + alt - 3 : yabai -m window --space 3
+shift + alt - 4 : yabai -m window --space 4
+shift + alt - 5 : yabai -m window --space 5
+shift + alt - 6 : yabai -m window --space 6
+shift + alt - 7 : yabai -m window --space 7
+shift + alt - 8 : yabai -m window --space 8
+shift + alt - 9 : yabai -m window --space 9
+shift + alt - 0 : yabai -m window --space 10
+
+##################
+## App Shortcut ##
+##################
+alt - return : open -a kitty
+shift + alt - d : ~/.dotfile/yabai/script/yazi.sh
+shift + alt - x : osascript ~/.dotfile/yabai/script/openfinder.applescript
+shift + alt - g : open -n -a "Google Chrome"
+shift + alt - z : open -a "Sublime Text"
+shift + alt - f : open -a "Lark"
+shift + alt - t : open -a "typora"
+shift + alt - w : open -a "WindTerm"
+shift + alt - c : open -a "Visual Studio Code - Insiders"
+shift + alt - e : open -a "Microsoft To Do"
+shift + alt - v : open -a "CorpLink"
+

@@ -17,6 +17,10 @@ alias cat='ccat'
 alias _top='top'
 alias top='htop'
 alias pnpx='pnpm --dlx '
+alias k='~/code/k/k.bash'
+alias pdm_cli='~/Public/PDM/pdm_cli'
+
+source ~/.dotfile/keep_local/source.sh
 
 function ross() {
     if [ -f "./install/setup.zsh" ]; then
@@ -25,6 +29,11 @@ function ross() {
     else
         echo "No ./install/setup.zsh found in current directory"
     fi
+}
+
+afplay() {
+    [[ "$1" == "-v" ]] && shift && shift
+    command afplay -v 0.1 "$@"
 }
 
 ex() {
@@ -46,4 +55,13 @@ ex() {
     else
         echo "'$1' is not a valid file"
     fi
+}
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
 }

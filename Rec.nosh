@@ -1,4 +1,16 @@
 #######################################
+## brew                              ##
+#######################################
+
+cd ~/.dotfile/brew
+# install homebrew if not installed
+brew bundle install
+# check if everything is installed
+brew bundle check
+# tip: remake homebrew bundle file
+# brew bundle dump
+
+#######################################
 ## shell                             ##
 #######################################
 
@@ -13,8 +25,9 @@ git clone http://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/pl
 wget https://mimosa-pudica.net/src/incr-0.2.zsh && mkdir ~/.oh-my-zsh/custom/plugins/incr && mv incr-0.2.zsh ~/.oh-my-zsh/custom/plugins/incr
 
 #######################################
-## Vim                               ##
+## vim                               ##
 #######################################
+
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ln -s ~/.dotfile/misc/vimrc ~/.vimrc
@@ -22,10 +35,34 @@ cd .vim/plugged/YouCompleteMe
 ./install.py
 
 #######################################
+## window manager                    ##
+#######################################
+
+# set up yabai (https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection)
+# tip: use command+shift+g in finder to go to any folder
+ln -s ~/.dotfile/yabai/skhdrc ~/.skhdrc
+ln -s ~/.dotfile/yabai/yabairc ~/.yabairc
+
+#######################################
+## application shortcuts             ##
+#######################################
+
+# karabiner
+mkdir -p ~/.config/karabiner/assets
+ln -s ~/.dotfile/misc/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
+ln -s ~/.dotfile/misc/karabiner/complex_modifications ~/.config/karabiner/assets/complex_modifications
+# manual keybindings
+# raycast => opt+space
+# snipaste => opt+shift+s
+# system => built-in keyboard settings -> replace 🌐 key with control
+
+#######################################
 ## misc                              ##
 #######################################
 
+# ranger
 ln -s ~/.dotfile/misc/ranger ~/.config/ranger
-edit /etc/sudoers
+# sudo
+# edit /etc/sudoers
 # set to tail Defaults pwfeedback
-# setup input method following: https://blog.zhheo.com/p/5e08f6be.html
+# set up input method following: https://blog.zhheo.com/p/5e08f6be.html

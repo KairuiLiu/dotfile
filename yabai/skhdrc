@@ -32,7 +32,7 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 
 ### toggle float mode
 shift + alt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
-alt - r : yabai -m window --toggle float --grid 4:4:1:1:2:2
+# alt - r : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 ### resize window
 ctrl + alt - h : yabai -m window --resize left:-50:0 || yabai -m window --resize right:-50:0
@@ -78,7 +78,7 @@ shift + alt - 0 : yabai -m window --space 10
 ##################
 ## App Shortcut ##
 ##################
-alt - return : open -a kitty
+alt - return : open -n -a kitty
 shift + alt - d : ~/.dotfile/yabai/script/yazi.sh
 shift + alt - x : osascript ~/.dotfile/yabai/script/openfinder.applescript
 shift + alt - g : open -n -a "Google Chrome"

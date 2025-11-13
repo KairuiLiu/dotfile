@@ -22,9 +22,9 @@ yabai -m config                                 \
     external_bar                 off:40:0       \
     menubar_opacity              1.0            \
     mouse_follows_focus          off            \
-    focus_follows_mouse          autoraise      \
+    focus_follows_mouse          autofocus      \
     display_arrangement_order    default        \
-    window_origin_display        default        \
+    window_origin_display        cursor         \
     window_placement             second_child   \
     window_insertion_point       focused        \
     window_zoom_persist          on             \
@@ -57,6 +57,7 @@ yabai -m rule --add app="飞连" manage=off
 yabai -m rule --add app="系统设置" manage=off
 # yabai -m rule --add app="Unity" title="Build Profiles" manage=off
 yabai -m rule --add app="Raycast" manage=off
+yabai -m rule --add app="网易云音乐" manage=off
 
 ######################
 ## Border           ##

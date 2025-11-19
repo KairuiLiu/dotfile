@@ -1,0 +1,11 @@
+@anthropic-ai/claude-code
+@byted/claude-code-bridge
+@bytedance-dev/bnpm
+create-start-app
+mcp-chrome-bridge
+parcel
+tsx
+turbo
+typescript
+vite
+yarn

@@ -26,6 +26,7 @@ shift + alt - l : yabai -m window --swap east
 ### split window
 alt - g : yabai -m window --insert east
 alt - v : yabai -m window --insert south
+alt - x : yabai -m window --toggle split
 
 ### enter fullscreen mode for the focused container
 alt - f : yabai -m window --toggle zoom-fullscreen
@@ -89,4 +90,5 @@ shift + alt - w : open -a "WindTerm"
 shift + alt - c : open -a "Visual Studio Code - Insiders"
 shift + alt - e : open -a "Microsoft To Do"
 shift + alt - v : open -a "CorpLink"
+shift + alt - b : open -na "Google Chrome" --args --profile-directory="Profile 3" https://gemini.google.com/
 

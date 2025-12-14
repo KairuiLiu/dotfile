@@ -12,4 +12,4 @@
 # @raycast.description yazi
 
 
-cd ~ && /opt/homebrew/bin/kitty yazi
+cd ~ && /Applications/Ghostty.app/Contents/MacOS/ghostty yazi

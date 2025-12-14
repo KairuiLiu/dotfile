@@ -102,3 +102,5 @@ esac
 
 # Added by coco installer
 export PATH="/Users/bytedance/.local/bin:$PATH"
+
+# zprof

@@ -18,10 +18,10 @@ alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
 
 ### move focused window
-shift + alt - h : yabai -m window --swap west
-shift + alt - j : yabai -m window --swap south
-shift + alt - k : yabai -m window --swap north
-shift + alt - l : yabai -m window --swap east
+shift + alt - h : yabai -m window --swap west || yabai -m display --swap west --focus
+shift + alt - j : yabai -m window --swap south || yabai -m display --swap south --focus
+shift + alt - k : yabai -m window --swap north || yabai -m display --swap north --focus
+shift + alt - l : yabai -m window --swap east || yabai -m display --swap east --focus
 
 ### split window
 alt - g : yabai -m window --insert east
@@ -79,7 +79,7 @@ shift + alt - 0 : yabai -m window --space 10
 ##################
 ## App Shortcut ##
 ##################
-alt - return : open -n -a kitty
+alt - return : open -n -a ghostty
 shift + alt - d : ~/.dotfile/yabai/script/yazi.sh
 shift + alt - x : osascript ~/.dotfile/yabai/script/openfinder.applescript
 shift + alt - g : open -n -a "Google Chrome"

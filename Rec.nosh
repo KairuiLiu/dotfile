@@ -46,7 +46,7 @@ ln -s ~/.dotfile/yabai/yabairc ~/.yabairc
 #######################################
 # npm                                ##
 #######################################
-# tip: backup 
+# tip: backup
 # pnpm pnpm list -g --depth=0 --json | jq -r '.[0].dependencies | keys[]' > pnpm-global-packages.txt
 cat ~/.dotfile/npm/pnpm-global-packages.txt | xargs pnpm install -g
 
@@ -67,6 +67,9 @@ ln -s ~/.dotfile/misc/karabiner/complex_modifications ~/.config/karabiner/assets
 ## misc                              ##
 #######################################
 
+# ghosty
+mkdir -p ~/.config/ghostty/
+ln -s ~/.dotfile/shell/ghostty ~/.config/ghostty/config
 # ranger
 ln -s ~/.dotfile/misc/ranger ~/.config/ranger
 # sudo

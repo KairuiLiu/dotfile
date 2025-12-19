@@ -70,6 +70,7 @@
   - File Service:
     - samba
     - vsftpd
+    - rsync
   - Zip:
     - gzip
     - unzip
@@ -469,6 +470,7 @@
     - perl
   - Rust:
     - rust
+    - rustup
   - PHP:
     - php
   - Ruby:
@@ -486,6 +488,9 @@
     - visual-studio-code-insiders-bin
     - rstudio-desktop-bin
     - rstudio-fcitx5 // only for git version
+    - rider
+    - rustrover
+    - rustrover-jre
 - Dev-Ops:
   - apipost-bin
   - postman-bin
@@ -617,6 +622,7 @@
     - rxvt-unicode-terminfo
     - alacritty
     - kitty
+    - ghostty
 - Browser:
   - chromium
   - google-chrome

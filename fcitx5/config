@@ -1,10 +1,12 @@
 [Hotkey]
-# 反复按切换键时进行轮换
+# Enumerate when press trigger key repeatedly
 EnumerateWithTriggerKeys=True
-# 轮换输入法时跳过第一个输入法
+# Skip first input method while enumerating
 EnumerateSkipFirst=False
-# 取消激活输入法
+# Deactivate Input Method
 DeactivateKeys=
+# Time limit in milliseconds for triggering modifier key shortcuts
+ModifierOnlyKeyTimeout=248
 
 [Hotkey/TriggerKeys]
 0=Control+space
@@ -28,48 +30,47 @@ DeactivateKeys=
 0=Control+Shift+Control_L
 
 [Hotkey/PrevPage]
-0=Up
+0=Left
 1=Control+H
 
 [Hotkey/NextPage]
-0=Down
+0=Right
 1=Control+L
 
 [Hotkey/PrevCandidate]
-0=Shift+Tab
-1=Left
-2=Control+K
+0=Up
+1=Control+K
 
 [Hotkey/NextCandidate]
-0=Tab
-1=Right
-2=Control+J
+0=Down
+1=Control+J
+2=Tab
 
 [Hotkey/TogglePreedit]
 0=Control+Alt+P
 
 [Behavior]
-# 默认状态为激活
+# Active By Default
 ActiveByDefault=True
-# 重新聚焦时重置状态
+# Reset state on Focus In
 resetStateWhenFocusIn=No
-# 共享输入状态
+# Share Input State
 ShareInputState=All
-# 在程序中显示预编辑文本
+# Show preedit in application
 PreeditEnabledByDefault=True
-# 切换输入法时显示输入法信息
+# Show Input Method Information when switch input method
 ShowInputMethodInformation=True
-# 在焦点更改时显示输入法信息
+# Show Input Method Information when changing focus
 showInputMethodInformationWhenFocusIn=False
-# 显示紧凑的输入法信息
+# Show compact input method information
 CompactInputMethodInformation=True
-# 显示第一个输入法的信息
+# Show first input method information
 ShowFirstInputMethodInformation=True
-# 默认页大小
+# Default page size
 DefaultPageSize=7
-# 覆盖 Xkb 选项
+# Override Xkb Option
 OverrideXkbOption=False
-# 自定义 Xkb 选项
+# Custom Xkb Option
 CustomXkbOption=
 # Force Enabled Addons
 EnabledAddons=
@@ -77,10 +78,10 @@ EnabledAddons=
 DisabledAddons=
 # Preload input method to be used by default
 PreloadInputMethod=True
-# 允许在密码框中使用输入法
+# Allow input method in the password field
 AllowInputMethodForPassword=False
-# 输入密码时显示预编辑文本
+# Show preedit text when typing password
 ShowPreeditForPassword=False
-# 保存用户数据的时间间隔（以分钟为单位）
+# Interval of saving user data in minutes
 AutoSavePeriod=30
 

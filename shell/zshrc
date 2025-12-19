@@ -133,7 +133,7 @@ export PATH="$PNPM_HOME:$PATH"
 
 source ~/.xinitrc
 source ~/.dotfile/shell/env.sh
-source /opt/ros/iron/setup.zsh
+# source /opt/ros/iron/setup.zsh
 
 export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 
@@ -141,5 +141,9 @@ export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
 source /usr/share/nvm/nvm.sh
 source /usr/share/nvm/bash_completion
 source /usr/share/nvm/install-nvm-exec
+
+export GEM_HOME="$HOME/.local/share/gem/ruby/3.4.0"
+export PATH="$GEM_HOME/bin:$PATH"
+
 
 clear

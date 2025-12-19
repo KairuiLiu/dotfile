@@ -83,10 +83,10 @@ systemctl enable bluetooth.service
 ln -s ~/.dotfile/sway/sway/sway_config ~/.config/sway/config
 ln -s ~/.dotfile/sway/mako ~/.config/mako
 ln -s ~/.dotfile/sway/waybar ~/.config/waybar
-ln -s ~/.dotfile/shell/kitty.conf ~/.config/kitty/kitty.conf
 # set wayland flag on chrome (chrome://flags)
 ln -s ~/.dotfile/sway/wofi ~/.config/wofi
-sudo cp ~/.dotfile/sway/sway/sway-custom-env.desktop /usr/share/wayland-sessions/
+# MAYBE NOT NEEDED
+# sudo cp ~/.dotfile/sway/sway/sway-custom-env.desktop /usr/share/wayland-sessions/
 
 #######################################
 ## i3 config                         ##
@@ -133,7 +133,7 @@ cd .vim/plugged/YouCompleteMe
 #######################################
 ## misc                              ##
 #######################################
-
+ln -s ~/.dotfile/shell/ghostty ~/.config/ghostty/config
 ln -s ~/.dotfile/misc/ranger ~/.config/ranger
 ln -s ~/.dotfile/misc/clight.conf ~/.config/clight.conf
 ln -s ~/.dotfile/fcitx5 ~/.config/
@@ -176,6 +176,12 @@ sudo cp google-chrome-beta google-chrome-beta.bak
 # fi
 # export LD_LIBRARY_PATH
 
+# Fix close lid behavior
+sudo vim /etc/systemd/logind.conf
+# uncomment the line and set to ignore
+## HandleLidSwitch=ignore
+## HandleLidSwitchExternalPower=ignore
+## HandleLidSwitchDocked=ignore
 
 # Tips:
 # config postman workspace

@@ -82,7 +82,7 @@ shift + alt - 0 : yabai -m window --space 10
 alt - return : open -n -a ghostty
 shift + alt - d : ~/.dotfile/yabai/script/yazi.sh
 shift + alt - x : osascript ~/.dotfile/yabai/script/openfinder.applescript
-shift + alt - g : open -n -a "Google Chrome"
+shift + alt - g : open -n -a "Google Chrome" --args --profile-directory="Default"
 shift + alt - z : open -a "Sublime Text"
 shift + alt - f : open -a "Lark"
 shift + alt - t : open -a "typora"
@@ -91,4 +91,10 @@ shift + alt - c : open -a "Visual Studio Code - Insiders"
 shift + alt - e : open -a "Microsoft To Do"
 shift + alt - v : open -a "CorpLink"
 shift + alt - b : open -na "Google Chrome" --args --profile-directory="Profile 3" https://gemini.google.com/
+
+#####################
+## FUCK CR MEETING ##
+#####################
+shift + alt - f11 : pkill -STOP -f "Code - Insiders"
+alt - f11 : pkill -CONT -f "Code - Insiders"
 

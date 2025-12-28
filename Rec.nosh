@@ -17,6 +17,8 @@ brew bundle check
 ln -s ~/.dotfile/shell/zshrc ~/.zshrc
 ln -s ~/.dotfile/shell/bashrc ~/.bashrc
 ln -s ~/.dotfile/shell/p10k.zsh ~/.p10k.zsh
+mkdir -p ~/.config/eza
+ln -s ~/.dotfile/shell/eza.yml ~/.config/eza/theme.yml
 
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k

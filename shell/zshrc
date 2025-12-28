@@ -1,106 +1,124 @@
-# ZSH Configuration
-
-# clear
-# zmodload zsh/zprof
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# ===== Zinit =====
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+
+# ===== P10k =====
+export LS_COLORS="$(vivid generate jellybeans)"
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
+zinit snippet OMZL::theme-and-appearance.zsh
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+zinit wait lucid for \
+    OMZL::git.zsh \
+    atload'
+        zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
+        bindkey "^[[Z" reverse-menu-complete
+    ' \
+    OMZL::completion.zsh \
+    OMZL::directories.zsh \
+    OMZP::git \
+    OMZP::sudo \
+    OMZP::extract
+
+zinit wait lucid for \
+    atload"zicompinit; zicdreplay" \
+        zdharma-continuum/fast-syntax-highlighting \
+    atload"_zsh_autosuggest_start" \
+        zsh-users/zsh-autosuggestions
+
+eval "$(zoxide init zsh)"
+
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey '^[[A' up-line-or-beginning-search
+bindkey '^[[B' down-line-or-beginning-search
+
+# ===== PATH & Brew =====
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="./node_modules/.bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
+export PATH="$HOME/Public/PDM:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
+
+export LDFLAGS="-L/opt/homebrew/opt/binutils/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/binutils/include"
+export OPENCV_LOG_LEVEL=ERROR
+
+export DOTNET_ROOT="$HOME/.dotnet"
+export PATH="$DOTNET_ROOT:$PATH"
+
+# ===== Lazy Load: Ruby =====
+_init_chruby() {
+  unfunction chruby ruby gem bundle irb 2>/dev/null
+  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+  chruby ruby-3.3.5
+}
+ruby()   { _init_chruby && ruby "$@" }
+gem()    { _init_chruby && gem "$@" }
+bundle() { _init_chruby && bundle "$@" }
+
+# ===== Lazy Load: Conda =====
+_init_conda() {
+  unfunction conda mamba 2>/dev/null
+  __conda_setup="$('$HOME/.miniconda3/bin/conda' 'shell.zsh' 'hook' 2>/dev/null)"
+  if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+  else
+    [ -f "$HOME/.miniconda3/etc/profile.d/conda.sh" ] && . "$HOME/.miniconda3/etc/profile.d/conda.sh"
+  fi
+  unset __conda_setup
+}
+conda() { _init_conda && conda "$@" }
+
+# ===== Lazy Load: thefuck=====
+fuck() {
+  unfunction fuck 2>/dev/null
+  eval $(thefuck --alias)
+  fuck "$@"
+}
+
+# ===== fnm =====
+eval "$(fnm env --use-on-cd --corepack-enabled --shell zsh)"
+
+# ===== FZF =====
+source <(fzf --zsh)
+
+# ===== Kitty =====
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
-plugins=(git
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-	sudo
-	extract
-	autojump
-	# nvm
-	)
-
-source $ZSH/oh-my-zsh.sh
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[[ ! -f ~/.dotfile/shell/p10k.zsh ]] || source ~/.dotfile/shell/p10k.zsh
-
-######################
-## Mac Config       ##
-######################
-
-# brew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-export PATH="./node_modules/.bin:$PATH"
-
-export PNPM_HOME="/Users/bytedance/Library/pnpm"
-case ":$PATH:" in
-*":$PNPM_HOME:"*) ;;
-*) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
-# bun
-export PATH="~/.bun/bin:$PATH"
-
-# others
-source ~/.dotfile/shell/shortcut.sh
-export OPENCV_LOG_LEVEL=ERROR
-eval $(thefuck --alias)
-source <(fzf --zsh)
-eval "$(fnm env --use-on-cd --shell zsh)"
-
-# source /opt/ros/iron/setup.zsh
-
-/opt/homebrew/bin/im-select com.apple.keylayout.ABC
-
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-source /opt/homebrew/opt/chruby/share/chruby/auto.sh
-chruby ruby-3.3.5
-
-# bun completions
-[ -s "/Users/bytedance/.bun/_bun" ] && source "/Users/bytedance/.bun/_bun"
-
-# bun
+# ===== Bun =====
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
-autoload -Uz compinit && compinit
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-export ANDROID_HOME=/Users/bytedance/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-
-# PDM
-export PATH="~/Public/PDM:$PATH"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/bytedance/.miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/bytedance/.miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/bytedance/.miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/bytedance/.miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
-  export LDFLAGS="-L/opt/homebrew/opt/binutils/lib"
-  export CPPFLAGS="-I/opt/homebrew/opt/binutils/include"
-
-# pnpm
-export PNPM_HOME="/Users/bytedance/Library/pnpm"
+# ===== pnpm =====
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
 
-# Added by coco installer
-export PATH="/Users/bytedance/.local/bin:$PATH"
+# ===== im-select =====
+/opt/homebrew/bin/im-select com.apple.keylayout.ABC &!
 
-# zprof
+# ===== Custom =====
+export EZA_CONFIG_DIR=~/.config/eza/
+source ~/.dotfile/shell/shortcut.sh
+
+# ===== P10k Config =====
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.dotfile/shell/p10k.zsh ]] || source ~/.dotfile/shell/p10k.zsh

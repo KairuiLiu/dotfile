@@ -78,3 +78,14 @@ ln -s ~/.dotfile/misc/ranger ~/.config/ranger
 # edit /etc/sudoers
 # set to tail Defaults pwfeedback
 # set up input method following: https://blog.zhheo.com/p/5e08f6be.html
+
+#######################################
+## input method (fcitx5 + rime-ice)  ##
+#######################################
+
+# 需先安装:
+# - rime-ice: https://github.com/iDvel/rime-ice
+# - stow: brew install stow
+cd ~/.dotfile/misc
+stow -t ~/.local/share/fcitx5/rime rime
+stow -t ~/.config/fcitx5 fcitx5

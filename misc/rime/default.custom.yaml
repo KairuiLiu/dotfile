@@ -1,0 +1,5 @@
+# default.custom.yaml
+# 覆盖 default.yaml 的自定义配置
+
+patch:
+  menu/page_size: 7  # 候选词个数

@@ -1,6 +1,8 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+[[ "$TERM" == "xterm-ghostty" ]] && export TERM=xterm-256color
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # ===== Zinit =====
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -42,7 +44,6 @@ bindkey '^[[A' up-line-or-beginning-search
 bindkey '^[[B' down-line-or-beginning-search
 
 # ===== PATH & Brew =====
-eval "$(/opt/homebrew/bin/brew shellenv)"
 export PATH="./node_modules/.bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"

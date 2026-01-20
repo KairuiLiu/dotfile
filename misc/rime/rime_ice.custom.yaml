@@ -1,0 +1,30 @@
+# rime_ice.custom.yaml
+# 用于覆盖 rime_ice.schema.yaml 的自定义配置
+
+patch:
+  # 添加 kairui 词库翻译器
+  "engine/translators/+":
+    - table_translator@kairui
+
+  # translator 配置补充
+  translator/enable_user_dict: true
+  translator/enable_encoder: true
+  translator/encode_commit_history: true
+
+  # 启用模糊音
+  "speller/algebra/+":
+    - derive/eng$/en/
+    - derive/en$/eng/
+    - derive/in$/ing/
+    - derive/ing$/in/
+
+  # kairui 个人词库 (搜狗导入)
+  kairui:
+    dictionary: ''
+    user_dict: cn_dicts/kairui
+    db_class: stabledb
+    enable_completion: true
+    enable_sentence: false
+    initial_quality: 1.15
+    comment_format:
+      - xform/^.+$//

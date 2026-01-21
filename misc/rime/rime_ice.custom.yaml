@@ -3,7 +3,7 @@
 
 patch:
   # Shift 键行为
-  ascii_composer/switch_key/Shift_L: commit_code  # 左Shift: 上屏英文原文
+  ascii_composer/switch_key/Shift_L: noop         # 左Shift: 屏蔽
   ascii_composer/switch_key/Shift_R: noop         # 右Shift: 屏蔽
 
   # 添加 kairui 词库翻译器
@@ -32,3 +32,6 @@ patch:
     initial_quality: 1.15
     comment_format:
       - xform/^.+$//
+
+  # 设置 ascii_mode 默认为中文(0)
+  "switches/@0/reset": 0  # 0=中文, 1=英文

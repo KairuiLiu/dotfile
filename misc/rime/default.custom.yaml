@@ -2,4 +2,8 @@
 # 覆盖 default.yaml 的自定义配置
 
 patch:
-  menu/page_size: 7  # 候选词个数
+  menu/page_size: 7 # 候选词个数
+
+  # Option+Backspace 删除一个音节，Command+Backspace 删除所有
+  key_binder/bindings/+:
+    - { when: composing, accept: Alt+BackSpace, send: Control+BackSpace }

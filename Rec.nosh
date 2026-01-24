@@ -80,12 +80,15 @@ ln -s ~/.dotfile/misc/ranger ~/.config/ranger
 # set up input method following: https://blog.zhheo.com/p/5e08f6be.html
 
 #######################################
-## input method (fcitx5 + rime-ice)  ##
+## input method (fcitx + rime-ice)   ##
 #######################################
-
-# 需先安装:
-# - rime-ice: https://github.com/iDvel/rime-ice
-# - stow: brew install stow
+# install fcitx (https://github.com/fcitx-contrib/fcitx5-macos-installer/blob/master/README.zh-CN.md)
+# install rime-ice
+cd ~
+git clone https://github.com/rime/plum.git plum
+cd ~/plum
+bash rime-install iDvel/rime-ice:others/recipes/full
 cd ~/.dotfile/misc
 stow -t ~/.local/share/fcitx5/rime rime
+# modify sync config: ~/.local/share/fcitx5/rime/installation.yaml
 stow -t ~/.config/fcitx5 fcitx5

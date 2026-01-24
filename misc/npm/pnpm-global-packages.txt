@@ -1,0 +1,9 @@
+@anthropic-ai/claude-code
+create-start-app
+mcp-chrome-bridge
+parcel
+tsx
+turbo
+typescript
+vite
+yarn

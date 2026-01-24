@@ -1,7 +1,5 @@
 alias gitBKCS="cd /home/liukairui/CODE/code-segments && git add . && git commit -m $(date '+UpDate_%Y-%m-%d_%H:%M') && git push"
 alias mwin="/home/liukairui/fileTrans/mountWin.sh "
-alias killwx="kill -SIGTERM -- -$(ps x -o "%r %c" | awk '{ n=substr($0,index($0,$2)); if(n~/uos/){print $1;exit} }')"
-alias weatherUoA="curl zh.wttr.in/Grafton%20Auckland"
 alias rr="ranger"
 alias csp="cd /home/liukairui/CODE/code-segments"
 alias rstudio="/usr/lib/rstudio/rstudio"
@@ -15,6 +13,46 @@ alias google-chrome-beta-wayland="LD_PRELOAD=/usr/lib/libgtk-4.so google-chrome-
 alias google-chrome-unstable-wayland="google-chrome-unstable --enable-wayland-ime --wayland-text-input-version=3 --enable-feature=UseOzonPlatform --ozone-platform=wayland --enable-wayland-ime"
 alias ra="ranger"
 alias fzfh="FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob \"!.git/*\" --glob \"!.node_modules/*\"' fzf"
+alias cp="cp -i"     # confirm before overwriting something
+alias df='df -h'     # human-readable sizes
+alias free='free -m' # show sizes in MB
+alias np='nano -w PKGBUILD'
+alias more=less
+alias ex="extract"
+alias pnpx='pnpm --dlx '
+alias mkdir='mkdir -p'
+
+if [[ -o interactive ]]; then
+    alias _ls='command ls'
+    alias _ll='command ls -alh'
+    alias ls='eza --color=auto'
+    alias ll='eza -al --git --color=auto'
+    alias _tree='command tree'
+    alias tree='eza --tree'
+    alias _grep='command grep'
+    alias grep='rg'
+    alias _find='command find'
+    alias find='fd'
+    alias _top='command top'
+    alias top='btop'
+    alias _du='command du -sh'
+    alias du='dust'
+    alias _diff='command diff'
+    alias diff='delta'
+    alias _ps='command ps'
+    alias ps='procs'
+    alias _ping='command ping'
+    alias ping='gping'
+fi
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 alias git-proxy="git config --global https.proxy http://127.0.0.1:37179 ; git config --global http.proxy http://127.0.0.1:37179"
 alias git-unproxy="git config --global --unset http.proxy ; git config --global --unset https.proxy"
@@ -39,26 +77,5 @@ function ross() {
         echo "Sourced ./install/setup.zsh"
     else
         echo "No ./install/setup.zsh found in current directory"
-    fi
-}
-
-ex() {
-    if [ -f $1 ]; then
-        case $1 in
-        *.tar.bz2) tar xjf $1 ;;
-        *.tar.gz) tar xzf $1 ;;
-        *.bz2) bunzip2 $1 ;;
-        *.rar) unrar x $1 ;;
-        *.gz) gunzip $1 ;;
-        *.tar) tar xf $1 ;;
-        *.tbz2) tar xjf $1 ;;
-        *.tgz) tar xzf $1 ;;
-        *.zip) unzip $1 ;;
-        *.Z) uncompress $1 ;;
-        *.7z) 7z x $1 ;;
-        *) echo "'$1' cannot be extracted via ex()" ;;
-        esac
-    else
-        echo "'$1' is not a valid file"
     fi
 }

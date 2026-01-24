@@ -27,7 +27,7 @@
 **Config Files For:**
 
 - Package backup
-- fcitx5
+- fcitx5 - rime
 - x.org
 - picom
 - i3

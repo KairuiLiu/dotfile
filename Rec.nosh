@@ -43,15 +43,6 @@ ln -s ~/.dotfile/shell/p10k.zsh ~/.p10k.zsh
 ln -s ~/.dotfile/shell/pam_environment ~/.pam_environment
 ln -s ~/.dotfile/shell/profile ~/.profile
 
-git-proxy
-cli-proxy
-
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone http://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-wget https://mimosa-pudica.net/src/incr-0.2.zsh && mkdir ~/.oh-my-zsh/custom/plugins/incr && mv incr-0.2.zsh ~/.oh-my-zsh/custom/plugins/incr
-
 #######################################
 ## windows files                     ##
 #######################################
@@ -117,6 +108,7 @@ sudo howdy test
 #######################################
 ## Vim                               ##
 #######################################
+
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ln -s ~/.dotfile/misc/vimrc ~/.vimrc
@@ -131,13 +123,42 @@ cd .vim/plugged/YouCompleteMe
 ./install.py
 
 #######################################
+# npm                                ##
+#######################################
+
+# tip: backup
+# pnpm pnpm list -g --depth=0 --json | jq -r '.[0].dependencies | keys[]' > pnpm-global-packages.txt
+cat ~/.dotfile/npm/pnpm-global-packages.txt | xargs pnpm install -g
+
+
+#######################################
+## input method (fcitx + rime-ice)   ##
+#######################################
+
+# install fcitx5
+ln -s ~/.dotfile/fcitx5 ~/.config/
+sudo cp ~/Public/fcitx5-**/* /usr/share/fcitx5/themes/ -r
+# install rime-ice
+cd ~
+git clone https://github.com/rime/plum.git plum
+cd ~/plum
+rime_dir="~/.local/share/fcitx5/rime/" && bash rime-install iDvel/rime-ice:others/recipes/full
+cd ~/.dotfile/misc
+stow -t ~/.local/share/fcitx5/rime rime
+# config sync path
+# vim ~/.local/share/fcitx5/rime/installation.yaml
+# Tip: sync rime user data via gui, checkout config from other branch before sync dotfile
+
+#######################################
 ## misc                              ##
 #######################################
+
+ln -s ~/.dotfile/misc/mpdconf ~/.mpdconf
+ln -s ~/.dotfile/misc/face ~/.face
+ln -s ~/.dotfile/shell/eza.yml ~/.config/eza/theme.yml
 ln -s ~/.dotfile/shell/ghostty ~/.config/ghostty/config
 ln -s ~/.dotfile/misc/ranger ~/.config/ranger
 ln -s ~/.dotfile/misc/clight.conf ~/.config/clight.conf
-ln -s ~/.dotfile/fcitx5 ~/.config/
-sudo cp /home/liukairui/Public/fcitx5-**/* /usr/share/fcitx5/themes/ -r
 # Set Kde Virtual Keyboard as fcitx5
 
 # Typora Fix
@@ -159,9 +180,6 @@ sudo chattr +i ~/.config/QQ/.crash_files/
 sudo cp ~/.dotfile/misc/vsftpd.conf /etc/vsftpd.conf
 ln -s /srv/ftp ~/fileTrans/ftp
 mkdir /srv/ftp/anon ; chmod 777 /srv/ftp/anon
-
-ln -s ~/.dotfile/misc/mpdconf ~/.mpdconf
-ln -s ~/.dotfile/misc/face ~/.face
 
 # Fix Chrome-[stable|beta|unstabel] GTK4 on wayland
 cd /opt/google/chrome-beta/

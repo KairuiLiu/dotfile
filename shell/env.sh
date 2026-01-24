@@ -53,3 +53,11 @@ export R_LIBS_USER=~/.R
 
 export GEM_HOME="~/.gems"
 export GEM_PATH="~/.gems"
+export PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
+
+eval "$(fnm env --use-on-cd --corepack-enabled --shell zsh)"
+
+export DOTNET_ROOT="$HOME/.dotnet"
+export PATH="$DOTNET_ROOT:$PATH"
+export PATH="./node_modules/.bin:$PATH"
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk

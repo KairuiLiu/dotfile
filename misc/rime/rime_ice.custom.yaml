@@ -21,3 +21,4 @@ patch:
 
   # 设置 ascii_mode 默认为中文(0)
   "switches/@0/reset": 0  # 0=中文, 1=英文
+

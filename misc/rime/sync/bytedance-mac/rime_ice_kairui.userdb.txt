@@ -2,5 +2,240 @@
 #@/db_name	rime_ice_kairui
 #@/db_type	userdb
 #@/rime_version	1.15.0
-#@/tick	0
+#@/tick	358
 #@/user_id	bytedance-mac
+an xia 	按下	c=1 d=0.477114 t=358
+ba 	吧	c=2 d=1.40028 t=358
+ba wo 	把我	c=1 d=0.694197 t=358
+ban 	半	c=2 d=1.35439 t=358
+bei 	被	c=1 d=0.99005 t=358
+ben shen 	本身	c=1 d=0.980199 t=358
+bi ru 	比如	c=1 d=0.571209 t=358
+bian cheng 	变成	c=4 d=1.8594 t=358
+bian geng 	变更	c=1 d=0.980199 t=358
+bu fen 	部分	c=1 d=0.609571 t=358
+bu men 	部门	c=8 d=4.94 t=358
+bu shi 	不是	c=1 d=0.666977 t=358
+bu tong de 	不同的	c=1 d=0.923116 t=358
+bu xing 	不行	c=1 d=0.697676 t=358
+bu yong 	不用	c=1 d=0.740818 t=358
+cai 	才	c=1 d=0.960789 t=358
+ce lve 	策略	c=1 d=0.818731 t=358
+chai fen 	拆分	c=2 d=1.25081 t=358
+chu 	出	c=1 d=0.744532 t=358
+chu sheng de 	出生的	c=1 d=0.951229 t=358
+chu xian 	出现	c=1 d=0.965605 t=358
+ci dian 	词典	c=1 d=0.985112 t=358
+ci ku 	词库	c=3 d=1.56302 t=358
+cong 	从	c=2 d=1.17667 t=358
+cuo le 	错了	c=1 d=0.985112 t=358
+dan shi 	但是	c=2 d=0.955997 t=358
+dan yu 	丹瑜	c=1 d=0.913931 t=358
+dao 	到	c=1 d=0.50409 t=358
+de 	的	c=11 d=4.90346 t=358
+dian 	点	c=1 d=0.927743 t=358
+dian wai mai 	点外卖	c=1 d=0.744532 t=358
+dui 	对	c=3 d=1.42234 t=358
+er bu shi 	而不是	c=2 d=1.75654 t=358
+fa hui 	发挥	c=1 d=0.937067 t=358
+fa lun wen 	发论文	c=1 d=0.970446 t=358
+fa xian 	发现	c=2 d=0.759539 t=358
+fa xiang 	发香	c=1 d=0.509156 t=358
+fa zhan 	发展	c=1 d=0.562705 t=358
+fang xiang 	方向	c=4 d=2.67269 t=358
+fen cheng 	分成	c=2 d=1.3666 t=358
+fen gong 	分工	c=1 d=0.612626 t=358
+fen xi 	分析	c=1 d=0.822835 t=358
+fu ze ren 	负责人	c=1 d=0.600496 t=358
+gai shan 	改善	c=1 d=0.460704 t=358
+gang wei 	岗位	c=1 d=0.603506 t=358
+ge 	个	c=1 d=0.891366 t=358
+ge ren 	个人	c=1 d=0.529935 t=358
+gei chu 	给出	c=1 d=0.878095 t=358
+gen ben yuan yin 	根本原因	c=1 d=0.67032 t=358
+gong si 	公司	c=1 d=0.748264 t=358
+gong zuo 	工作	c=1 d=0.65377 t=358
+gui hua 	规划	c=5 d=2.75098 t=358
+guo 	过	c=1 d=0.687289 t=358
+hai hui 	还会	c=0 d=0.071177 t=358
+hai ke yi 	还可以	c=0 d=0.0559898 t=358
+hai shi 	还是	c=3 d=1.52791 t=358
+hai you 	还有	c=0 d=0.0913931 t=358
+hai you mei you 	还有没有	c=1 d=0.955997 t=358
+hai you yi ge 	还有一个	c=1 d=0.918512 t=358
+hang ye 	行业	c=1 d=0.647265 t=358
+hao ba 	好吧	c=1 d=0.519442 t=358
+he 	和	c=2 d=1.09516 t=358
+he ni 	和你	c=0 d=0.0869358 t=358
+hen jiu 	很久	c=1 d=0.546074 t=358
+hou 	后	c=2 d=0.955997 t=358
+hou xuan ci 	候选词	c=1 d=0.491644 t=358
+hui 	会	c=6 d=3.12544 t=358
+hui gun 	回滚	c=1 d=0.501576 t=358
+huo zhe 	或者	c=2 d=1.28744 t=358
+ji qi ren 	机器人	c=3 d=1.6318 t=358
+ji shu 	技术	c=1 d=0.946485 t=358
+jia 	加	c=1 d=0.683861 t=358
+jia zhi 	价值	c=1 d=0.585669 t=358
+jian duan 	简短	c=1 d=0.802519 t=358
+jian suo 	检索	c=1 d=0.909373 t=358
+jian yi 	建议	c=2 d=1.79187 t=358
+jie shao 	介绍	c=1 d=0.609571 t=358
+jin tian 	今天	c=1 d=0.532592 t=358
+jiu shi 	就是	c=1 d=0.985112 t=358
+jiu shi lun shi 	就事论事	c=1 d=0.814647 t=358
+ju bei 	具备	c=1 d=0.540641 t=358
+juan wang 	卷王	c=1 d=0.951229 t=358
+kan chu 	看出	c=2 d=1.35802 t=358
+kan kan 	看看	c=1 d=1 t=358
+ke yi 	可以	c=2 d=1.30274 t=358
+kong ge 	空格	c=1 d=0.479505 t=358
+lai 	来	c=1 d=0.786628 t=358
+lao ban 	老板	c=2 d=1.31424 t=358
+le 	了	c=5 d=2.89316 t=358
+li ru 	例如	c=1 d=0.843665 t=358
+li shi 	历史	c=1 d=0.900325 t=358
+liao jie 	了解	c=1 d=0.557106 t=358
+liao le 	聊了	c=1 d=0.543351 t=358
+ma 	吗	c=1 d=0.810584 t=358
+ma de 	妈的	c=2 d=1.67156 t=358
+ma ta 	吗他	c=1 d=0.537944 t=358
+mei ge 	每个	c=1 d=0.755784 t=358
+mei tuan 	美团	c=1 d=0.715338 t=358
+mei wen ti 	没问题	c=1 d=0.516851 t=358
+mei you 	没有	c=1 d=0.458406 t=358
+ming cheng 	名称	c=1 d=0.733447 t=358
+ming xiao 	名校	c=1 d=0.985112 t=358
+mo shi 	模式	c=1 d=0.831104 t=358
+na ge 	那个	c=2 d=1.73892 t=358
+na li 	那里	c=1 d=0.97531 t=358
+na xie 	那些	c=2 d=1.23195 t=358
+ne 	呢	c=2 d=1.92244 t=358
+ni 	你	c=1 d=0.612626 t=358
+ni ke yi 	你可以	c=1 d=0.891366 t=358
+ni que ding 	你确定	c=1 d=0.918512 t=358
+ni ye ke yi 	你也可以	c=1 d=0.995012 t=358
+nv tong shi 	女同事	c=1 d=0.860708 t=358
+pan duan 	判断	c=1 d=0.571209 t=358
+pei zhi 	配置	c=1 d=0.965605 t=358
+pi pei 	匹配	c=1 d=0.814647 t=358
+qi shi 	其实	c=1 d=0.923116 t=358
+qi ta 	其他	c=1 d=0.960789 t=358
+qi yong 	启用	c=1 d=0.951229 t=358
+qian duan 	前端	c=1 d=0.970446 t=358
+qiang hua 	强化	c=1 d=0.918512 t=358
+qing jie 	情节	c=1 d=0.99005 t=358
+qing shang gao 	情商高	c=1 d=0.927743 t=358
+quan ju 	全局	c=1 d=0.946485 t=358
+que shao 	缺少	c=2 d=1.31416 t=358
+que shi 	确实	c=1 d=0.514274 t=358
+ran hou 	然后	c=2 d=0.883745 t=358
+rang ou 	让偶	c=1 d=0.869358 t=358
+ren 	人	c=4 d=2.19837 t=358
+shan chu 	删除	c=1 d=0.995012 t=358
+shan yu 	善于	c=1 d=0.932394 t=358
+shang 	上	c=1 d=0.640824 t=358
+shen me 	什么	c=4 d=2.11311 t=358
+shen me yang de 	什么样的	c=1 d=0.778801 t=358
+shen me ye 	什么也	c=1 d=0.65377 t=358
+shi 	是	c=5 d=3.45977 t=358
+shi de 	是的	c=1 d=0.559898 t=358
+shi fou 	是否	c=1 d=0.579842 t=358
+shi hou 	时候	c=2 d=0.852144 t=358
+shi mian 	失眠	c=1 d=0.634448 t=358
+shi mian 	市面	c=1 d=0.637628 t=358
+shi shen me 	是什么	c=1 d=0.763379 t=358
+shu ru 	输入	c=2 d=1.51821 t=358
+shu ru fa 	输入法	c=1 d=0.831104 t=358
+shui 	谁	c=1 d=0.574072 t=358
+shuo de 	说的	c=1 d=0.878095 t=358
+si hu 	似乎	c=1 d=0.802519 t=358
+suan fa 	算法	c=1 d=0.965605 t=358
+ta 	他	c=3 d=1.62234 t=358
+ta dui 	他对	c=1 d=0.551563 t=358
+ta hai 	他还	c=1 d=0.625002 t=358
+ta hai hui 	他还会	c=1 d=0.715338 t=358
+ta hai ke yi 	他还可以	c=1 d=0.562705 t=358
+tai niu bi 	太牛逼	c=1 d=0.782705 t=358
+te bie 	特别	c=1 d=0.56836 t=358
+te xing 	特性	c=1 d=0.532592 t=358
+te zhi 	特制	c=1 d=0.913931 t=358
+te zhi 	特质	c=1 d=0.548812 t=358
+tiao dong 	跳动	c=1 d=0.733447 t=358
+tiao jian 	条件	c=1 d=0.995012 t=358
+tiao zheng 	调整	c=1 d=0.774916 t=358
+tong guo 	同过	c=1 d=0.640824 t=358
+tong guo 	通过	c=2 d=1.30459 t=358
+tong shi 	同事	c=1 d=0.540641 t=358
+tong yang de 	同样的	c=1 d=0.826959 t=358
+tui ce 	推测	c=1 d=0.606531 t=358
+wei lai 	未来	c=1 d=0.771052 t=358
+wei shen me 	为什么	c=2 d=0.965795 t=358
+wei wo 	为我	c=1 d=0.767206 t=358
+wen ti 	问题	c=5 d=3.02996 t=358
+wo 	我	c=8 d=4.09344 t=358
+wo gan jue 	我感觉	c=1 d=0.909373 t=358
+wo jiang 	我将	c=1 d=0.722527 t=358
+wo men 	我们	c=4 d=2.72869 t=358
+wo shi 	我是	c=1 d=0.960789 t=358
+xi hua 	细化	c=1 d=0.737123 t=358
+xian shi 	显示	c=2 d=1.73451 t=358
+xian zai 	现在	c=2 d=1.03582 t=358
+xiang mu 	项目	c=1 d=0.67368 t=358
+xiang yao 	想要	c=1 d=0.955997 t=358
+xiao zhao sheng 	校招生	c=1 d=0.818731 t=358
+xie xie 	谢谢	c=1 d=0.522046 t=358
+xie zai 	卸载	c=1 d=0.71177 t=358
+xin lai de 	新来的	c=1 d=0.852144 t=358
+xu qiu 	需求	c=1 d=0.57695 t=358
+xue shu 	学术	c=1 d=0.980199 t=358
+xue xi 	学习	c=2 d=1.71765 t=358
+yi 	一	c=2 d=1.80086 t=358
+yi ban 	一般	c=1 d=1 t=358
+yi dian 	一点	c=1 d=0.806541 t=358
+yi ge 	一个	c=6 d=3.23663 t=358
+yi hao wei 	一号位	c=1 d=0.527292 t=358
+yi ji 	以及	c=1 d=0.767206 t=358
+yi jing 	已经	c=1 d=0.680451 t=358
+yi xia 	一下	c=1 d=0.839457 t=358
+yin gai 	因该	c=1 d=0.932394 t=358
+yin mou lun 	阴谋论	c=1 d=0.740818 t=358
+yin wei 	因为	c=2 d=1.11192 t=358
+ying gai 	应该	c=3 d=1.67051 t=358
+yong 	用	c=2 d=1.42634 t=358
+yong hu 	拥护	c=1 d=0.729789 t=358
+yong yuan 	永远	c=1 d=0.726149 t=358
+you 	有	c=1 d=0.582748 t=358
+you shi 	优势	c=1 d=0.941765 t=358
+you xian 	优先	c=2 d=1.72586 t=358
+yuan ben 	原本	c=1 d=0.856415 t=358
+zai 	在	c=2 d=1.69755 t=358
+zai ye 	再也	c=1 d=0.737123 t=358
+zen me zuo 	怎么做	c=1 d=0.927743 t=358
+zhao pin 	招聘	c=3 d=1.79189 t=358
+zhe 	这	c=5 d=2.21637 t=358
+zhe ge 	这个	c=4 d=3.36552 t=358
+zhe me hao 	这么好	c=1 d=0.600496 t=358
+zhe shi 	这是	c=1 d=0.794534 t=358
+zhe shi yi 	这是一	c=0 d=0.0771052 t=358
+zhe shi yi ge 	这是一个	c=1 d=0.774916 t=358
+zhe shi yi zhong 	这是一种	c=1 d=0.904837 t=358
+zhen 	真	c=1 d=0.755784 t=358
+zheng zai 	正在	c=2 d=1.1743 t=358
+zhi chi 	支持	c=1 d=0.83527 t=358
+zhi chi xing 	支持性	c=1 d=0.995012 t=358
+zhi dao 	知道	c=1 d=0.628135 t=358
+zhi qian 	之前	c=1 d=0.826959 t=358
+zhi qian he ni 	之前和你	c=1 d=0.873716 t=358
+zhong 	中	c=1 d=0.904837 t=358
+zhong wen 	中文	c=1 d=0.606531 t=358
+zhuan 	转	c=1 d=0.960789 t=358
+zhun que 	准确	c=1 d=0.565525 t=358
+zi 	子	c=2 d=1.43448 t=358
+zi bu men 	子部门	c=2 d=1.4821 t=358
+zi ding yi 	自定义	c=3 d=1.77077 t=358
+zi jie tiao dong 	字节跳动	c=1 d=0.701173 t=358
+zong jie 	总结	c=2 d=1.60632 t=358
+zu 	组	c=3 d=1.89112 t=358
+zuo 	做	c=2 d=1.90737 t=358
+zuo de 	做的	c=1 d=0.597501 t=358

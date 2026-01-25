@@ -2,7 +2,6 @@
 name: kairui
 version: "2026.01.20"
 sort: by_weight
-use_preset_vocabulary: true
 ...
 
 阿和公路	a he gong lu	1
@@ -37257,9 +37256,6 @@ use_preset_vocabulary: true
 也准备	ye zhun bei	1
 叶子	ye zi	1
 叶子	ye zi	6
-一	yi	2
-一	yi	169
-一	yi	4
 以	yi	302
 以	yi	1
 依	yi	3

@@ -10,7 +10,6 @@ patch:
   translator/enable_user_dict: true
   translator/enable_encoder: true
   translator/encode_commit_history: true
-  translator/dictionary: rime_ice_kairui
 
   # 启用模糊音
   "speller/algebra/+":
@@ -18,6 +17,8 @@ patch:
     - derive/en$/eng/
     - derive/in$/ing/
     - derive/ing$/in/
-    
+
   # 设置 ascii_mode 默认为中文(0)
   "switches/@0/reset": 0  # 0=中文, 1=英文
+
+  # 暂时禁用 kairui 字库

@@ -6,14 +6,11 @@ patch:
   ascii_composer/switch_key/Shift_L: noop         # 左Shift: 屏蔽
   ascii_composer/switch_key/Shift_R: noop         # 右Shift: 屏蔽
 
-  # 添加 kairui 词库翻译器
-  "engine/translators/+":
-    - table_translator@kairui
-
   # translator 配置补充
   translator/enable_user_dict: true
   translator/enable_encoder: true
   translator/encode_commit_history: true
+  translator/dictionary: rime_ice_kairui
 
   # 启用模糊音
   "speller/algebra/+":
@@ -21,17 +18,6 @@ patch:
     - derive/en$/eng/
     - derive/in$/ing/
     - derive/ing$/in/
-
-  # kairui 个人词库 (搜狗导入)
-  kairui:
-    dictionary: cn_dicts/kairui
-    user_dict: cn_dicts/kairui
-    db_class: stabledb
-    enable_completion: true
-    enable_sentence: false
-    initial_quality: 1.15
-    comment_format:
-      - xform/^.+$//
-
+    
   # 设置 ascii_mode 默认为中文(0)
   "switches/@0/reset": 0  # 0=中文, 1=英文

@@ -1,0 +1,14 @@
+# Rime dictionary
+# encoding: utf-8
+
+---
+name: rime_ice_kairui
+version: "2023-04-18"
+import_tables:
+  - cn_dicts/8105
+  - cn_dicts/base
+  - cn_dicts/ext
+  - cn_dicts/tencent
+  - cn_dicts/others
+  - cn_dicts/kairui
+...

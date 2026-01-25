@@ -10,7 +10,6 @@ patch:
   translator/enable_user_dict: true
   translator/enable_encoder: true
   translator/encode_commit_history: true
-  translator/dictionary: rime_ice_kairui
 
   # 启用模糊音
   "speller/algebra/+":

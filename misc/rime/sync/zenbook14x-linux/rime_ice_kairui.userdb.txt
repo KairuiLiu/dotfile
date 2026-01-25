@@ -1,0 +1,6 @@
+# Rime user dictionary
+#@/db_name	rime_ice_kairui
+#@/db_type	userdb
+#@/rime_version	1.16.0
+#@/tick	0
+#@/user_id	zenbook14x-linux

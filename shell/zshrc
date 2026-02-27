@@ -4,6 +4,18 @@ fi
 [[ "$TERM" == "xterm-ghostty" ]] && export TERM=xterm-256color
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# ===== History Configuration =====
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+setopt EXTENDED_HISTORY          # 记录命令的时间戳
+setopt HIST_EXPIRE_DUPS_FIRST    # 历史满时先删除重复项
+setopt HIST_IGNORE_DUPS          # 不记录连续重复的命令
+setopt HIST_IGNORE_SPACE         # 不记录以空格开头的命令
+setopt HIST_VERIFY               # 历史替换时先显示,不直接执行
+setopt INC_APPEND_HISTORY        # 立即写入历史,而不是等到shell退出
+setopt SHARE_HISTORY             # 多个shell之间共享历史
+
 # ===== Zinit =====
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"

@@ -62,3 +62,7 @@ gone	gone
 Go程	gocheng
 code	code
 SOHO	soho
+
+一下	yixa
+一下	yixai
+

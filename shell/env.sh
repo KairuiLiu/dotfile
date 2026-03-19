@@ -10,7 +10,6 @@ export LANGUAGE=zh_CN:en_US
 export LC_MONETARY=zh_CN.UTF-8
 export LC_TIME=zh_CN.UTF-8
 # export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE="wayland;fcitx;ibus"
 export GLFW_IM_MODULE=fcitx
 export INPUT_METHOD=fcitx
 export XMODIFIERS=@im=fcitx
@@ -18,7 +17,6 @@ export IMSETTINGS_MODULE=fcitx
 export SDL_IM_MODULE=fcitx
 export XIM=fcitx
 export XIM_PROGRAM=fcitx
-export GDK_BACKEND=wayland
 
 
 # Path Setting
@@ -36,13 +34,24 @@ export PUB_HOSTED_URL="https://pub.flutter-io.cn"
 export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 
 # Wayland Setting
-export QT_QPA_PLATFORM=wayland
-export CLUTTER_BACKEND=wayland
-export SDL_VIDEODRIVER=wayland
-export MOZ_ENABLE_WAYLAND=1
-export MOZ_WEBRENDER=1
-export XDG_SESSION_TYPE=wayland
 export QT_QPA_PLATFORMTHEME=qt5ct
+
+# Wayland Setting - 只在 Wayland session 下生效
+if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+    export GDK_BACKEND=wayland
+    export QT_QPA_PLATFORM=wayland
+    export CLUTTER_BACKEND=wayland
+    export SDL_VIDEODRIVER=wayland
+    export MOZ_ENABLE_WAYLAND=1
+    export MOZ_WEBRENDER=1
+    export QT_IM_MODULE="wayland;fcitx;ibus"
+else
+    # X11 fallback (i3 等)
+    export GDK_BACKEND=x11
+    export QT_QPA_PLATFORM=xcb
+    export SDL_VIDEODRIVER=x11
+    export QT_IM_MODULE=fcitx
+fi
 
 export GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/liukairui/.gtkrc-2.0:/home/liukairui/.config/gtkrc-2.0
 export GTK_RC_FILES=/etc/gtk/gtkrc:/home/liukairui/.gtkrc:/home/liukairui/.config/gtkrc

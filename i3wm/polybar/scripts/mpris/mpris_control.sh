@@ -41,10 +41,10 @@ update_state() {
     elif [ ${#CUR_PLAYER} -eq 0 ]; then
         init_player
     fi
-    staue=$(playerctl --player=$CUR_PLAYER status 2>/dev/null)
+    status=$(playerctl --player=$CUR_PLAYER status 2>/dev/null)
     if [ ${#CUR_PLAYER} -eq 0 ]; then
         PLAYER_STATUS=-1
-    elif [ "$staue" == "Stopped" ]; then
+    elif [ "$status" == "Stopped" ]; then
         PLAYER_STATUS=0
     else
         PLAYER_STATUS=1
@@ -92,7 +92,7 @@ show_menu_selector() {
     options="${options} Exit"
     menu="$(rofi -sep "*" -dmenu -i -p "Choose Player" -location 0 -hide-scrollbar -line-padding 4 -padding 20 -kb-row-tab "" <<<${options})"
     menu=${menu:2}
-    if [ menu == "Exit" ]; then
+    if [ "$menu" == "Exit" ]; then
         return
     elif [ ${#menu} -eq 0 ]; then
         return

@@ -15,6 +15,8 @@ alias pnpx='pnpm --dlx '
 alias k='~/code/k/k.bash'
 alias pdm_cli='~/Public/PDM/pdm_cli'
 alias mkdir='mkdir -p'
+alias claude='ipgatekeeper --country JP -- claude'
+
 if [[ -o interactive ]]; then
     alias _ls='command ls'
     alias _ll='command ls -alh'

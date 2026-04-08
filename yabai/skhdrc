@@ -29,7 +29,7 @@ alt - v : yabai -m window --insert south
 alt - x : yabai -m window --toggle split
 
 ### enter fullscreen mode for the focused container
-alt - f : yabai -m window --toggle zoom-fullscreen
+alt - f : ~/.dotfile/yabai/script/toggle-zoom-fullscreen.sh
 
 ### toggle float mode
 shift + alt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2

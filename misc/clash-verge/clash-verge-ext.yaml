@@ -14,7 +14,7 @@ tun:
     - any:53
   mtu: 1500
   route-exclude-address: []
-  stack: system
+  stack: gvisor
   strict-route: false
   enable: false
 experimental:

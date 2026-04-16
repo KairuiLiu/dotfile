@@ -128,8 +128,7 @@ cd .vim/plugged/YouCompleteMe
 
 # tip: backup
 # pnpm pnpm list -g --depth=0 --json | jq -r '.[0].dependencies | keys[]' > pnpm-global-packages.txt
-cat ~/.dotfile/npm/pnpm-global-packages.txt | xargs pnpm install -g
-
+cat ~/.dotfile/misc/npm/pnpm-global-packages.txt | xargs pnpm install -g
 
 #######################################
 ## input method (fcitx + rime-ice)   ##

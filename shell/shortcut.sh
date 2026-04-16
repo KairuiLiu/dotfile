@@ -55,13 +55,13 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-alias git-proxy="git config --global https.proxy http://127.0.0.1:37179 ; git config --global http.proxy http://127.0.0.1:37179"
+alias git-proxy="git config --global https.proxy http://127.0.0.1:7897 ; git config --global http.proxy http://127.0.0.1:7897"
 alias git-unproxy="git config --global --unset http.proxy ; git config --global --unset https.proxy"
 
 function cli-proxy() {
-    export http_proxy=http://127.0.0.1:37179
+    export http_proxy=http://127.0.0.1:7897
     export https_proxy=$http_proxy
-    export socks_proxy=socks5://127.0.0.1:37179
+    export socks_proxy=socks5://127.0.0.1:7897
     echo -e "HTTP & WS Proxy on"
 }
 

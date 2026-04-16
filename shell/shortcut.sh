@@ -21,6 +21,7 @@ alias more=less
 alias ex="extract"
 alias pnpx='pnpm --dlx '
 alias mkdir='mkdir -p'
+alias claude='ipgatekeeper --country JP -- claude'
 
 if [[ -o interactive ]]; then
     alias _ls='command ls'

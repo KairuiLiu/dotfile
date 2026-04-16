@@ -102,7 +102,7 @@ clash-for-android:
 external-controller-unix: /tmp/verge/verge-mihomo.sock
 
 # 策略组引用
-pr:   &a3 {type: select,   proxies: [♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, DIRECT, REJECT] }
+pr:   &a3 {type: select,   proxies: [🚀 手动切换, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, DIRECT, REJECT] }
 p:    &a1 {type: http,     interval: 86400,  health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800} }
 auto: &a4 {type: url-test, lazy: true,  url: http://www.gstatic.com/generate_204, interval: 900, use: [Sub] }
 use:  &a2 {type: select,   use: [Sub] }
@@ -119,7 +119,7 @@ proxy-providers:
 proxies: []
 proxy-groups:
 #分流分组
-  - {name: 🚀 手动切换, <<: *a3}
+  - {name: 🚀 手动切换, <<: *a2}
   - {name: 🌏 全球加速, <<: *a3}
   - {name: 🍎 苹果服务, <<: *a3}
   - {name: 📺 哔哩哔哩, <<: *a3}
@@ -160,10 +160,10 @@ rule-providers:
   Download:    {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml,                  path: ./ruleset/Download.yaml     }
   ChinaIP:     {<<: *a7, url: https://cdn.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/clash-rule-provider.yml,                                     path: ./ruleset/ChinaIP.yaml      }
 
-
 # 分流Policy
 rules:
   # 本地规则
+  - DST-PORT,22,DIRECT
   - DOMAIN-KEYWORD,byte,DIRECT
   - DOMAIN-KEYWORD,zijie,DIRECT
   - DOMAIN-SUFFIX,country.is,🤖 AI站点
@@ -187,3 +187,10 @@ rules:
   - RULE-SET,ChinaIP,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,🐟 兜底分流
+
+# 解决 github 连接失败问题:
+# 在 ~/.ssh/config 中设置
+# Host github.com
+#     Hostname ssh.github.com
+#     Port 443
+#     User git

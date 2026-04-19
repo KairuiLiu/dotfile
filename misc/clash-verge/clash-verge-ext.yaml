@@ -14,7 +14,7 @@ tun:
     - any:53
   mtu: 1500
   route-exclude-address: []
-  stack: gvisor
+  stack: system
   strict-route: false
   enable: false
 experimental:
@@ -160,13 +160,35 @@ rule-providers:
   Download:    {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml,                  path: ./ruleset/Download.yaml     }
   ChinaIP:     {<<: *a7, url: https://cdn.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/clash-rule-provider.yml,                                     path: ./ruleset/ChinaIP.yaml      }
 
+
 # 分流Policy
 rules:
   # 本地规则
   - DST-PORT,22,DIRECT
   - DOMAIN-KEYWORD,byte,DIRECT
+  - DOMAIN-KEYWORD,is.snssdk.com,DIRECT
   - DOMAIN-KEYWORD,zijie,DIRECT
   - DOMAIN-SUFFIX,country.is,🤖 AI站点
+
+  ## 克劳德
+  # 主站
+  - DOMAIN-KEYWORD,anthropic,🤖 AI站点
+  - DOMAIN-KEYWORD,claude,🤖 AI站点
+  - DOMAIN-SUFFIX,clau.de,🤖 AI站点
+  # Claude 的 SaaS 服务
+  - DOMAIN-SUFFIX,sentry.io,🤖 AI站点
+  - DOMAIN-SUFFIX,statsigapi.net,🤖 AI站点
+  - DOMAIN,browser-intake-us5-datadoghq.com,🤖 AI站点
+  - DOMAIN-KEYWORD,datadog,🤖 AI站点
+  - DOMAIN-KEYWORD,sift,🤖 AI站点
+  - DOMAIN-SUFFIX,intercom.io,🤖 AI站点
+  - DOMAIN-SUFFIX,intercomcdn.com,🤖 AI站点
+  - DOMAIN,cdn.usefathom.com,🤖 AI站点
+  # IP/ASN 兜底
+  - IP-CIDR,160.79.104.0/21,🤖 AI站点
+  - IP-CIDR6,2607:6bc0::/32,🤖 AI站点
+  - IP-ASN,399358,🤖 AI站点
+
   # 策略组
   - RULE-SET,Ad,🆎 AdBlock
   - RULE-SET,OpenAi,🤖 AI站点

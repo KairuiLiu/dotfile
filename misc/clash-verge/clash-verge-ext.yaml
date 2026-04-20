@@ -93,45 +93,13 @@ clash-for-android:
 external-controller-unix: /tmp/verge/verge-mihomo.sock
 
 # 策略组引用
-pr:
-  &a3 {
-    type: select,
-    proxies:
-      [
-        🚀 手动切换,
-        ♻️ 自动选择,
-        🇭🇰 香港节点,
-        🇯🇵 日本节点,
-        🇺🇲 美国节点,
-        🇨🇳 台湾节点,
-        🇸🇬 狮城节点,
-        DIRECT,
-        REJECT,
-      ],
-  }
-p:
-  &a1 {
-    type: http,
-    interval: 86400,
-    health-check:
-      {
-        enable: true,
-        url: http://www.gstatic.com/generate_204,
-        interval: 1800,
-      },
-  }
-auto:
-  &a4 {
-    type: url-test,
-    lazy: true,
-    url: http://www.gstatic.com/generate_204,
-    interval: 900,
-    use: [Sub],
-  }
-use: &a2 { type: select, use: [Sub] }
-c: &a6 { type: http, behavior: classical, interval: 86400 }
-d: &a5 { type: http, behavior: domain, interval: 86400 }
-i: &a7 { type: http, behavior: ipcidr, interval: 86400 }
+pr:   &a3 {type: select,   proxies: [🚀 手动切换, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, DIRECT, REJECT] }
+p:    &a1 {type: http,     interval: 86400,  health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800} }
+auto: &a4 {type: url-test, lazy: true,  url: http://www.gstatic.com/generate_204, interval: 900, use: [Sub] }
+use:  &a2 {type: select,   use: [Sub] }
+c:    &a6 {type: http,     behavior: classical, interval: 86400}
+d:    &a5 {type: http,     behavior: domain,    interval: 86400}
+i:    &a7 {type: http,     behavior: ipcidr,    interval: 86400}
 
 proxy-providers:
   Sub:
@@ -165,114 +133,49 @@ proxy-groups:
 
 # 分流规则
 rule-providers:
-  Ad:
-    {
-      <<: *a5,
-      url: https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt,
-      path: ./ruleset/anti-ad-clash.yaml,
-    }
-  OpenAi:
-    {
-      <<: *a6,
-      url: https://gist.githubusercontent.com/ddgksf2013/cb4121e8b5c5d865cc949cb8120320c4/raw/Ai.yaml,
-      path: ./ruleset/OpenAi.yaml,
-    }
-  BiliBili:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml,
-      path: ./ruleset/BiliBili.yaml,
-    }
-  Bahamut:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bahamut/Bahamut.yaml,
-      path: ./ruleset/Bahamut.yaml,
-    }
-  GlobalMedia:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml,
-      path: ./ruleset/GlobalMedia.yaml,
-    }
-  Apple:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml,
-      path: ./ruleset/Apple.yaml,
-    }
-  Github:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml,
-      path: ./ruleset/Github.yaml,
-    }
-  Microsoft:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml,
-      path: ./ruleset/Microsoft.yaml,
-    }
-  Google:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml,
-      path: ./ruleset/Google.yaml,
-    }
-  Telegram:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml,
-      path: ./ruleset/Telegram.yaml,
-    }
-  Twitter:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml,
-      path: ./ruleset/Twitter.yaml,
-    }
-  Game:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml,
-      path: ./ruleset/Game.yaml,
-    }
-  ProxyLite:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ProxyLite/ProxyLite.yaml,
-      path: ./ruleset/ProxyLite.yaml,
-    }
-  Direct:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Direct/Direct.yaml,
-      path: ./ruleset/Direct.yaml,
-    }
-  Lan:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml,
-      path: ./ruleset/Lan.yaml,
-    }
-  Download:
-    {
-      <<: *a6,
-      url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml,
-      path: ./ruleset/Download.yaml,
-    }
-  ChinaIP:
-    {
-      <<: *a7,
-      url: https://cdn.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/clash-rule-provider.yml,
-      path: ./ruleset/ChinaIP.yaml,
-    }
+  Ad:          {<<: *a5, url: https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules_domainset.txt,                                     path: ./ruleset/anti-ad-clash.yaml}
+  OpenAi:      {<<: *a6, url: https://gist.githubusercontent.com/ddgksf2013/cb4121e8b5c5d865cc949cb8120320c4/raw/Ai.yaml,                         path: ./ruleset/OpenAi.yaml       }
+  BiliBili:    {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml,                  path: ./ruleset/BiliBili.yaml     }
+  Bahamut:     {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bahamut/Bahamut.yaml,                    path: ./ruleset/Bahamut.yaml      }
+  GlobalMedia: {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml,  path: ./ruleset/GlobalMedia.yaml  }
+  Apple:       {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml,              path: ./ruleset/Apple.yaml        }
+  Github:      {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml,                      path: ./ruleset/Github.yaml       }
+  Microsoft:   {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml,                path: ./ruleset/Microsoft.yaml    }
+  Google:      {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml,                      path: ./ruleset/Google.yaml       }
+  Telegram:    {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml,                  path: ./ruleset/Telegram.yaml     }
+  Twitter:     {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Twitter/Twitter.yaml,                    path: ./ruleset/Twitter.yaml      }
+  Game:        {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml,                          path: ./ruleset/Game.yaml         }
+  ProxyLite:   {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ProxyLite/ProxyLite.yaml,                path: ./ruleset/ProxyLite.yaml    }
+  Direct:      {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Direct/Direct.yaml,                      path: ./ruleset/Direct.yaml       }
+  Lan:         {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml,                            path: ./ruleset/Lan.yaml          }
+  Download:    {<<: *a6, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml,                  path: ./ruleset/Download.yaml     }
+  ChinaIP:     {<<: *a7, url: https://cdn.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/clash-rule-provider.yml,                                     path: ./ruleset/ChinaIP.yaml      }
 
 # 分流Policy
 rules:
   # 本地规则
   - DST-PORT,22,DIRECT
   - DOMAIN-SUFFIX,country.is,🤖 AI站点
+
+  ## 克劳德
+  # 主站
+  - DOMAIN-KEYWORD,anthropic,🤖 AI站点
+  - DOMAIN-KEYWORD,claude,🤖 AI站点
+  - DOMAIN-SUFFIX,clau.de,🤖 AI站点
+  # Claude 的 SaaS 服务
+  - DOMAIN-SUFFIX,sentry.io,🤖 AI站点
+  - DOMAIN-SUFFIX,statsigapi.net,🤖 AI站点
+  - DOMAIN,browser-intake-us5-datadoghq.com,🤖 AI站点
+  - DOMAIN-KEYWORD,datadog,🤖 AI站点
+  - DOMAIN-KEYWORD,sift,🤖 AI站点
+  - DOMAIN-SUFFIX,intercom.io,🤖 AI站点
+  - DOMAIN-SUFFIX,intercomcdn.com,🤖 AI站点
+  - DOMAIN,cdn.usefathom.com,🤖 AI站点
+  # IP/ASN 兜底
+  - IP-CIDR,160.79.104.0/21,🤖 AI站点
+  - IP-CIDR6,2607:6bc0::/32,🤖 AI站点
+  - IP-ASN,399358,🤖 AI站点
+
   # 策略组
   - RULE-SET,Ad,🆎 AdBlock
   - RULE-SET,OpenAi,🤖 AI站点

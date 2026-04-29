@@ -90,7 +90,8 @@ shift + alt - w : open -a "WindTerm"
 shift + alt - c : open -a "Visual Studio Code - Insiders"
 shift + alt - e : open -a "Microsoft To Do"
 shift + alt - v : open -a "CorpLink"
-shift + alt - b : open -na "Google Chrome" --args --profile-directory="Profile 3" https://gemini.google.com/
+# shift + alt - b : open -na "Google Chrome" --args --profile-directory="Profile 3" https://gemini.google.com/
+shift + alt - b : ~/.dotfile/yabai/script/keep-claude/keep-claude.sh
 shift + alt - i : ~/.dotfile/yabai/script/toggle-iphone.sh
 shift + alt - o : ~/.dotfile/yabai/script/ohhh/ohhh
 shift + alt - p : INBOX_PATH=~/Documents/Misc/inbox.md ~/.dotfile/yabai/script/inbox/inbox

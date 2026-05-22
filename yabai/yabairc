@@ -58,6 +58,7 @@ yabai -m rule --add app="系统设置" manage=off
 # yabai -m rule --add app="Unity" title="Build Profiles" manage=off
 yabai -m rule --add app="Raycast" manage=off
 yabai -m rule --add app="网易云音乐" manage=off
+yabai -m rule --add app="^iPhone镜像$" manage=off layer=above
 
 ######################
 ## Border           ##

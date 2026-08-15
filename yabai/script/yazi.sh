@@ -12,4 +12,4 @@
 # @raycast.description yazi
 
 
-cd ~ && /Applications/Ghostty.app/Contents/MacOS/ghostty yazi
+/Applications/Ghostty.app/Contents/MacOS/ghostty --working-directory="$HOME" -e yazi

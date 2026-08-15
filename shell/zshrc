@@ -1,8 +1,11 @@
+zmodload zsh/zprof
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 [[ "$TERM" == "xterm-ghostty" ]] && export TERM=xterm-256color
 eval "$(/opt/homebrew/bin/brew shellenv)"
+typeset -U path PATH
+typeset -U fpath FPATH
 
 # ===== History Configuration =====
 HISTFILE=~/.zsh_history
@@ -133,5 +136,5 @@ export EZA_CONFIG_DIR=~/.config/eza/
 source ~/.dotfile/shell/shortcut.sh
 
 # ===== P10k Config =====
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[[ ! -f ~/.dotfile/shell/p10k.zsh ]] || source ~/.dotfile/shell/p10k.zsh
+[[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
+zprof > /tmp/zprof.log

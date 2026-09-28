@@ -1,15 +1,6 @@
 #!/bin/bash
 
-# Required parameters:
-# @raycast.schemaVersion 1
-# @raycast.title yazi
-# @raycast.mode silent
-
-# Optional parameters:
-# @raycast.icon 🤖
-
-# Documentation:
-# @raycast.description yazi
-
-
-/Applications/Ghostty.app/Contents/MacOS/ghostty --working-directory="$HOME" -e yazi
+# exec /usr/bin/open -na Ghostty.app --args \
+#   --working-directory="$HOME" \
+#   -e /bin/zsh -lic 'y; exec /bin/zsh -il'
+/Applications/Ghostty.app/Contents/MacOS/ghostty --working-directory="$HOME" --working-directory="$HOME" -e /bin/zsh -lic 'y; exec /bin/zsh -il'

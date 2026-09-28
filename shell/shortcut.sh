@@ -40,8 +40,6 @@ if [[ -o interactive ]]; then
     alias ping='gping'
 fi
 
-source ~/.dotfile/keep_local/source.sh
-
 function ross() {
     if [ -f "./install/setup.zsh" ]; then
         source "./install/setup.zsh"
@@ -64,3 +62,5 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+[ -s "$HOME/.dotfile/keep_local/source.sh" ] && source "$HOME/.dotfile/keep_local/source.sh"

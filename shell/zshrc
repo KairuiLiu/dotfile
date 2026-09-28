@@ -29,7 +29,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 export LS_COLORS="$(vivid generate jellybeans)"
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
-zinit snippet OMZL::theme-and-appearance.zsh
+# zinit snippet OMZL::theme-and-appearance.zsh
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
 zinit wait lucid for \

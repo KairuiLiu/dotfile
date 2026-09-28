@@ -83,7 +83,7 @@ alt - return : open -n -a ghostty
 shift + alt - d : ~/.dotfile/yabai/script/yazi.sh
 shift + alt - x : osascript ~/.dotfile/yabai/script/openfinder.applescript
 shift + alt - g : open -n -a "Google Chrome" --args --profile-directory="Default"
-shift + alt - z : open -a "Sublime Text"
+shift + alt - z : ~/.dotfile/yabai/script/move-or-open.sh 'Sublime Text'
 shift + alt - f : open -a "LarkSuite"
 shift + alt - t : open -a "typora"
 shift + alt - w : open -a "WindTerm"

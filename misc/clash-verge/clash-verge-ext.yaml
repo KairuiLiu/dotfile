@@ -75,8 +75,8 @@ dns:
     - https://dns.alidns.com/dns-query
     - tls://223.5.5.5
   respect-rules: true
-  use-hosts: true
-  use-system-hosts: true
+  use-hosts: false
+  use-system-hosts: false
 profile:
   tracing: true
   store-selected: true
@@ -95,8 +95,8 @@ external-controller-unix: /tmp/verge/verge-mihomo.sock
 # 策略组引用
 pr:   &a3 {type: select,   proxies: [🚀 手动切换, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇺🇲 美国节点, 🇨🇳 台湾节点, 🇸🇬 狮城节点, DIRECT, REJECT] }
 p:    &a1 {type: http,     interval: 86400,  health-check: {enable: true, url: http://www.gstatic.com/generate_204, interval: 1800} }
-auto: &a4 {type: url-test, lazy: true,  url: http://www.gstatic.com/generate_204, interval: 900, use: [Sub] }
-use:  &a2 {type: select,   use: [Sub] }
+auto: &a4 {type: url-test, lazy: true,  url: http://www.gstatic.com/generate_204, interval: 900, use: [Sub, Sub2] }
+use:  &a2 {type: select,   use: [Sub, Sub2] }
 c:    &a6 {type: http,     behavior: classical, interval: 86400}
 d:    &a5 {type: http,     behavior: domain,    interval: 86400}
 i:    &a7 {type: http,     behavior: ipcidr,    interval: 86400}
@@ -107,7 +107,28 @@ proxy-providers:
     url: # 替换为订阅地址
     path: ./proxy_providers/sub.yaml
 
-proxies: []
+  Sub2:
+    <<: *a1
+    url: # 替换为订阅地址
+    path: ./proxy_providers/sub2.yaml
+
+
+proxies:
+  - name: MarsProxy-HTTP
+    type: http
+    server: # 替换为 "Server"
+    port: # 替换为 Port
+    username: # 替换为 "Username"
+    password: # 替换为 "Password"
+    dialer-proxy: 🇭🇰 香港节点
+  - name: MarsProxy-SOCKET5
+    type: socks5
+    server: # 替换为 "Server"
+    port: # 替换为 Port
+    username: # 替换为 "Username"
+    password: # 替换为 "Password"
+    dialer-proxy: 🇭🇰 香港节点
+
 proxy-groups:
   #分流分组
   - { name: 🚀 手动切换, <<: *a2 }
@@ -122,6 +143,7 @@ proxy-groups:
   - { name: 🎮 游戏平台, <<: *a3 }
   - { name: 🆎 AdBlock, <<: *a3 }
   - { name: 🐟 兜底分流, <<: *a3 }
+  - { name: 🇺🇸 纯血美国人, type: select, proxies: [MarsProxy-HTTP, MarsProxy-SOCKET5] }
 
   #节点分组
   - { name: ♻️ 自动选择, <<: *a4 }
@@ -155,26 +177,26 @@ rule-providers:
 rules:
   # 本地规则
   - DST-PORT,22,DIRECT
-  - DOMAIN-SUFFIX,country.is,🤖 AI站点
+  - DOMAIN-SUFFIX,country.is,🇺🇸 纯血美国人
 
   ## 克劳德
   # 主站
-  - DOMAIN-KEYWORD,anthropic,🤖 AI站点
-  - DOMAIN-KEYWORD,claude,🤖 AI站点
-  - DOMAIN-SUFFIX,clau.de,🤖 AI站点
+  - DOMAIN-KEYWORD,anthropic,🇺🇸 纯血美国人
+  - DOMAIN-KEYWORD,claude,🇺🇸 纯血美国人
+  - DOMAIN-SUFFIX,clau.de,🇺🇸 纯血美国人
   # Claude 的 SaaS 服务
-  - DOMAIN-SUFFIX,sentry.io,🤖 AI站点
-  - DOMAIN-SUFFIX,statsigapi.net,🤖 AI站点
-  - DOMAIN,browser-intake-us5-datadoghq.com,🤖 AI站点
-  - DOMAIN-KEYWORD,datadog,🤖 AI站点
-  - DOMAIN-KEYWORD,sift,🤖 AI站点
-  - DOMAIN-SUFFIX,intercom.io,🤖 AI站点
-  - DOMAIN-SUFFIX,intercomcdn.com,🤖 AI站点
-  - DOMAIN,cdn.usefathom.com,🤖 AI站点
+  - DOMAIN-SUFFIX,sentry.io,🇺🇸 纯血美国人
+  - DOMAIN-SUFFIX,statsigapi.net,🇺🇸 纯血美国人
+  - DOMAIN,browser-intake-us5-datadoghq.com,🇺🇸 纯血美国人
+  - DOMAIN-KEYWORD,datadog,🇺🇸 纯血美国人
+  - DOMAIN-KEYWORD,sift,🇺🇸 纯血美国人
+  - DOMAIN-SUFFIX,intercom.io,🇺🇸 纯血美国人
+  - DOMAIN-SUFFIX,intercomcdn.com,🇺🇸 纯血美国人
+  - DOMAIN,cdn.usefathom.com,🇺🇸 纯血美国人
   # IP/ASN 兜底
-  - IP-CIDR,160.79.104.0/21,🤖 AI站点
-  - IP-CIDR6,2607:6bc0::/32,🤖 AI站点
-  - IP-ASN,399358,🤖 AI站点
+  - IP-CIDR,160.79.104.0/21,🇺🇸 纯血美国人
+  - IP-CIDR6,2607:6bc0::/32,🇺🇸 纯血美国人
+  - IP-ASN,399358,🇺🇸 纯血美国人
 
   # 策略组
   - RULE-SET,Ad,🆎 AdBlock

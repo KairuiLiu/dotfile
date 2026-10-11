@@ -9,7 +9,7 @@
 
     "custom/rofi":{
         "format": "",
-        "on-click": "~/.dotfile/sway/sway/run-rofi.sh"
+        "on-click": "\"$HOME/.dotfile/sway/sway/run-rofi.sh\""
     },
 
     "sway/workspaces": {
@@ -49,7 +49,7 @@
     "custom/weather": {
         "format": "{}",
         "return-type": "text",
-        "exec": "~/.config/waybar/scripts/weather.sh",
+        "exec": "\"$HOME/.config/waybar/scripts/weather.sh\"",
         "interval": 600
     },
     "network": {
@@ -112,7 +112,7 @@
     "custom/power": {
         "format": "@ {}",
         "return-type": "text",
-        "exec": "~/.config/waybar/scripts/power.sh",
+        "exec": "\"$HOME/.config/waybar/scripts/power.sh\"",
         "interval": 8
     },
     "backlight": {
@@ -128,40 +128,40 @@
     },
     "custom/tray_button": {
         "format": "",
-        "on-click": "pgrep -f '/.config/waybar/config_tray' && (ps aux | grep '/.config/waybar/config_tray' | grep -v grep | awk '{print $2}' | xargs kill) || (waybar --config ~/.config/waybar/config_tray &)"
+        "on-click": "pgrep -f '/.config/waybar/config_tray' && (ps aux | grep '/.config/waybar/config_tray' | grep -v grep | awk '{print $2}' | xargs kill) || (waybar --config \"$HOME/.config/waybar/config_tray\" &)"
     },
 
     "custom/mrpis-control": {
         "format": "{}",
         "return-type": "text",
-        "exec": "~/.config/waybar/scripts/mpris/mpris_control.sh --icon",
-        "on-click": "~/.config/waybar/scripts/mpris/mpris_control.sh --select",
-        "on-scroll-up": "~/.config/waybar/scripts/mpris/mpris_control.sh --vc 0.05+",
-        "on-scroll-down": "~/.config/waybar/scripts/mpris/mpris_control.sh --vc 0.05-"
+        "exec": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --icon",
+        "on-click": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --select",
+        "on-scroll-up": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --vc 0.05+",
+        "on-scroll-down": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --vc 0.05-"
     },
 
     "custom/mrpis-prev": {
         "format": "󰄽",
-        "on-click": "~/.config/waybar/scripts/mpris/mpris_control.sh --previous"
+        "on-click": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --previous"
     },
 
 
     "custom/mrpis-play-pause": {
         "format": "󰐎",
-        "on-click": "~/.config/waybar/scripts/mpris/mpris_control.sh --playpause"
+        "on-click": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --playpause"
     },
 
     "custom/mrpis-next": {
         "format": "󰄾",
-        "on-click": "~/.config/waybar/scripts/mpris/mpris_control.sh --next"
+        "on-click": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --next"
     },
 
     "custom/mrpis-process": {
         "format": "{}",
         "return-type": "text",
-        "exec": "~/.config/waybar/scripts/mpris/mpris_control.sh --process",
-        "on-scroll-up": "~/.config/waybar/scripts/mpris/mpris_control.sh --vc 0.05+",
-        "on-scroll-down": "~/.config/waybar/scripts/mpris/mpris_control.sh --vc 0.05-",
+        "exec": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --process",
+        "on-scroll-up": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --vc 0.05+",
+        "on-scroll-down": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --vc 0.05-",
         "tail": true,
         "interval": 1
     },
@@ -169,10 +169,10 @@
     "custom/mrpis-status": {
         "format": "{}",
         "return-type": "text",
-        "exec": "~/.config/waybar/scripts/mpris/mpris_control.sh --title",
-        "on-click": "~/.config/waybar/scripts/mpris/mpris_control.sh --select",
-        "on-scroll-up": "~/.config/waybar/scripts/mpris/mpris_control.sh --vc 0.05+",
-        "on-scroll-down": "~/.config/waybar/scripts/mpris/mpris_control.sh --vc 0.05-",
+        "exec": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --title",
+        "on-click": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --select",
+        "on-scroll-up": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --vc 0.05+",
+        "on-scroll-down": "\"$HOME/.config/waybar/scripts/mpris/mpris_control.sh\" --vc 0.05-",
         "tail": true,
         "max-length": 20,
         "interval": 1
@@ -182,6 +182,6 @@
         "interval": 1,
         "format": "{}",
         "return-type": "text",
-        "exec": "~/.config/waybar/scripts/lyric/lyric.bash"
+        "exec": "\"$HOME/.config/waybar/scripts/lyric/lyric.bash\""
     }
 }

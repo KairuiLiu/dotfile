@@ -291,7 +291,7 @@ set conceallevel=1
 let g:tex_conceal='abdmg'
 
 "------- YCM ---------------
-set runtimepath+=~/.vim/plugged/YouCompleteMe
+set runtimepath+=$HOME/.vim/plugged/YouCompleteMe
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif "离开插入模式后自动关闭预览窗口"
 let g:ycm_collect_identifiers_from_tags_files = 1           " 开启 YCM基于标签引擎
 let g:ycm_collect_identifiers_from_comments_and_strings = 1 " 注释与字符串中的内容也用于补全
@@ -305,7 +305,7 @@ let g:ycm_complete_in_comments = 1                          " 在注释输入中
 let g:ycm_complete_in_strings = 1                           " 在字符串输入中也能补全
 let g:ycm_collect_identifiers_from_comments_and_strings = 1 " 注释和字符串中的文字也会被收入补全
 "let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf=$HOME . '/.vim/plugged/YouCompleteMe/third_party/ycmd/cpp/.ycm_extra_conf.py'
 let g:ycm_show_diagnostics_ui = 0                           " 禁用语法检查
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 " 回车即选中当前项
@@ -419,7 +419,7 @@ let g:startify_files_number = 5
 "===================================
 "=== VIM-Plug ======================
 "===================================
-call plug#begin('~/.vim/plugged')
+call plug#begin($HOME . '/.vim/plugged')
 Plug 'lyokha/vim-xkbswitch'                 "neovim notsupport
 Plug 'grwlf/xkb-switch'                  "neoivm norsupport
 Plug 'vim-airline/vim-airline'

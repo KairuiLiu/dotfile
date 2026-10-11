@@ -14,7 +14,7 @@ PLAYERS=($(playerctl -l 2>/dev/null))
 FORMAT="'{{ title }} - {{ artist }}'"
 FORMAT_PROCESS="'{{ duration(position)}}/{{duration(mpris:length) }}'"
 PLAYER_STATUS=-1
-CUR_PLAYER=$(cat ~/.config/waybar/.curplayer.log)
+CUR_PLAYER=$(cat "$HOME/.config/waybar/.curplayer.log")
 EXIT_CODE=$?
 
 update_players() {
@@ -25,11 +25,11 @@ init_player() {
     update_players
     if [ ${#PLAYERS[*]} -eq 0 ]; then
         CUR_PLAYER=""
-        echo ${CUR_PLAYER} >~/.config/waybar/.curplayer.log
+        echo ${CUR_PLAYER} >"$HOME/.config/waybar/.curplayer.log"
         return 1
     else
         CUR_PLAYER=$PLAYERS
-        echo ${CUR_PLAYER} >~/.config/waybar/.curplayer.log
+        echo ${CUR_PLAYER} >"$HOME/.config/waybar/.curplayer.log"
     fi
     return 0
 }
@@ -98,7 +98,7 @@ show_menu_selector() {
         return
     else
         CUR_PLAYER=$menu
-        echo ${CUR_PLAYER} >~/.config/waybar/.curplayer.log
+        echo ${CUR_PLAYER} >"$HOME/.config/waybar/.curplayer.log"
     fi
 }
 

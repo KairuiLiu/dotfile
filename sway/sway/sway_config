@@ -21,7 +21,7 @@ exec --no-startup-id /usr/lib/xdg-desktop-portal -r
 #######################
 ## In/Output         ##
 #######################
-output * bg ~/Pictures/sway/bkg.png fill
+output * bg "$HOME/Pictures/sway/bkg.png" fill
 output eDP-1 resolution 2880x1800 position 0 0 scale 1.75
 
 # exec swayidle -w \
@@ -41,6 +41,12 @@ input "type:keyboard" {
     xkb_options "caps:swapescape"
 }
 
+# keyd already swaps CapsLock/Esc in /etc/keyd/default.conf.
+# Applying the XKB swap again would undo it for keyd-managed keyboards.
+input "4012:2782:keyd_virtual_keyboard" {
+    xkb_options ""
+}
+
 #######################
 ## Function Shortcut ##
 #######################
@@ -56,9 +62,9 @@ bindsym $mod+Shift+F5 exec light -A 5
 bindsym $mod+F12 exec swaylock-fancy
 bindsym $mod+Shift+F12 exec swaylock-fancy -p
 bindsym $mod+Shift+b exec blueman-manager
-bindsym $mod+Shift+p exec ~/.dotfile/sway/sway/muti-monitor-switch.sh external_only
-bindsym $mod+Ctrl+p exec ~/.dotfile/sway/sway/muti-monitor-switch.sh edp_only
-bindsym $mod+Ctrl+Shift+p exec ~/.dotfile/sway/sway/muti-monitor-switch.sh both
+bindsym $mod+Shift+p exec "$HOME/.dotfile/sway/sway/muti-monitor-switch.sh" external_only
+bindsym $mod+Ctrl+p exec "$HOME/.dotfile/sway/sway/muti-monitor-switch.sh" edp_only
+bindsym $mod+Ctrl+Shift+p exec "$HOME/.dotfile/sway/sway/muti-monitor-switch.sh" both
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec $menu
 bindsym Print exec grim -g "$(slurp)" - | swappy -f -
@@ -180,14 +186,14 @@ bindsym $mod+Shift+v exec clash-verge
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec "code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
 bindsym $mod+Shift+g exec "google-chrome-unstable --enable-wayland-ime --wayland-text-input-version=3 --enable-feature=UseOzonPlatform --ozone-platform=wayland --enable-wayland-ime"
-bindsym $mod+space exec ~/.dotfile/sway/sway/run-rofi.sh
+bindsym $mod+space exec "$HOME/.dotfile/sway/sway/run-rofi.sh"
 bindsym $mod+Shift+z exec subl
 bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+Shift+a exec wdisplays
 bindsym $mod+Shift+w exec wechat-universal
 bindsym $mod+Shift+y exec /opt/YesPlayMusic/yesplaymusic  --enable-features=UseOzonePlatform --ozone-platform=wayland --gtk-version=4
 bindsym $mod+Return exec "fcitx5-remote -s keyboard-us ; $term"
-bindsym $mod+Shift+F1 exec pgrep -f 'waybar --config ~/.config/waybar/config_tray' && (ps aux | grep 'waybar --config ~/.config/waybar/config_tray' | grep -v grep | awk '{print $2}' | xargs kill) || (waybar --config ~/.config/waybar/config_tray &)
+bindsym $mod+Shift+F1 exec pgrep -f "waybar --config $HOME/.config/waybar/config_tray" && (ps aux | grep "waybar --config $HOME/.config/waybar/config_tray" | grep -v grep | awk '{print $2}' | xargs kill) || (waybar --config "$HOME/.config/waybar/config_tray" &)
 
 # [WIP] for_window [app_id="code-insiders-url-handler"] fullscreen fake
 # [WIP] for_window [app_id="wofi"] border none

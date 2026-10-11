@@ -1,14 +1,14 @@
-alias gitBKCS="cd /home/liukairui/CODE/code-segments && git add . && git commit -m $(date '+UpDate_%Y-%m-%d_%H:%M') && git push"
-alias mwin="/home/liukairui/fileTrans/mountWin.sh "
+alias gitBKCS='cd "$HOME/CODE/code-segments" && git add . && git commit -m "$(date "+UpDate_%Y-%m-%d_%H:%M")" && git push'
+alias mwin='"$HOME/fileTrans/mountWin.sh"'
 alias rr="ranger"
-alias csp="cd /home/liukairui/CODE/code-segments"
+alias csp='cd "$HOME/CODE/code-segments"'
 alias rstudio="/usr/lib/rstudio/rstudio"
 alias rstudio-wayland="rstudio --gtk-version=3 --enable-features=UseOzonePlatform --ozone-platform=wayland"
 alias code-insiders-wayland="code-insiders --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
 alias android-studio-wayland="QT_QPA_PLATFORM=xcb android-studio"
-alias aur-backup="cd ~/.dotfile/aur && ./backup.sh ./app-list.yaml"
-alias aur-build="cd ~/.dotfile/aur && ./build-db.sh ./app-list.yaml"
-alias aur-query="cd ~/.dotfile/aur && ./query.sh ./app-list.db"
+alias aur-backup='cd "$HOME/.dotfile/aur" && ./backup.sh ./app-list.yaml'
+alias aur-build='cd "$HOME/.dotfile/aur" && ./build-db.sh ./app-list.yaml'
+alias aur-query='cd "$HOME/.dotfile/aur" && ./query.sh ./app-list.db'
 alias google-chrome-beta-wayland="LD_PRELOAD=/usr/lib/libgtk-4.so google-chrome-beta --ozone-platform=wayland --gtk-version=4"
 alias google-chrome-unstable-wayland="google-chrome-unstable --enable-wayland-ime --wayland-text-input-version=3 --enable-feature=UseOzonPlatform --ozone-platform=wayland --enable-wayland-ime"
 alias ra="ranger"
@@ -80,3 +80,8 @@ function ross() {
         echo "No ./install/setup.zsh found in current directory"
     fi
 }
+
+# Optional machine-specific overrides, loaded after shared aliases and functions.
+if [ -s "$HOME/.dotfile/keep_local/source.sh" ]; then
+    source "$HOME/.dotfile/keep_local/source.sh"
+fi

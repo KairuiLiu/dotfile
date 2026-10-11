@@ -1,1 +1,1 @@
-source ~/.dotfile/shell/env.sh
+source "$HOME/.dotfile/shell/env.sh"

@@ -35,12 +35,12 @@ exec --no-startup-id xrandr --output eDP-1 --mode 2880x1800
 exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080
 exec_always light
 
-exec xmodmap ~/.Xmodmap
-exec_always --no-startup-id feh --bg-scale "/home/liukairui/Pictures/i3/bkg.png"
-exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
+exec xmodmap "$HOME/.Xmodmap"
+exec_always --no-startup-id feh --bg-scale "$HOME/Pictures/i3/bkg.png"
+exec_always --no-startup-id picom --config "$HOME/.config/picom/picom.conf" -b
 exec fcitx5
 exec killall polybar
-exec ~/.config/polybar/launch.sh
+exec "$HOME/.config/polybar/launch.sh"
 
 exec systemctl start --user dunst
 
@@ -61,15 +61,15 @@ bindsym $mod+F12 exec --no-startup-id i3lock-fancy
 bindsym $mod+Shift+F12 exec --no-startup-id i3lock-fancy -p
 bindsym $mod+Shift+b exec binggpt
 bindsym $mod+Shift+m exec mail-spring
-bindsym $mod+Shift+p exec xrandr --output eDP-1 --off --output HDMI-1 --mode 1920x1080 && killall polybar && ~/.config/polybar/launch.sh
-bindsym $mod+Ctrl+p exec xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --off && killall polybar && ~/.config/polybar/launch.sh
-bindsym $mod+Ctrl+Shift+p exec xrandr --output eDP-1 --mode 1920x1080 --pos 1920x682 --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 && killall polybar && ~/.config/polybar/launch.sh
-bindsym $mod+Ctrl+n feh --bg-scale "/home/liukairui/Pictures/i3/bkg.png"
+bindsym $mod+Shift+p exec xrandr --output eDP-1 --off --output HDMI-1 --mode 1920x1080 && killall polybar && "$HOME/.config/polybar/launch.sh"
+bindsym $mod+Ctrl+p exec xrandr --output eDP-1 --mode 1920x1080 --output HDMI-1 --off && killall polybar && "$HOME/.config/polybar/launch.sh"
+bindsym $mod+Ctrl+Shift+p exec xrandr --output eDP-1 --mode 1920x1080 --pos 1920x682 --output HDMI-1 --primary --mode 1920x1080 --pos 0x0 && killall polybar && "$HOME/.config/polybar/launch.sh"
+bindsym $mod+Ctrl+n feh --bg-scale "$HOME/Pictures/i3/bkg.png"
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show run
 bindsym Print exec deepin-screenshot
 bindsym $mod+Shift+r restart
-bindsym $mod+Ctrl+r exec ~/.config/polybar/launch.sh
+bindsym $mod+Ctrl+r exec "$HOME/.config/polybar/launch.sh"
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 #####################
@@ -188,8 +188,8 @@ bindsym $mod+Shift+v exec qv2ray
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec code-insiders
 bindsym $mod+Shift+g exec google-chrome-beta
-bindsym $mod+space exec ~/.config/polybar/scripts/launcher-alt
-bindsym $mod+Ctrl+space exec ~/.config/polybar/scripts/launcher-full
+bindsym $mod+space exec "$HOME/.config/polybar/scripts/launcher-alt"
+bindsym $mod+Ctrl+space exec "$HOME/.config/polybar/scripts/launcher-full"
 bindsym $mod+Shift+z exec subl
 bindsym $mod+Shift+t exec telegram-desktop
 bindsym $mod+Shift+a exec arandr

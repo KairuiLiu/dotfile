@@ -18,7 +18,7 @@ sudo vim /etc/pacman.d/mirrorlist
 # sudo vim /etc/pacman.conf
 ## [archlinuxcn]
 ## Include = /etc/pacman.d/archlinuxcn-mirrorlist
-sudo cp ~/.dotfile/aur/archlinuxcn-mirrorlist /etc/pacman.d/
+sudo cp "$HOME/.dotfile/aur/archlinuxcn-mirrorlist" /etc/pacman.d/
 sudo pacman -Syyu
 sudo pacman -S archlinuxcn-keyring
 sudo pacman -S clash-verge yay zsh
@@ -27,21 +27,22 @@ sudo pacman -S clash-verge yay zsh
 ## X.org config                      ##
 #######################################
 
-ln -s ~/.dotfile/x.org/Xresources ~/.Xresources
-ln -s ~/.dotfile/x.org/Xmodmap ~/.Xmodmap
-ln -s ~/.dotfile/x.org/xinitrc ~/.xinitrc
-ln -s ~/.dotfile/x.org/picom ~/.config/picom
+ln -s "$HOME/.dotfile/x.org/Xresources" "$HOME/.Xresources"
+ln -s "$HOME/.dotfile/x.org/Xmodmap" "$HOME/.Xmodmap"
+ln -s "$HOME/.dotfile/x.org/xinitrc" "$HOME/.xinitrc"
+ln -s "$HOME/.dotfile/x.org/picom" "$HOME/.config/picom"
 
 #######################################
 ## shell                             ##
 #######################################
 
-ln -s ~/.dotfile/shell/zshrc ~/.zshrc
-ln -s ~/.dotfile/shell/bashrc ~/.bashrc
-ln -s ~/.dotfile/shell/xprofile ~/.xprofile
-ln -s ~/.dotfile/shell/p10k.zsh ~/.p10k.zsh
-ln -s ~/.dotfile/shell/pam_environment ~/.pam_environment
-ln -s ~/.dotfile/shell/profile ~/.profile
+ln -s "$HOME/.dotfile/shell/zshrc" "$HOME/.zshrc"
+ln -s "$HOME/.dotfile/shell/bashrc" "$HOME/.bashrc"
+ln -s "$HOME/.dotfile/shell/xprofile" "$HOME/.xprofile"
+ln -s "$HOME/.dotfile/shell/p10k.zsh" "$HOME/.p10k.zsh"
+ln -s "$HOME/.dotfile/shell/pam_environment" "$HOME/.pam_environment"
+ln -s "$HOME/.dotfile/shell/profile" "$HOME/.profile"
+mkdir -p "$HOME/.dotfile/keep_local"
 
 #######################################
 ## windows files                     ##
@@ -53,7 +54,7 @@ fc-cache
 sudo fc-cache
 
 mkdir -p fileTrans/{c..f} fileTrans/liukairuiFtp
-ln -s ~/.dotfile/shell/mountWin.sh ~/fileTrans/mountWin.sh
+ln -s "$HOME/.dotfile/shell/mountWin.sh" "$HOME/fileTrans/mountWin.sh"
 chmod 755 .dotfile/shell/mountWin.sh
 
 #######################################
@@ -71,24 +72,24 @@ systemctl enable bluetooth.service
 ## sway config                       ##
 #######################################
 
-ln -s ~/.dotfile/sway/sway/sway_config ~/.config/sway/config
-ln -s ~/.dotfile/sway/mako ~/.config/mako
-ln -s ~/.dotfile/sway/waybar ~/.config/waybar
+ln -s "$HOME/.dotfile/sway/sway/sway_config" "$HOME/.config/sway/config"
+ln -s "$HOME/.dotfile/sway/mako" "$HOME/.config/mako"
+ln -s "$HOME/.dotfile/sway/waybar" "$HOME/.config/waybar"
 # set wayland flag on chrome (chrome://flags)
-ln -s ~/.dotfile/sway/wofi ~/.config/wofi
+ln -s "$HOME/.dotfile/sway/wofi" "$HOME/.config/wofi"
 # MAYBE NOT NEEDED
-# sudo cp ~/.dotfile/sway/sway/sway-custom-env.desktop /usr/share/wayland-sessions/
+# sudo cp "$HOME/.dotfile/sway/sway/sway-custom-env.desktop" /usr/share/wayland-sessions/
 
 #######################################
 ## i3 config                         ##
 #######################################
 
-ln -s ~/.dotfile/i3wm/i3_config ~/.config/i3/config
-ln -s ~/.dotfile/i3wm/polybar ~/.config/polybar
-ln -s ~/.dotfile/i3wm/dunstrc ~/.config/dunst/dunstrc
-ln -s ~/.dotfile/i3wm/rofi ~/.config/rofi
+ln -s "$HOME/.dotfile/i3wm/i3_config" "$HOME/.config/i3/config"
+ln -s "$HOME/.dotfile/i3wm/polybar" "$HOME/.config/polybar"
+ln -s "$HOME/.dotfile/i3wm/dunstrc" "$HOME/.config/dunst/dunstrc"
+ln -s "$HOME/.dotfile/i3wm/rofi" "$HOME/.config/rofi"
 sudo chmod 4755 /usr/bin/light # enable set backlight in i3
-# ln -s ~/.dotfile/i3wm/touchegg.conf ~/.config/touchegg
+# ln -s "$HOME/.dotfile/i3wm/touchegg.conf" "$HOME/.config/touchegg"
 
 #######################################
 ## howdy config                      ##
@@ -109,9 +110,9 @@ sudo howdy test
 ## Vim                               ##
 #######################################
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+curl -fLo "$HOME/.vim/autoload/plug.vim" --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-ln -s ~/.dotfile/misc/vimrc ~/.vimrc
+ln -s "$HOME/.dotfile/misc/vimrc" "$HOME/.vimrc"
 cd .vim/plugged/xkb-switch
 mkdir build && cd build
 cmake ..
@@ -128,56 +129,56 @@ cd .vim/plugged/YouCompleteMe
 
 # tip: backup
 # pnpm pnpm list -g --depth=0 --json | jq -r '.[0].dependencies | keys[]' > pnpm-global-packages.txt
-cat ~/.dotfile/misc/npm/pnpm-global-packages.txt | xargs pnpm install -g
+cat "$HOME/.dotfile/misc/npm/pnpm-global-packages.txt" | xargs pnpm install -g
 
 #######################################
 ## input method (fcitx + rime-ice)   ##
 #######################################
 
 # install fcitx5
-ln -s ~/.dotfile/fcitx5 ~/.config/
-sudo cp ~/Public/fcitx5-**/* /usr/share/fcitx5/themes/ -r
+ln -s "$HOME/.dotfile/fcitx5" "$HOME/.config/"
+sudo cp "$HOME"/Public/fcitx5-**/* /usr/share/fcitx5/themes/ -r
 # install rime-ice
-cd ~
+cd "$HOME"
 git clone https://github.com/rime/plum.git plum
-cd ~/plum
-rime_dir="~/.local/share/fcitx5/rime/" && bash rime-install iDvel/rime-ice:others/recipes/full
-cd ~/.dotfile/misc
-stow -t ~/.local/share/fcitx5/rime rime
+cd "$HOME/plum"
+rime_dir="$HOME/.local/share/fcitx5/rime/" && bash rime-install iDvel/rime-ice:others/recipes/full
+cd "$HOME/.dotfile/misc"
+stow -t "$HOME/.local/share/fcitx5/rime" rime
 # config sync path
-# vim ~/.local/share/fcitx5/rime/installation.yaml
+# vim "$HOME/.local/share/fcitx5/rime/installation.yaml"
 # Tip: sync rime user data via gui, checkout config from other branch before sync dotfile
 
 #######################################
 ## misc                              ##
 #######################################
 
-ln -s ~/.dotfile/misc/mpdconf ~/.mpdconf
-ln -s ~/.dotfile/misc/face ~/.face
-ln -s ~/.dotfile/shell/eza.yml ~/.config/eza/theme.yml
-ln -s ~/.dotfile/shell/ghostty ~/.config/ghostty/config
-ln -s ~/.dotfile/misc/ranger ~/.config/ranger
-ln -s ~/.dotfile/misc/clight.conf ~/.config/clight.conf
+ln -s "$HOME/.dotfile/misc/mpdconf" "$HOME/.mpdconf"
+ln -s "$HOME/.dotfile/misc/face" "$HOME/.face"
+ln -s "$HOME/.dotfile/shell/eza.yml" "$HOME/.config/eza/theme.yml"
+ln -s "$HOME/.dotfile/shell/ghostty" "$HOME/.config/ghostty/config"
+ln -s "$HOME/.dotfile/misc/ranger" "$HOME/.config/ranger"
+ln -s "$HOME/.dotfile/misc/clight.conf" "$HOME/.config/clight.conf"
 # Set Kde Virtual Keyboard as fcitx5
 
 # Typora Fix
-vim ~/.config/Typora/conf/conf.user.json
+vim "$HOME/.config/Typora/conf/conf.user.json"
 # set autoHideMenuBar = true
 
 # Sudo Pwd Feedback
 edit /etc/sudoers
 # set to tail Defaults pwfeedback
 
-# create ~/.xdmanrco
+# create "$HOME/.xdmanrco"
 # set like XDMAN_JAVA_HOME=/usr/lib/jvm/java-20-openjdk
 
 # QQ Crash File Fix
-sudo rm -rf ~/.config/QQ/.crash_files/*
-sudo chattr +i ~/.config/QQ/.crash_files/
+sudo rm -rf "$HOME/.config/QQ/.crash_files/"*
+sudo chattr +i "$HOME/.config/QQ/.crash_files/"
 
 # vsftpd
-sudo cp ~/.dotfile/misc/vsftpd.conf /etc/vsftpd.conf
-ln -s /srv/ftp ~/fileTrans/ftp
+sudo cp "$HOME/.dotfile/misc/vsftpd.conf" /etc/vsftpd.conf
+ln -s /srv/ftp "$HOME/fileTrans/ftp"
 mkdir /srv/ftp/anon ; chmod 777 /srv/ftp/anon
 
 # Fix Chrome-[stable|beta|unstabel] GTK4 on wayland

@@ -20,16 +20,16 @@ export XIM_PROGRAM=fcitx
 
 
 # Path Setting
-export PATH=/home/liukairui/.local/bin:$PATH
-# export PATH=/usr/local/texlive/2023/bin/x86_64-linux:/home/liukairui/.local/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
+# export PATH="/usr/local/texlive/2023/bin/x86_64-linux:$HOME/.local/bin:$PATH"
 # export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
 # export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
 
 # Flutter and Android Setting
-export PATH=/opt/flutter/bin:$PATH
+export PATH="/opt/flutter/bin:$PATH"
 export CHROME_EXECUTABLE="/usr/bin/google-chrome-unstable"
-export ANDROID_HOME="/home/liukairui/.andriodHome/Sdk"
-export ANDROID_SDK_ROOT='/home/liukairui/.andriodHome/Sdk'
+export ANDROID_HOME="$HOME/.andriodHome/Sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
 export PUB_HOSTED_URL="https://pub.flutter-io.cn"
 export FLUTTER_STORAGE_BASE_URL="https://storage.flutter-io.cn"
 
@@ -53,16 +53,16 @@ else
     export QT_IM_MODULE=fcitx
 fi
 
-export GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/liukairui/.gtkrc-2.0:/home/liukairui/.config/gtkrc-2.0
-export GTK_RC_FILES=/etc/gtk/gtkrc:/home/liukairui/.gtkrc:/home/liukairui/.config/gtkrc
+export GTK2_RC_FILES="/etc/gtk-2.0/gtkrc:$HOME/.gtkrc-2.0:$HOME/.config/gtkrc-2.0"
+export GTK_RC_FILES="/etc/gtk/gtkrc:$HOME/.gtkrc:$HOME/.config/gtkrc"
 export FZF_DEFAULT_COMMAND='rg --files --follow --glob "!.git/*" --glob "!.node_modules"'
 
-export GOPATH=~/.go
-export R_LIBS_USER=~/.R
+export GOPATH="$HOME/.go"
+export R_LIBS_USER="$HOME/.R"
 
-export GEM_HOME="~/.gems"
-export GEM_PATH="~/.gems"
-export PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
+export GEM_HOME="$HOME/.gems"
+export GEM_PATH="$HOME/.gems"
+export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
 
 eval "$(fnm env --use-on-cd --corepack-enabled --shell zsh)"
 

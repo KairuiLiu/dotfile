@@ -1,3 +1,3 @@
 #!/bin/bash
 
-node ~/.config/polybar/scripts/currency/app.js
+node "$HOME/.config/polybar/scripts/currency/app.js"

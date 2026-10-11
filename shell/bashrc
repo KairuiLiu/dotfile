@@ -1,5 +1,5 @@
 #
-# ~/.bashrc
+# "$HOME/.bashrc"
 #
 
 [[ $- != *i* ]] && return
@@ -53,7 +53,7 @@ use_color=true
 # globbing instead of external grep binary.
 safe_term=${TERM//[^[:alnum:]]/?} # sanitize TERM
 match_lhs=""
-[[ -f ~/.dir_colors ]] && match_lhs="${match_lhs}$(<~/.dir_colors)"
+[[ -f "$HOME/.dir_colors" ]] && match_lhs="${match_lhs}$(<"$HOME/.dir_colors")"
 [[ -f /etc/DIR_COLORS ]] && match_lhs="${match_lhs}$(</etc/DIR_COLORS)"
 [[ -z ${match_lhs} ]] &&
 	type -P dircolors >/dev/null &&
@@ -61,10 +61,10 @@ match_lhs=""
 [[ $'\n'${match_lhs} == *$'\n'"TERM "${safe_term}* ]] && use_color=true
 
 if ${use_color}; then
-	# Enable colors for ls, etc.  Prefer ~/.dir_colors #64489
+	# Enable colors for ls, etc.  Prefer "$HOME/.dir_colors" #64489
 	if type -P dircolors >/dev/null; then
-		if [[ -f ~/.dir_colors ]]; then
-			eval $(dircolors -b ~/.dir_colors)
+		if [[ -f "$HOME/.dir_colors" ]]; then
+			eval $(dircolors -b "$HOME/.dir_colors")
 		elif [[ -f /etc/DIR_COLORS ]]; then
 			eval $(dircolors -b /etc/DIR_COLORS)
 		fi
@@ -114,14 +114,14 @@ shopt -s expand_aliases
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
-alias mpdfrash='find * -iname "*.mp3" | sort  > ~/.mpd/playlists/playlist.m3u'
-alias_setting="~/bash_aliases"
+alias mpdfrash='find * -iname "*.mp3" | sort  > "$HOME/.mpd/playlists/playlist.m3u"'
+alias_setting="$HOME/bash_aliases"
 if [[ -f ${alias_setting} ]]; then
-	. ${alias_setting}
+	. "${alias_setting}"
 fi
 
 export PATH=$PATH:usr/bin
 export PATH=$PATH:usr/include/c++
 
-source ~/.dotfile/shell/shortcut.sh
-source ~/.dotfile/shell/env.sh
+source "$HOME/.dotfile/shell/env.sh"
+source "$HOME/.dotfile/shell/shortcut.sh"

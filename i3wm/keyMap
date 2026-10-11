@@ -114,8 +114,8 @@ bindsym $mod+Shift+v exec qv2ray
 bindsym $mod+Shift+f exec feishu
 bindsym $mod+Shift+c exec code-insiders
 bindsym $mod+Shift+g exec google-chrome-beta
-bindsym $mod+space exec ~/.config/polybar/scripts/launcher-alt
-bindsym $mod+Ctrl+space exec ~/.config/polybar/scripts/launcher-full
+bindsym $mod+space exec "$HOME/.config/polybar/scripts/launcher-alt"
+bindsym $mod+Ctrl+space exec "$HOME/.config/polybar/scripts/launcher-full"
 bindsym $mod+Shift+z exec subl
 bindsym $mod+Shift+w exec wechat-uos
 bindsym $mod+Shift+y exec yesplaymusic

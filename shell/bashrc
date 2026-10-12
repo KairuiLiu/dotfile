@@ -109,9 +109,9 @@ shopt -s expand_aliases
 shopt -s histappend
 
 alias mpdfrash='find * -iname "*.mp3" | sort  > ~/.mpd/playlists/playlist.m3u'
-alias_setting="~/bash_aliases"
-if [[ -f ${alias_setting} ]]; then
-	. ${alias_setting}
+alias_setting="$HOME/bash_aliases"
+if [[ -f "${alias_setting}" ]]; then
+	. "${alias_setting}"
 fi
 
 export PATH=$PATH:usr/bin

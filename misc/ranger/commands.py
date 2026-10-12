@@ -98,15 +98,20 @@ class fzf_home(Command):
     def execute(self):
         import subprocess
         import os.path
-        home_directory = os.path.expanduser('~')  # 获取家目录路径
+        import shlex
+        home_directory = shlex.quote(os.path.expanduser('~'))
         if self.quantifier:
             # match only directories
-            command = r"find -L {home_directory} \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -type d -print 2> /dev/null | sed 1d | cut -b3- | fzf +m"
+            command = (
+                rf"find -L {home_directory} \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune "
+                "-o -type d -print 2> /dev/null | sed 1d | fzf +m"
+            )
         else:
             # match files and directories
-            command = r"find -L {home_directory} \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune \
-            -o -print 2> /dev/null | sed 1d | cut -b3- | fzf +m"
+            command = (
+                rf"find -L {home_directory} \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune "
+                "-o -print 2> /dev/null | sed 1d | fzf +m"
+            )
 
         fzf = self.fm.execute_command(command, universal_newlines=True, stdout=subprocess.PIPE)
         stdout, stderr = fzf.communicate()

@@ -9,14 +9,11 @@ tap "nikitabobko/tap", trusted: true
 tap "openclaw/tap", trusted: true
 tap "steipete/tap", trusted: { formulae: ["bird"] }
 tap "tw93/tap", trusted: { formulae: ["mole"] }
-brew "openjdk"
 brew "apktool"
 brew "openssl@3", link: true
-brew "asio"
 brew "ast-grep"
 brew "atool"
 brew "readline"
-brew "python@3.12"
 brew "autojump"
 brew "automake"
 brew "bash-completion"
@@ -67,7 +64,6 @@ brew "mtr"
 brew "neofetch"
 brew "snappy"
 brew "opencv"
-brew "openjdk@17"
 brew "pandoc"
 brew "postgresql@14", restart_service: :changed
 brew "procs"

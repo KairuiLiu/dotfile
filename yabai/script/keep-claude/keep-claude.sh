@@ -7,4 +7,4 @@ if pgrep -fq "$APP_BIN"; then
   exit 0
 fi
 
-ipgatekeeper --country JP -- "$APP_BIN"
+ipgatekeeper --country US -- "$APP_BIN"

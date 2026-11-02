@@ -8,7 +8,7 @@ brew bundle install
 # check if everything is installed
 brew bundle check
 # tip: remake homebrew bundle file
-# brew bundle dump
+# brew bundle dump --force --no-describe --no-npm --no-vscode --no-go --no-uv --file="$HOME/.dotfile/brew/Brewfile"
 
 #######################################
 ## shell                             ##

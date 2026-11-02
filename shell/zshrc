@@ -135,6 +135,14 @@ esac
 export EZA_CONFIG_DIR=~/.config/eza/
 source ~/.dotfile/shell/shortcut.sh
 
+# ===== Brew =====
+export HOMEBREW_BUNDLE_FILE="$HOME/.dotfile/brew/Brewfile"
+export HOMEBREW_BUNDLE_NO_DESCRIBE=1
+export HOMEBREW_BUNDLE_DUMP_NO_NPM=1
+export HOMEBREW_BUNDLE_DUMP_NO_VSCODE=1
+export HOMEBREW_BUNDLE_DUMP_NO_GO=1
+export HOMEBREW_BUNDLE_DUMP_NO_UV=1
+
 # ===== P10k Config =====
 [[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
 zprof > /tmp/zprof.log

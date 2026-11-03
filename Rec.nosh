@@ -55,7 +55,8 @@ mkdir -p ~/.config/karabiner/assets
 ln -s ~/.dotfile/misc/karabiner/karabiner.json ~/.config/karabiner/karabiner.json
 ln -s ~/.dotfile/misc/karabiner/complex_modifications ~/.config/karabiner/assets/complex_modifications
 # manual keybindings
-# raycast => opt+space
+# raycast => cmd+space for active
+# raycast => opt+; for paste history
 # snipaste => opt+shift+s
 # system => built-in keyboard settings -> replace 🌐 key with control
 
@@ -78,12 +79,11 @@ ln -s ~/.dotfile/misc/ranger ~/.config/ranger
 #######################################
 # install fcitx (https://github.com/fcitx-contrib/fcitx5-macos-installer/blob/master/README.zh-CN.md)
 # install rime-ice
-cd ~
-git clone https://github.com/rime/plum.git plum
-cd ~/plum
-bash rime-install iDvel/rime-ice:others/recipes/full
-cd ~/.dotfile/misc
-stow -t ~/.local/share/fcitx5/rime rime
+[ -d ~/plum ] || git clone https://github.com/rime/plum.git ~/plum
+rime_stage=$(mktemp -d); rime_dir=$rime_stage bash ~/plum/rime-install iDvel/rime-ice:others/recipes/full
+stow -d ~/.dotfile/misc -t ~/.local/share/fcitx5/rime rime
+stow -d ~/.dotfile/misc -t ~/.config/fcitx5 fcitx5
+
+rsync -a --ignore-existing "$rime_stage/cn_dicts/" ~/.dotfile/misc/rime/cn_dicts/
 # modify sync config: ~/.local/share/fcitx5/rime/installation.yaml
-stow -t ~/.config/fcitx5 fcitx5
 # Tip: sync rime user data via gui, checkout config from other branch before sync dotfile

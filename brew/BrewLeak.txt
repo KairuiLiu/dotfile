@@ -1,3 +1,7 @@
-网易云音乐
-HyperSwitch
-NeatDownloadManager
+网易云音乐 https://music.163.com/#/download
+HyperSwitch https://bahoom.com/hyperswitch
+NeatDownloadManager https://www.neatdownloadmanager.com/index.php/en/
+霞鹜文楷屏幕阅读版 https://github.com/lxgw/LxgwWenKai-Screen/releases/
+MiSans VF https://hyperos.mi.com/font/zh/download/
+SpaceId https://github.com/KairuiLiu/SpaceId/releases
+windterm https://github.com/kingToolbox/WindTerm/releases

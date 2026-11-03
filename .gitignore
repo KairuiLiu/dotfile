@@ -112,3 +112,4 @@ aur/new-app-list.txt
 misc/ranger/**/__pycache__/
 
 keep_local
+.DS_Store

@@ -3,14 +3,12 @@ tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git"
 tap "daipeihust/tap"
 tap "didriksg/tap", trusted: { casks: ["crisp"] }
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
-tap "homebrew/services"
 tap "kitknox/rootshell"
 tap "nikitabobko/tap", trusted: true
 tap "openclaw/tap", trusted: true
 tap "steipete/tap", trusted: { formulae: ["bird"] }
 tap "tw93/tap", trusted: { formulae: ["mole"] }
 brew "apktool"
-brew "openssl@3", link: true
 brew "ast-grep"
 brew "atool"
 brew "readline"
@@ -34,6 +32,7 @@ brew "dpkg"
 brew "dust"
 brew "exiftool"
 brew "eza"
+brew "fastfetch"
 brew "fd"
 brew "lame"
 brew "ffmpeg"
@@ -61,11 +60,11 @@ brew "lynx"
 brew "mas"
 brew "mole"
 brew "mtr"
-brew "neofetch"
 brew "snappy"
 brew "opencv"
+brew "openssl@3", link: true
 brew "pandoc"
-brew "postgresql@14", restart_service: :changed
+brew "postgresql@14"
 brew "procs"
 brew "python-setuptools"
 brew "python@3.13"
@@ -81,11 +80,11 @@ brew "sox"
 brew "stow"
 brew "swiftformat"
 brew "switchaudio-osx"
+brew "tealdeer"
 brew "telnet"
 brew "the_silver_searcher"
 brew "thefuck"
 brew "thrift"
-brew "tldr"
 brew "tree"
 brew "vivid"
 brew "wget"
@@ -93,6 +92,7 @@ brew "wireguard-tools"
 brew "yazi"
 brew "zoxide"
 brew "anomalyco/tap/opencode", trusted: true
+brew "asmvik/formulae/skhd", trusted: true
 brew "daipeihust/tap/im-select", trusted: true
 brew "felixkratz/formulae/borders", trusted: true
 brew "felixkratz/formulae/sketchybar", trusted: true
@@ -111,43 +111,46 @@ cask "docker-desktop"
 cask "finetune"
 cask "firefox"
 cask "folo"
+cask "font-fira-code"
+cask "font-lxgw-wenkai"
+cask "font-lxgw-wenkai-gb"
+cask "font-smiley-sans"
 cask "font-symbols-only-nerd-font"
 cask "ghostty"
 cask "google-chrome"
 cask "google-chrome@dev"
-cask "hiddenbar"
-cask "imhex"
-cask "kap"
 cask "karabiner-elements"
 cask "keka"
 cask "krita"
 cask "letos"
+cask "localsend"
 cask "logi-options+"
 cask "mediamate"
 cask "obs"
 cask "openlogi"
 cask "postman"
-cask "rar"
 cask "raycast"
 cask "reqable"
 cask "kitknox/rootshell/rootshell", trusted: true
 cask "snipaste"
-cask "spaceid"
 cask "sublime-merge"
 cask "sublime-text"
 cask "swiftformat-for-xcode"
+cask "telegram"
 cask "thaw"
 cask "tigervnc"
 cask "typora"
 cask "visual-studio-code@insiders"
 cask "vlc"
-cask "windterm"
+cask "wechat"
 mas "Amphetamine", id: 937984704
 mas "Apple Configurator", id: 1037126344
 mas "Developer", id: 640199958
 mas "Disk Space Analyzer", id: 446243721
 mas "Lettera", id: 0
 mas "Microsoft To Do", id: 1274495053
+mas "MoneyTrack", id: 1473785373
+mas "Quantumult X", id: 1443988620
 mas "Quick Camera", id: 598853070
 mas "SerialPort Std", id: 6748636259
 mas "Shadowrocket", id: 932747118

@@ -20,6 +20,9 @@ font-feature = liga
 font-feature = dlig
 font-shaping-break = false
 
+macos-icon = custom
+macos-custom-icon = ~/.dotfile/shell/ghostty.icns
+
 cursor-color = #eee9fc
 cursor-text = #eee9fc
 cursor-style = bar
